@@ -3,8 +3,6 @@
         "inherits": [
             "MCU_STM32WLe5xC"
         ],
-        "stm32wl-lora-driver.rf-switch-ctl1": "PA_4",
-        "stm32wl-lora-driver.rf-switch-ctl2": "PA_5",
         "device_name": "STM32WLE5JCIx"
     },
     "LORA_E5_BREAKOUT": {
@@ -16,8 +14,6 @@
         "inherits": [
             "MCU_STM32WLe5xC"
         ],
-        "stm32wl-lora-driver.rf-switch-ctl1": "PB_8",
-        "stm32wl-lora-driver.rf-switch-ctl2": "PC_13",
         "device_name": "STM32WLE5JCIx"
     }
 }
