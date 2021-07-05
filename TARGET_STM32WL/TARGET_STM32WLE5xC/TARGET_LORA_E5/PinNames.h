@@ -125,6 +125,9 @@ typedef enum {
 #define SPI_SCK PB_13
 #endif
 
+// Standardized LED and button names
+
+
     /**** OSCILLATOR pins ****/
     RCC_OSC32_IN = PC_14,
     RCC_OSC32_OUT = PC_15,
