@@ -125,10 +125,13 @@ typedef enum {
 #define SPI_SCK PB_13
 #endif
 
-    LED1    = PB_10,    /* Green    */
-    LED2    = PB_5,     /* RED      */
+// Standardized LED and button names
+#define LED1    PB_5
+#define LED2    PB_10
 
-    BUTTON1 = PA_0,     
+#define BUTTON1 PA_0
+
+#define USER_BUTTON BUTTON1  
 
     /**** OSCILLATOR pins ****/
     RCC_OSC32_IN = PC_14,
