@@ -1,3 +1,4 @@
+
 /* mbed Microcontroller Library
  * SPDX-License-Identifier: BSD-3-Clause
  ******************************************************************************
@@ -117,16 +118,25 @@ typedef enum {
 } PinName;
 
 // Legacy I2C aliases
-#define I2C_SDA  PA_15
-#define I2C_SCL  PB_15
+#define I2C_SDA  PA_11
+#define I2C_SCL  PA_12
 // Legacy SPI aliases
-#define SPI_CS   PB_9
-#define SPI_MOSI PA_10
-#define SPI_MISO PB_14
-#define SPI_SCK  PB_13
+#define SPI_CS   PA_4
+#define SPI_MOSI PA_7
+#define SPI_MISO PA_6
+#define SPI_SCK  PA_5
+
+#define LED1     PA_9
+#define LED2     PA_10
 
 #ifdef __cplusplus
 }
 #endif
 
 #endif
+
+
+
+
+
+

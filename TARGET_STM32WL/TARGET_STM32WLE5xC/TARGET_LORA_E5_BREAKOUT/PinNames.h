@@ -125,6 +125,10 @@ typedef enum {
 #define SPI_MISO PB_14
 #define SPI_SCK  PB_13
 
+#define LED1     PB_5
+#define LED2     PB_10
+#define BUTTON1  PA_0
+
 #ifdef __cplusplus
 }
 #endif

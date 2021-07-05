@@ -1,7 +1,7 @@
 {
     "LORA_E5": {
         "inherits": [
-            "MCU_STM32WLe5xC"
+            "MCU_STM32WLE5xC"
         ],
         "device_name": "STM32WLE5JCIx"
     },
@@ -12,8 +12,13 @@
     },
     "RAK3172": {
         "inherits": [
-            "MCU_STM32WLe5xC"
+            "MCU_STM32WLE5xC"
         ],
-        "device_name": "STM32WLE5JCIx"
+        "device_name": "STM32WLE5CCUx"
+    },
+    "RAK3172_BREAKOUT": {
+        "inherits": [
+            "RAK3172"
+        ]
     }
 }
