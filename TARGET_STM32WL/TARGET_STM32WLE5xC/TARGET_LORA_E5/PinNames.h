@@ -103,31 +103,6 @@ typedef enum {
     CONSOLE_RX = PB_7,
 #endif
 
-// Legacy I2C aliases
-#ifndef I2C_SDA
-#define I2C_SDA PA_15
-#endif
-#ifndef I2C_SCL
-#define I2C_SCL PB_15
-#endif
-
-// Legacy SPI aliases
-#ifndef SPI_CS
-#define SPI_CS PB_9
-#endif
-#ifndef SPI_MOSI
-#define SPI_MOSI PA_10
-#endif
-#ifndef SPI_MISO
-#define SPI_MISO PB_14
-#endif
-#ifndef SPI_SCK
-#define SPI_SCK PB_13
-#endif
-
-// Standardized LED and button names
-
-
     /**** OSCILLATOR pins ****/
     RCC_OSC32_IN = PC_14,
     RCC_OSC32_OUT = PC_15,
@@ -140,6 +115,15 @@ typedef enum {
     // Not connected
     NC = (int)0xFFFFFFFF
 } PinName;
+
+// Legacy I2C aliases
+#define I2C_SDA  PA_15
+#define I2C_SCL  PB_15
+// Legacy SPI aliases
+#define SPI_CS   PB_9
+#define SPI_MOSI PA_10
+#define SPI_MISO PB_14
+#define SPI_SCK  PB_13
 
 #ifdef __cplusplus
 }
