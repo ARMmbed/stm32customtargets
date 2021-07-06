@@ -14,7 +14,7 @@
         "inherits": [
             "MCU_STM32WLe5xC"
         ],
-        "device_name": "STM32WLE5JCIx"
+        "device_name": "STM32WLE5CCUx"
     },
     "RAK3172_BREAKOUT": {
         "inherits": [
