@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  blinky:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: build CL1
+        uses: addnab/docker-run-action@v3
+        with:
+          options: -v ${{ github.workspace }}:/stm32customtargets -w=/stm32customtargets
+          image: mbedos/mbed-os-env:latest
+          shell: bash
+          run: |
+            pip3 list
+            cd ..
+            git clone https://github.com/ARMmbed/mbed-os-example-blinky.git
+            cd mbed-os-example-blinky
+            git clone https://github.com/ARMmbed/mbed-os.git
+            echo "**** copy stm32customtargets ***"
+            cp -R ../stm32customtargets/ .
+            echo "**** copy custom_targets.json ***"
+            cp stm32customtargets/custom_targets.json .
+            python3 stm32customtargets/automatic_build.py
+
