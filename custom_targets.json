@@ -1,2 +1,14 @@
 {
+    "BLUEPILL_F103C8": {
+        "inherits": [
+            "MCU_STM32F103x8"
+        ],
+        "overrides": {
+            "clock_source": "USE_PLL_HSE_XTAL"
+        },
+        "device_has_add": [
+            "USBDEVICE"
+        ],
+        "device_name": "STM32F103C8"
+    }
 }
