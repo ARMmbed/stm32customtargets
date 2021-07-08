@@ -1,7 +1,17 @@
-# README for STM32 custom targets
+CUSTOM boards with STM32
+
+Feel free to propose your custom boards support in mbed-os!
 
 Table of Contents
 =================
+
+* [Usage](#usage)
+* [STM32F1](#stm32f1)
+   * [BLUEPILL](#bluepill)
+* [STM32WL](#stm32wl)
+   * [LORA_E5](#lora_e5)
+   * [LoRa-E5 breakout board](#lora-e5-breakout-board)
+   * [RAK3172](#rak3172)
 
 
 # Usage
@@ -25,7 +35,19 @@ mbed compile -m XXX -t XXX
 ````
 
 
-# Customer boards
+
+# STM32F1
+
+## BLUEPILL
+
+MCU: STM32F103C8T6
+
+source: https://os.mbed.com/users/hudakz/code/mbed-os-bluepill/
+
+ (https://os.mbed.com/users/hudakz/code/STM32F103C8T6_Hello/)
+
+
+# STM32WL
 
 ## LORA_E5
 
