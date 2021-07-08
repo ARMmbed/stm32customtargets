@@ -29,12 +29,23 @@ Copy custom_targets.json
 cp stm32customtargets/custom_targets.json .
 ````
 
-Then build your target!
+Then build your target with
 
+- CLI1:
 ````
 mbed compile -m XXX -t XXX
 ````
 
+- CLI2:
+
+Add in the application CMakeLists.txt:
+````
+add_subdirectory(stm32customtargets)
+````
+And build:
+````
+mbedtools compile -m XXX -t XXX
+````
 
 
 # STM32F1
