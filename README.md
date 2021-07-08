@@ -1,4 +1,4 @@
-CUSTOM boards with STM32
+# CUSTOM boards with STM32
 
 Feel free to propose your custom boards support in mbed-os!
 
@@ -12,6 +12,7 @@ Table of Contents
    * [LORA_E5](#lora_e5)
    * [LoRa-E5 breakout board](#lora-e5-breakout-board)
    * [RAK3172](#rak3172)
+* [License and contributions](#license-and-contributions)
 
 
 # Usage
@@ -69,3 +70,8 @@ MCU: STM32WLE5CC
 
 https://docs.rakwireless.com/Product-Categories/WisDuo/RAK3172-Module/Datasheet/#description
 
+
+# License and contributions
+
+The software is provided under the [Apache-2.0 license](LICENSE-apache-2.0.txt).
+Contributions to this project are accepted under the same license.
