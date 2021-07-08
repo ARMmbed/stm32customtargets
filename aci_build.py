@@ -108,11 +108,25 @@ set(APP_TARGET ci-application)
 
 include(${MBED_PATH}/tools/cmake/app.cmake)
 
+add_subdirectory(TARGET_STM32F0)
+add_subdirectory(TARGET_STM32F1)
+add_subdirectory(TARGET_STM32F2)
+add_subdirectory(TARGET_STM32F3)
+add_subdirectory(TARGET_STM32F4)
+add_subdirectory(TARGET_STM32F7)
+add_subdirectory(TARGET_STM32G0)
+add_subdirectory(TARGET_STM32G4)
+add_subdirectory(TARGET_STM32H7)
+add_subdirectory(TARGET_STM32L0)
+add_subdirectory(TARGET_STM32L1)
+add_subdirectory(TARGET_STM32L4)
+add_subdirectory(TARGET_STM32L5)
+add_subdirectory(TARGET_STM32WB)
+add_subdirectory(TARGET_STM32WL)
+
 add_subdirectory(${MBED_PATH})
 
 add_executable(${APP_TARGET})
-add_subdirectory(TARGET_STM32F1)
-add_subdirectory(TARGET_STM32WL)
 
 mbed_configure_app_target(${APP_TARGET})
 
