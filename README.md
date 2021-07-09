@@ -12,6 +12,8 @@ Table of Contents
    * [LORA_E5](#lora_e5)
    * [LoRa-E5 breakout board](#lora-e5-breakout-board)
    * [RAK3172](#rak3172)
+* [STM32L4](#stm32l4)
+   * [STWIN](#stwin)
 * [License and contributions](#license-and-contributions)
 
 
@@ -57,6 +59,15 @@ MCU: STM32F103C8T6
 source: https://os.mbed.com/users/hudakz/code/mbed-os-bluepill/
 
  (https://os.mbed.com/users/hudakz/code/STM32F103C8T6_Hello/)
+
+
+# STM32L4
+
+## STWIN
+
+MCU: STM32L4R9ZI
+
+https://www.st.com/en/evaluation-tools/steval-stwinkt1.html
 
 
 # STM32WL
