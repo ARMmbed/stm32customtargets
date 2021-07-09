@@ -6,6 +6,7 @@ add_library(mbed-lora-e5 INTERFACE)
 target_sources(mbed-lora-e5
     INTERFACE
         PeripheralPins.c
+        LORA_E5_radio_driver.cpp
 )
 
 target_include_directories(mbed-lora-e5
@@ -13,4 +14,7 @@ target_include_directories(mbed-lora-e5
         .
 )
 
-target_link_libraries(mbed-lora-e5 INTERFACE mbed-stm32wle5xc)
+target_link_libraries(mbed-lora-e5 INTERFACE
+    mbed-stm32wle5xc
+    mbed-lorawan
+)
