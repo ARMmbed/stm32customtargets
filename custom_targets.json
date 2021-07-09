@@ -28,5 +28,27 @@
         "features": [
             "BLE"
         ]
+    },
+    "LORA_E5": {
+        "inherits": [
+            "MCU_STM32WLE5xC"
+        ],
+        "device_name": "STM32WLE5JCIx"
+    },
+    "LORA_E5_BREAKOUT": {
+        "inherits": [
+            "LORA_E5"
+        ]
+    },
+    "RAK3172": {
+        "inherits": [
+            "MCU_STM32WLE5xC"
+        ],
+        "device_name": "STM32WLE5CCUx"
+    },
+    "RAK3172_BREAKOUT": {
+        "inherits": [
+            "RAK3172"
+        ]
     }
 }
