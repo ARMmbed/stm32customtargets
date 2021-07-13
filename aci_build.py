@@ -22,14 +22,20 @@ from argparse import ArgumentParser
 import sys
 import os
 import json
+import subprocess
+import re
+
 
 custom_targets_file = open("custom_targets.json", "r")
 custom_targets_info = json.load(custom_targets_file)
 custom_targets_file.close()
 
 print("")
+BuildType = "PATCH"
 Arguments = ArgumentParser(description="Quick script for build check")
 Arguments.add_argument("--toolchain", "-t", help="ARM | GCC_ARM | IAR . Default is GCC_ARM")
+Arguments.add_argument("--target", "-m", help="Specific target. Default is patched targets compared to master branch")
+Arguments.add_argument("--full", "-f", action="store_true", help="Build all targets. Default is patched targets compared to master branch")
 Arguments.add_argument("--baremetal", "-b", action="store_true", help="Build with baremetal profile")
 Arguments.add_argument("--cli2", "-c", action="store_true", help="Build with cmake (CLI2). Default is CLI1")
 Arguments.add_argument("--exit", "-e", action="store_true", help="Stop after 1st build failure")
@@ -49,6 +55,43 @@ if args.baremetal:
     mbed_lib = "mbed-baremetal"
 else:
     mbed_lib = "mbed-os"
+
+TargetList = [*custom_targets_info]
+
+if args.target:
+    BuildType = "TARGET"
+    print ("Explicit target is requested: %s" % args.target)
+    for EachTarget in TargetList:
+        if EachTarget == args.target:
+            pass
+        else:
+            print ("\t%s is skipped" % EachTarget)
+            del custom_targets_info[EachTarget]
+
+if args.full:
+    BuildType = "FULL"
+
+if BuildType == "PATCH":
+    PatchedTargets = []
+    try:
+        CONSOLE = subprocess.check_output(["git", "diff", "--name-only", "origin/master"], stderr=subprocess.STDOUT).decode('ascii')
+        CONSOLE = CONSOLE.splitlines()
+
+        for EachPatchedFile in CONSOLE:
+            TARGET_match = re.match(r"TARGET_STM32.*/TARGET_(.*)/", EachPatchedFile)
+            if TARGET_match:
+                print("  match1: %s" % TARGET_match.group(1))
+                PatchedTargets.append(TARGET_match.group(1))
+
+    except:
+        pass
+
+    for EachTarget in TargetList:
+        if EachTarget in PatchedTargets:
+            pass
+        else:
+            print ("\t%s is skipped" % EachTarget)
+            del custom_targets_info[EachTarget]
 
 
 ## MAIN APPLICATION
