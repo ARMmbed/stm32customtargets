@@ -38,6 +38,11 @@
     "LORA_E5_BREAKOUT": {
         "inherits": [
             "LORA_E5"
+        ],
+        "macros_add": [
+            "LED1=PB_5", 
+            "LED2=PB_10",
+            "BUTTON1=PA_0"
         ]
     },
     "RAK3172": {
@@ -49,6 +54,10 @@
     "RAK3172_BREAKOUT": {
         "inherits": [
             "RAK3172"
+        ],
+        "macros_add": [
+            "LED1=PA_9", 
+            "LED2=PA_10"
         ]
     }
 }
