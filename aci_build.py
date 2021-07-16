@@ -73,15 +73,18 @@ if args.full:
 
 if BuildType == "PATCH":
     PatchedTargets = []
+    print("git", "diff", "--name-only", "origin/master")
     try:
         CONSOLE = subprocess.check_output(["git", "diff", "--name-only", "origin/master"], stderr=subprocess.STDOUT).decode('ascii')
         CONSOLE = CONSOLE.splitlines()
 
         for EachPatchedFile in CONSOLE:
+            print("patched file: %s" % EachPatchedFile)
             TARGET_match = re.match(r"TARGET_STM32.*/TARGET_(.*)/", EachPatchedFile)
             if TARGET_match:
-                print("  match1: %s" % TARGET_match.group(1))
-                PatchedTargets.append(TARGET_match.group(1))
+                if TARGET_match.group(1) not in PatchedTargets:
+                    print("  => %s" % TARGET_match.group(1))
+                    PatchedTargets.append(TARGET_match.group(1))
 
     except:
         pass

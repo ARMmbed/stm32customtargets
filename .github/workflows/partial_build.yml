@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: build CL1
         uses: addnab/docker-run-action@v3
@@ -27,6 +29,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: build CL2
         uses: addnab/docker-run-action@v3
