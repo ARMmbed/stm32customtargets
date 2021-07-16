@@ -535,8 +535,6 @@ test_cases = [
 def validate_pin_names(args):
     """Entry point for validating the Pin names."""
     suites = []
-    if args.suite_names:
-        suites = args.suite_names.split(",")
 
     targets = dict()
     if args.paths:
@@ -576,10 +574,6 @@ def validate_pin_names(args):
             case_result = "FAILED" if case_output else "PASSED"
 
             platform_name = target
-            if not args.full_name and args.output_format == "prettytext":
-                if len(platform_name) > 40:
-                    platform_name = "..." + platform_name[-40:]
-
             report.append(
                 {
                     "platform_name": platform_name,
@@ -590,33 +584,24 @@ def validate_pin_names(args):
                 }
             )
 
-    generate_output(report, args.output_format, args.verbose, args.output_file)
+    generate_output(report, args.verbose)
 
     if not has_passed_all_test_cases(report):
         raise TestCaseError("One or more test cases failed")
 
 
-def generate_output(report, output_format, verbosity, output_file):
+def generate_output(report, verbosity):
     """Generate the output."""
-    if output_format == "json":
-        output = json.dumps(report)
-    elif output_format == "html":
-        output = print_pretty_html_report(report)
-    else:
-        if verbosity == 0:
-            output = print_summary(report)
-        elif verbosity == 1:
-            output = print_suite_summary(report)
-        elif verbosity == 2:
-            output = print_report(report, False)
-        elif verbosity > 2:
-            output = print_report(report, True)
+    if verbosity == 0:
+        output = print_summary(report)
+    elif verbosity == 1:
+        output = print_suite_summary(report)
+    elif verbosity == 2:
+        output = print_report(report, False)
+    elif verbosity > 2:
+        output = print_report(report, True)
 
-    if output_file:
-        with open(output_file, "w") as out_file:
-            out_file.write(output)
-    else:
-        print(output)
+    print(output)
 
 
 def parse_args():
@@ -624,12 +609,6 @@ def parse_args():
     parser = ArgumentParserWithDefaultHelp(
         description="Pin names validation",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-    )
-
-    parser.add_argument(
-        "-n",
-        "--suite_names",
-        help="Run specific test suite. Use comma to seperate multiple suites.",
     )
 
     parser.add_argument(
@@ -641,29 +620,6 @@ def parse_args():
             "Verbosity of the report (none to -vvv)."
             " Only applies for 'prettytext' output format."
         ),
-    )
-
-    parser.add_argument(
-        "-f",
-        "--full_name",
-        action="store_true",
-        help=(
-            "Don't truncate long platform names in"
-            " human-readable output formats"
-        ),
-    )
-
-    parser.add_argument(
-        "-o",
-        "--output_format",
-        default="prettytext",
-        help="Set the output format: prettytext (default), json or html",
-    )
-
-    parser.add_argument(
-        "-w",
-        "--output_file",
-        help="File to write output to, instead of printing to stdout",
     )
 
     group = parser.add_mutually_exclusive_group(required=True)

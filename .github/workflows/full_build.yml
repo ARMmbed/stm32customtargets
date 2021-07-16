@@ -21,7 +21,7 @@ jobs:
           run: |
             pip3 list
             git clone https://github.com/ARMmbed/mbed-os.git
-            python3 aci_build.py -f
+            python3 aci_build.py --all
 
   CLI2:
     runs-on: ubuntu-latest
@@ -38,7 +38,7 @@ jobs:
           run: |
             pip3 list
             git clone https://github.com/ARMmbed/mbed-os.git
-            python3 aci_build.py -c -f
+            python3 aci_build.py --cli2 --all
 
   PIN_STANDARD:
     runs-on: ubuntu-latest
@@ -46,11 +46,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: build CL2
+      - name: aci_pinvalidate.py
         uses: addnab/docker-run-action@v3
         with:
           options: -v ${{ github.workspace }}:/stm32customtargets -w=/stm32customtargets
           image: mbedos/mbed-os-env:latest
           shell: bash
           run: |
-            python3 aci_build.py -p -f
+            python3 aci_build.py --pin --all
