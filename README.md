@@ -2,14 +2,18 @@
 
 Feel free to propose your custom boards support in mbed-os!
 
+
 Table of Contents
 =================
 
 * [Usage](#usage)
 * [STM32F1](#stm32f1)
    * [BLUEPILL](#bluepill)
+* [STM32WL](#stm32wl)
+   * [LORA_E5](#lora_e5)
 * [STM32L4](#stm32l4)
-   * [STWIN](#stwin)
+   * [STWIN SensorTile Wireless Industrial Node development kit](#stwin-sensortile-wireless-industrial-node-development-kit)
+* [STM32WL](#stm32wl)
 * [STM32WL](#stm32wl)
    * [Seeed Studio LoRa E5](#seeed-studio-lora-e5)
    * [Charles's LoRa-E5 breakout board](#charless-lora-e5-breakout-board)
@@ -57,20 +61,68 @@ mbedtools compile -m XXX -t XXX
 
 ## BLUEPILL
 
+<img src="https://stm32-base.org/assets/img/boards/STM32F103C8T6_Blue_Pill-1.jpg">
+
 MCU: STM32F103C8T6
+
+TARGET: BLUEPILL_F103C8
+
+
 
 source: https://os.mbed.com/users/hudakz/code/mbed-os-bluepill/
 
  (https://os.mbed.com/users/hudakz/code/STM32F103C8T6_Hello/)
 
 
+# STM32L0
+
+## MURATA LPWAN Wireless Module
+
+MCU: STM32L082CZ
+
+TARGET: MTB_MURATA_ABZ
+
+https://wireless.murata.com/type-abz-078.html
+
+- LORA is not enabled by default. You need to update your local mbed_app.json file:
+
+```
+{
+    "target_overrides": {
+        "MTB_MURATA_ABZ": {
+            "target.components_add":            ["SX1276"],
+            "sx1276-lora-driver.spi-mosi":       "PA_7",
+            "sx1276-lora-driver.spi-miso":       "PA_6",
+            "sx1276-lora-driver.spi-sclk":       "PB_3",
+            "sx1276-lora-driver.spi-cs":         "PA_15",
+            "sx1276-lora-driver.reset":          "PC_0",
+            "sx1276-lora-driver.dio0":           "PB_4",
+            "sx1276-lora-driver.dio1":           "PB_1",
+            "sx1276-lora-driver.dio2":           "PB_0",
+            "sx1276-lora-driver.dio3":           "PC_13",
+            "sx1276-lora-driver.txctl":          "PC_2",
+            "sx1276-lora-driver.rxctl":          "PA_1",
+            "sx1276-lora-driver.pwr-amp-ctl":    "PC_1",
+            "sx1276-lora-driver.tcxo":           "PA_12"
+        }
+    }
+}
+```
+
+
 # STM32L4
 
-## STWIN
+## STWIN SensorTile Wireless Industrial Node development kit
 
 MCU: STM32L4R9ZI
 
+<img src="https://www.st.com/bin/ecommerce/api/image.PF268005.en.feature-description-include-personalized-no-cpn-large.jpg">
+
+TARGET: STWIN
+
 https://www.st.com/en/evaluation-tools/steval-stwinkt1.html
+
+- BLE is enabled by default
 
 
 # STM32WL
@@ -79,9 +131,13 @@ https://www.st.com/en/evaluation-tools/steval-stwinkt1.html
 
 MCU: STM32WLE5JC
 
+TARGET: LORA_E5
+
 https://www.seeedstudio.com/LoRa-E5-Wireless-Module-p-4745.html
 
 ## Charles's LoRa-E5 breakout board
+
+TARGET: LORA_E5_BREAKOUT
 
 <img src="https://github.com/hallard/LoRa-E5-Breakout/blob/main/pictures/LoRa-E5-Breakout-top.png">
 
@@ -98,9 +154,13 @@ Use LoRa E5 module and added
 
 MCU: STM32WLE5CC
 
+TARGET: RAK3172
+
 https://docs.rakwireless.com/Product-Categories/WisDuo/RAK3172-Module/Datasheet/#description
 
 ## Charles's RAK3172 breakout board
+
+TARGET: RAK3172_BREAKOUT
 
 TBD
 
