@@ -88,5 +88,27 @@
             "LED1=PA_9", 
             "LED2=PA_10"
         ]
+    },
+    "CORE2":
+    {
+        "inherits": ["MCU_STM32F4"],
+        "extra_labels_add": ["STM32F407xG"],
+        "macros_add": [
+            "STM32F407xx",
+            "ENCODER_1=TIM2",
+            "ENCODER_2=TIM8",
+            "ENCODER_3=TIM3",
+            "ENCODER_4=TIM4",
+            "UPPER_RESISTOR=5.6e4",
+            "LOWER_RESISTOR=1.0e4",
+            "VIN_MEAS_CORRECTION=0.986"
+        ],
+        "overrides": {
+            "lse_available": 0,
+            "clock_source": "USE_PLL_HSE_XTAL"
+        },
+        "device_has_add": ["ANALOGOUT", "TRNG", "CAN"],
+        "device_has_remove": ["LPTICKER"],
+        "device_name": "STM32F407ZG"
     }
 }
