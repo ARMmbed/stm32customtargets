@@ -11,6 +11,13 @@
         ],
         "device_name": "STM32F103C8"
     },
+    "MTB_MURATA_ABZ": {
+        "inherits": [
+            "MCU_STM32L082xZ"
+        ],
+        "detect_code": ["0456"],
+        "device_name": "STM32L082CZYx"
+    },
     "STWIN": {
         "inherits": [
             "MCU_STM32L4R9xI"
