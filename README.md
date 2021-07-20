@@ -8,13 +8,16 @@ Table of Contents
 * [Usage](#usage)
 * [STM32F1](#stm32f1)
    * [BLUEPILL](#bluepill)
-* [STM32WL](#stm32wl)
-   * [LORA_E5](#lora_e5)
-   * [LoRa-E5 breakout board](#lora-e5-breakout-board)
-   * [RAK3172](#rak3172)
 * [STM32L4](#stm32l4)
    * [STWIN](#stwin)
+* [STM32WL](#stm32wl)
+   * [Seeed Studio LoRa E5](#seeed-studio-lora-e5)
+   * [Charles's LoRa-E5 breakout board](#charless-lora-e5-breakout-board)
+   * [RAK Wireless RAK3172](#rak-wireless-rak3172)
+   * [Charles's RAK3172 breakout board](#charless-rak3172-breakout-board)
 * [License and contributions](#license-and-contributions)
+   * [Automatic pull request checks](#automatic-pull-request-checks)
+   * [Automatic weekly non regression](#automatic-weekly-non-regression)
 
 
 # Usage
@@ -114,3 +117,29 @@ Use RAK3172 and added
 
 The software is provided under the [Apache-2.0 license](LICENSE-apache-2.0.txt).
 Contributions to this project are accepted under the same license.
+
+## Automatic pull request checks
+
+- Build with CLI1 should be OK
+```
+python aci_build.py
+```
+
+- Build with CLI2 should be OK
+```
+python aci_build.py --cli2
+```
+
+- Standard Pin Names check should be OK
+
+https://os.mbed.com/docs/mbed-os/latest/apis/standard-pin-names.html
+
+```
+python aci_build.py --pin
+```
+
+## Automatic weekly non regression
+
+A full non regression is executed each week-end
+
+See in https://github.com/ARMmbed/stm32customtargets/actions

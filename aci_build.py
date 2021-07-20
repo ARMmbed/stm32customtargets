@@ -38,6 +38,7 @@ Arguments.add_argument("--target", "-m", help="Specific target. Default is patch
 Arguments.add_argument("--full", "-f", action="store_true", help="Build all targets. Default is patched targets compared to master branch")
 Arguments.add_argument("--baremetal", "-b", action="store_true", help="Build with baremetal profile")
 Arguments.add_argument("--cli2", "-c", action="store_true", help="Build with cmake (CLI2). Default is CLI1")
+Arguments.add_argument("--pin", "-p", action="store_true", help="Check pin name standart")
 Arguments.add_argument("--exit", "-e", action="store_true", help="Stop after 1st build failure")
 args = Arguments.parse_args()
 
@@ -73,6 +74,7 @@ if args.full:
 
 if BuildType == "PATCH":
     PatchedTargets = []
+    PinNamesList = []
     print("git", "diff", "--name-only", "origin/master")
     try:
         CONSOLE = subprocess.check_output(["git", "diff", "--name-only", "origin/master"], stderr=subprocess.STDOUT).decode('ascii')
@@ -80,11 +82,15 @@ if BuildType == "PATCH":
 
         for EachPatchedFile in CONSOLE:
             print("patched file: %s" % EachPatchedFile)
-            TARGET_match = re.match(r"TARGET_STM32.*/TARGET_(.*)/", EachPatchedFile)
-            if TARGET_match:
-                if TARGET_match.group(1) not in PatchedTargets:
-                    print("  => %s" % TARGET_match.group(1))
-                    PatchedTargets.append(TARGET_match.group(1))
+            if args.pin:
+                if "PinNames.h" in EachPatchedFile:
+                    PinNamesList.append(EachPatchedFile)
+            else:
+                TARGET_match = re.match(r"TARGET_STM32.*/TARGET_(.*)/", EachPatchedFile)
+                if TARGET_match:
+                    if TARGET_match.group(1) not in PatchedTargets:
+                        print("  => %s" % TARGET_match.group(1))
+                        PatchedTargets.append(TARGET_match.group(1))
 
     except:
         pass
@@ -194,23 +200,72 @@ mbed_set_post_build(${APP_TARGET})
     configuration_file.close()
 
 
-## START BUILD
-
 BuildFailed = []
 BuildOK = []
 
-for EachTarget in custom_targets_info:
-    cmdline = "%s compile -m %s -t %s" % (mbed_tool, EachTarget, requested_toolchain)
-    print ("\n***************************************")
-    print ("Executing: " + cmdline)
-    sys.stdout.flush()
+if args.pin:
+    ## START PIN NAME VALIDATION
 
-    if os.system(cmdline) != 0:
-        BuildFailed.append(cmdline)
-        if args.exit:
-            sys.exit(2)
+    if "python" in sys.path:
+        python_tool = "python"
     else:
-        BuildOK.append(cmdline)
+        python_tool = "python3"
+
+    if BuildType == "PATCH":
+        for EachPinName in PinNamesList:
+            cmdline = "%s aci_pinvalidate.py -p %s -vvv" % (python_tool, EachPinName)
+            print("\n***************************************")
+            print("Executing: " + cmdline)
+            sys.stdout.flush()
+
+            if os.system(cmdline) != 0:
+                BuildFailed.append(cmdline)
+                if args.exit:
+                    sys.exit(2)
+            else:
+                BuildOK.append(cmdline)
+
+    elif BuildType == "FULL":
+        cmdline = "%s aci_pinvalidate.py -a -vvv" % python_tool
+        print("\n***************************************")
+        print("Executing: " + cmdline)
+        sys.stdout.flush()
+
+        if os.system(cmdline) != 0:
+            BuildFailed.append(cmdline)
+            if args.exit:
+                sys.exit(2)
+        else:
+            BuildOK.append(cmdline)
+
+    else:
+        cmdline = "%s aci_pinvalidate.py -t %s -vvv" % (python_tool, args.target)
+        print("\n***************************************")
+        print("Executing: " + cmdline)
+        sys.stdout.flush()
+
+        if os.system(cmdline) != 0:
+            BuildFailed.append(cmdline)
+            if args.exit:
+                sys.exit(2)
+        else:
+            BuildOK.append(cmdline)
+else:
+    ## START BUILD
+
+    for EachTarget in custom_targets_info:
+        cmdline = "%s compile -m %s -t %s" % (mbed_tool, EachTarget, requested_toolchain)
+        print ("\n***************************************")
+        print ("Executing: " + cmdline)
+        sys.stdout.flush()
+
+        if os.system(cmdline) != 0:
+            BuildFailed.append(cmdline)
+            if args.exit:
+                sys.exit(2)
+        else:
+            BuildOK.append(cmdline)
+
 
 if BuildOK != []:
     print()
