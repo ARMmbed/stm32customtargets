@@ -78,6 +78,38 @@ MCU: STM32WLE5JC
 
 https://www.seeedstudio.com/LoRa-E5-Wireless-Module-p-4745.html
 
+LoRa-E5 use only RFO_HP for TX power, so for all boards using this module you need to add this to your `mbed_app.json` on section `target_overrides`
+
+```json
+
+   "LORA_E5": {
+      "stm32wl-lora-driver.rf_switch_config": 2
+   }
+```
+
+## Seeed Studio LoRa E5 Mini
+
+Use LoRa E5 modulen basic board with USB/Serial and headers
+
+https://www.seeedstudio.com/LoRa-E5-mini-STM32WLE5JC-p-4869.html
+
+
+## Seeed Studio LoRa E5 Dev Board
+
+Use LoRa E5 module 
+
+https://www.seeedstudio.com/LoRa-E5-Dev-Kit-p-4868.html
+
+- RS485 Modbus
+- all LoRa-E5 pins exposed
+- temperature sensor
+- buttons
+- Led 
+- GPIO to enable 3.3V and 5V for sensors
+- some grove sonnectors (I2C, Serial, ..)
+- Arduino form factor to plug shield
+
+
 ## Charles's LoRa-E5 breakout board
 
 <img src="https://github.com/hallard/LoRa-E5-Breakout/blob/main/pictures/LoRa-E5-Breakout-top.png">
@@ -91,16 +123,8 @@ Use LoRa E5 module and added
 - Green Led on PB10 (LED1) reversed (1=OFF, 0=ON)
 - Red Led on PB5 (LED2) reversed (1=OFF, 0=ON)
 
-LoRa-E5 use only RFO_HP so you need to add this to your `mbed_app.json` on section `target_overrides`
+for debug LEDs of breakout so you need to add this to your `mbed_app.json` on section `target_overrides` and don't forget also the `rf_switch_config` seen above
 
-```json
-
-   "LORA_E5": {
-      "stm32wl-lora-driver.rf_switch_config": 2
-   }
-```
-
-or for debug LEDs of breakout  
 
 ```json
    "LORA_E5_BREAKOUT": {
@@ -118,6 +142,16 @@ MCU: STM32WLE5CC
 
 https://docs.rakwireless.com/Product-Categories/WisDuo/RAK3172-Module/Datasheet/#description
 
+RAK3172 use only RFO_HP for TX power and no TXCO so for all boards using this module you need to add this to your `mbed_app.json` on section `target_overrides`
+
+```json
+
+   "RAK3172": {
+      "stm32wl-lora-driver.rf_switch_config": 2,
+      "stm32wl-lora-driver.crystal_select" : 0
+   }
+```
+
 ## Charles's RAK3172 breakout board
 
 <img src="https://github.com/hallard/RAK3172-Breakout/blob/main/pictures/RAK3172-Breakout-top.png">
@@ -132,18 +166,7 @@ Use RAK3172 and added
 - Red Led on PA9 (LED2) reversed (1=OFF, 0=ON)
 - SMD CR2450 battery holder
 
-RAK3172 use only RFO_HP, and no TXCO so you need to add this to your `mbed_app.json` on section `target_overrides`
-
-
-```json
-
-   "RAK3172": {
-      "stm32wl-lora-driver.rf_switch_config": 2,
-      "stm32wl-lora-driver.crystal_select" : 0
-   }
-```
-
-or for debug LEDs of breakout  
+For debug LEDs of breakout so you need to add this to your `mbed_app.json` on section `target_overrides` and don't forget also the `rf_switch_config` and `crystal_select` seen above
 
 ```json
    "RAK3172_BREAKOUT": {
