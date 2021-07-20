@@ -421,10 +421,6 @@ typedef enum {
 #define SERVO_SEL2 PE_12
 #define SERVO_POWER_ON PE_15
 
-/*
-asasdasd
-*/
-
 // Battery and BOOT pins
 #define BAT_MEAS PA_5           //  VIN SUPPLY MEASURMENT
 

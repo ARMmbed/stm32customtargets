@@ -9,6 +9,8 @@ Table of Contents
 * [Usage](#usage)
 * [STM32F1](#stm32f1)
    * [BLUEPILL](#bluepill)
+* [STM32F4](#stm32f4)
+   * [CORE2](#core2)
 * [STM32WL](#stm32wl)
    * [SeeedStudio LoRa E5](#seeed-studio-lora-e5)
    * [SeeedStudio LoRa E5 Mini](#seeed-studio-lora-e5-mini)
@@ -80,6 +82,19 @@ TARGET: BLUEPILL_F103C8
 source: https://os.mbed.com/users/hudakz/code/mbed-os-bluepill/
 
  (https://os.mbed.com/users/hudakz/code/STM32F103C8T6_Hello/)
+
+
+# STM32F4
+
+## CORE2 
+
+MCU: STM32F407ZG
+
+TARGET: CORE2
+
+https://github.com/byq77/core2-mbed6-template
+
+<img src="https://husarion.com/docs/assets/img/core2-hardware/core2_top_small.jpg" width="500"/>
 
 
 # STM32L0
