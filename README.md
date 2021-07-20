@@ -91,6 +91,27 @@ Use LoRa E5 module and added
 - Green Led on PB10 (LED1) reversed (1=OFF, 0=ON)
 - Red Led on PB5 (LED2) reversed (1=OFF, 0=ON)
 
+LoRa-E5 use only RFO_HP so you need to add this to your `mbed_app.json` on section `target_overrides`
+
+```json
+
+   "LORA_E5": {
+      "stm32wl-lora-driver.rf_switch_config": 2
+   }
+```
+
+or for debug LEDs of breakout  
+
+```json
+   "LORA_E5_BREAKOUT": {
+      "stm32wl-lora-driver.rf_switch_config": 2,
+      "stm32wl-lora-driver.debug_tx": "PB_5",
+      "stm32wl-lora-driver.debug_rx": "PB_10",
+      "stm32wl-lora-driver.debug_invert": 1
+   }
+```
+
+
 ## RAK Wireless RAK3172
 
 MCU: STM32WLE5CC
@@ -99,15 +120,40 @@ https://docs.rakwireless.com/Product-Categories/WisDuo/RAK3172-Module/Datasheet/
 
 ## Charles's RAK3172 breakout board
 
-TBD
+<img src="https://github.com/hallard/RAK3172-Breakout/blob/main/pictures/RAK3172-Breakout-top.png">
+
+https://github.com/hallard/RAK3172-Breakout
 
 Use RAK3172 and added
 
 - FTDI 6 pins connector (use 3.3V FTDI One, not 5V)
 - Exposed JTAG pins needed to flash module (PA13-SWDIO / PA14-SWCLK / RESET)
-- Red Led on PA9 (LED1) reversed (1=OFF, 0=ON)
-- Green Led on PA10 (LED2) reversed (1=OFF, 0=ON)
+- Green Led on PA10 (LED1) reversed (1=OFF, 0=ON)
+- Red Led on PA9 (LED2) reversed (1=OFF, 0=ON)
 - SMD CR2450 battery holder
+
+RAK3172 use only RFO_HP, and no TXCO so you need to add this to your `mbed_app.json` on section `target_overrides`
+
+
+```json
+
+   "RAK3172": {
+      "stm32wl-lora-driver.rf_switch_config": 2,
+      "stm32wl-lora-driver.crystal_select" : 0
+   }
+```
+
+or for debug LEDs of breakout  
+
+```json
+   "RAK3172_BREAKOUT": {
+      "stm32wl-lora-driver.rf_switch_config": 2,
+      "stm32wl-lora-driver.crystal_select" : 0,
+      "stm32wl-lora-driver.debug_tx": "PA_10",
+      "stm32wl-lora-driver.debug_rx": "PA_9",
+      "stm32wl-lora-driver.debug_invert": 1
+   }
+```
 
 
 # License and contributions
