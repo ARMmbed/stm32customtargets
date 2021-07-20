@@ -107,7 +107,7 @@
             "lse_available": 0,
             "clock_source": "USE_PLL_HSE_XTAL"
         },
-        "device_has_add": ["ANALOGOUT", "TRNG", "CAN"],
+        "device_has_add": ["TRNG", "CAN"],
         "device_has_remove": ["LPTICKER"],
         "device_name": "STM32F407ZG"
     }

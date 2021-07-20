@@ -252,70 +252,9 @@ typedef enum {
     ADC_VREF = 0xF1,
     ADC_VBAT = 0xF2,
 
-    // Generic signals namings
-    LED1        = PE_2, 
-    LED2        = PE_3, 
-    LED3        = PE_4, 
-
-    // Standardized button names
-    BUTTON1 = PG_12,
-    BUTTON2 = PG_13,
-
-    // I2C & SPI
-    I2C_SCL     = PB_8, /* I2C1 */
-    I2C_SDA     = PB_9,
-    SPI_MOSI    = PA_7,
-    SPI_MISO    = PA_6,
-    SPI_SCK     = PA_5,
-    SPI_CS      = PB_6,
-    PWM_OUT     = PB_3,
-
     /**** USB pins ****/
     USB_OTG_FS_DM = PA_11,
     USB_OTG_FS_DP = PA_12,
-    USB_OTG_FS_ID = PA_10,
-    USB_OTG_FS_SOF = PA_8,
-    USB_OTG_FS_VBUS = PA_9,
-    USB_OTG_HS_DM = PB_14,
-    USB_OTG_HS_DP = PB_15,
-    USB_OTG_HS_ID = PB_12,
-    USB_OTG_HS_SOF = PA_4,
-    USB_OTG_HS_ULPI_CK = PA_5,
-    USB_OTG_HS_ULPI_D0 = PA_3,
-    USB_OTG_HS_ULPI_D1 = PB_0,
-    USB_OTG_HS_ULPI_D2 = PB_1,
-    USB_OTG_HS_ULPI_D3 = PB_10,
-    USB_OTG_HS_ULPI_D4 = PB_11,
-    USB_OTG_HS_ULPI_D5 = PB_12,
-    USB_OTG_HS_ULPI_D6 = PB_13,
-    USB_OTG_HS_ULPI_D7 = PB_5,
-    USB_OTG_HS_ULPI_DIR = PC_2,
-    USB_OTG_HS_ULPI_NXT = PC_3,
-    USB_OTG_HS_ULPI_STP = PC_0,
-    USB_OTG_HS_VBUS = PB_13,
-
-    /**** ETHERNET pins ****/
-    ETH_COL = PA_3,
-    ETH_CRS = PA_0,
-    ETH_CRS_DV = PA_7,
-    ETH_MDC = PC_1,
-    ETH_MDIO = PA_2,
-    ETH_PPS_OUT = PB_5,
-    ETH_REF_CLK = PA_1,
-    ETH_RXD0 = PC_4,
-    ETH_RXD1 = PC_5,
-    ETH_RXD2 = PB_0,
-    ETH_RXD3 = PB_1,
-    ETH_RX_CLK = PA_1,
-    ETH_RX_DV = PA_7,
-    ETH_RX_ER = PB_10,
-    ETH_TXD0 = PB_12,
-    ETH_TXD1 = PB_13,
-    ETH_TXD2 = PC_2,
-    ETH_TXD3 = PE_2,
-    ETH_TXD3_ALT0 = PB_8,
-    ETH_TX_CLK = PC_3,
-    ETH_TX_EN = PB_11,
 
     /**** OSCILLATOR pins ****/
     RCC_OSC32_IN = PC_14,
@@ -326,196 +265,215 @@ typedef enum {
     /**** DEBUG pins ****/
     SYS_JTCK_SWCLK = PA_14,
     SYS_JTDI = PA_15,
-    SYS_JTDO_SWO = PB_3,
     SYS_JTMS_SWDIO = PA_13,
-    SYS_JTRST = PB_4,
-    SYS_TRACECLK = PE_2,
-    SYS_TRACED0 = PE_3,
-    SYS_TRACED1 = PE_4,
-    SYS_TRACED2 = PE_5,
-    SYS_TRACED3 = PE_6,
-    SYS_WKUP = PA_0,
-
-    /**** SENSORS PINS ****/
-    SENS1_PIN1 = PA_2,
-    SENS1_PIN1_ALT0 = PA_2_ALT0,
-    SENS1_PIN1_ALT1 = PA_2_ALT1,
-    SENS1_PIN2 = PG_3,
-    SENS1_PIN3 = PB_8,
-    SENS1_PIN3_ALT0 = PB_8_ALT0,
-    SENS1_PIN3_ALT1 = PB_8_ALT1,
-    SENS1_PIN4 = PB_9,
-    SENS1_PIN4_ALT0 = PB_9_ALT0,
-    SENS1_PIN4_ALT1 = PB_9_ALT1,
-
-    SENS2_PIN1 = PA_6,
-    SENS2_PIN1_ALT0 = PA_6_ALT0,
-    SENS2_PIN2 = PC_8,
-    SENS2_PIN2_ALT0 = PC_8_ALT0,
-    SENS2_PIN3 = PA_8,
-    SENS2_PIN4 = PC_9,
-    SENS2_PIN4_ALT0 = PC_9_ALT0,
-    
-    SENS3_PIN1 = PC_4,
-    SENS3_PIN1_ALT0 = PC_4_ALT0,
-    SENS3_PIN2 = PG_2,
-    SENS3_PIN3 = PC_12, // UART_5_TX
-    SENS3_PIN3_UART_TX = PC_12, // UART_5_TX
-    SENS3_PIN4 = PD_2,  // UART_5_RX
-    SENS3_PIN4_UART_RX = PD_2,  // UART_5_RX
-
-    SENS4_PIN1 = PC_5,
-    SENS4_PIN1_ALT0 = PC_5_ALT0,
-    SENS4_PIN2 = PD_15,
-    SENS4_PIN3 = PG_14, // USART_6_TX 
-    SENS4_PIN3_UART_TX = PG_14, // USART_6_TX 
-    SENS4_PIN4 = PG_9,  // USART_6_RX
-    SENS4_PIN4_UART_RX = PG_9,  // USART_6_RX
-    
-    SENS5_PIN1 = PB_0,
-    SENS5_PIN1_ALT0 = PB_0_ALT0,
-    SENS5_PIN1_ALT1 = PB_0_ALT1,
-    SENS5_PIN2 = PD_14,
-    SENS5_PIN3 = PD_13,
-    SENS5_PIN4 = PD_12,
-    
-    SENS6_PIN1 = PB_1,
-    SENS6_PIN2 = PD_8,
-    SENS6_PIN3 = PD_10,
-    SENS6_PIN4 = PD_9,
-
-    SENS_POWER_ON = PG_4, // SENSOR 5V TOGGLE
-
-    /**** EXT PORT PINS ****/
-    EXT_PIN1 = PF_3,
-    EXT_PIN2 = PF_10,
-    EXT_PIN3 = PF_4,
-    EXT_PIN4 = PF_5,
-    EXT_PIN5 = PC_0,
-    EXT_PIN5_ALT0 = PC_0_ALT0,
-    EXT_PIN5_ALT1 = PC_0_ALT1,
-    EXT_PIN6 = PD_6, // RX
-    EXT_PIN7 = PD_5, // TX
-    EXT_PIN8 = PB_13, // SCK SPI
-    EXT_PIN9 = PC_2, // MISO SPI
-    EXT_PIN9_ALT0 = PC_2_ALT0,
-    EXT_PIN9_ALT1 = PC_2_ALT1,
-    EXT_PIN10 = PC_3, // MOSI SPI
-    EXT_PIN10_ALT0 = PC_3_ALT0,
-    EXT_PIN10_ATL1 = PC_3_ALT1,
-    EXT_PIN11 = PF_0, // SDA I2C
-    EXT_PIN12 = PF_1, // SCL I2C
-
-    /**** RPI PORT PINS ****/
-    RPI_SERIAL_TX = PA_9,
-    RPI_SERIAL_RX = PA_10,
-    RPI_CONSOLE = PG_5,
-    RPI_STATUS = PG_6,
-    RPI_BTN = PG_7,
-
-    /**** CAN ****/
-    CAN_TX = PD_1,
-    CAN_RX = PD_0,
-    CAN_EN = PA_15,
-    CAN_EN_ALT0 = PA_15_ALT0,
-
-    /**** USB-B/USB-micro FTDI PINS ****/
-    FT_SERIAL_TX = PB_10,
-    FT_SERIAL_RX = PB_11,
-    FT_CBUS3 = PD_11,
-
-    /**** HOST USB PINS ****/
-    USB_DM = PA_11,
-    USB_DP = PA_12,
-    USB_CHARGE = PE_8,
-    USB_CHARGE_IND = PE_7,
 
     // STDIO for console print
 #ifdef MBED_CONF_TARGET_STDIO_UART_TX
     CONSOLE_TX = MBED_CONF_TARGET_STDIO_UART_TX,
 #else
-    CONSOLE_TX = FT_SERIAL_TX,
+    CONSOLE_TX = PB_10,
 #endif
 #ifdef MBED_CONF_TARGET_STDIO_UART_RX
     CONSOLE_RX = MBED_CONF_TARGET_STDIO_UART_RX,
 #else
-    CONSOLE_RX = FT_SERIAL_RX,
+    CONSOLE_RX = PB_11,
 #endif
 
-    SERIAL_TX   = CONSOLE_TX, /* USART 1*/
-    SERIAL_RX   = CONSOLE_RX,
-
-    /**** SD READER PINS****/
-    SD_MOSI = PB_5_ALT0,
-    SD_MISO = PC_11,
-    SD_CLK = PC_10,
-    SD_CS = PB_3_ALT0,
-    SD_IN = PG_15,
-    SD_POWER_ON = PD_7,
-
-    /**** SERVO PINS ****/
-    SERVO1_PWM = PE_9,
-    SERVO2_PWM = PE_11,
-    SERVO3_PWM = PE_13,
-    SERVO4_PWM = PE_14,
-    SERVO5_PWM = PB_15,
-    SERVO5_PWM_ALT0 = PB_15_ALT0,
-    SERVO5_PWM_ALT1 = PB_15_ALT1,
-    SERVO6_PWM = PB_14,
-    SERVO6_PWM_ALT0 = PB_14_ALT0,
-    SERVO6_PWM_ALT1 = PB_14_ALT1,
-    SERVO_ADC = PA_3,
-    SERVO_ADC_ALT0 = PA_3_ALT0,
-    SERVO_ADC_ALT1 = PA_3_ALT1,
-    SERVO_SEL1 = PE_10,
-    SERVO_SEL2 = PE_12,
-    SERVO_POWER_ON = PE_15,
-
-    /**** BAT AND BOOT PINS****/
-    BAT_MEAS = PA_5,            //  VIN SUPPLY MEASURMENT
-    BAT_MEAS_ALT0 = PA_5_ALT0,  // 	UPPER_RESISTOR: 56kOhm
-	                            //  LOWER_RESISTOR: 10kOhm
-                                //  Volts = ((2 * ADC_READ))/2520 * (UPPER_RESISTOR + LOWER_RESISTOR) / LOWER_RESISTOR;
-    BOOT1 = PB_2,
-
-    /**** MOTOR PINS ****/
-    MOT12_SLEEP = PC_13,
-    MOT12_FAULT = PE_0,
-    MOT1_PWM = PF_6,
-    MOT1A_IN = PG_10,
-    MOT1B_IN = PG_11,
-    MOT1A_ENC = PA_0,
-    MOT1A_ENC_ALT0 = PA_0_ALT0,
-    MOT1A_ENC_ALT1 = PA_0_ALT1,
-    MOT1B_ENC = PA_1,
-    MOT2_PWM = PF_7,
-    MOT2A_IN = PD_3,
-    MOT2B_IN = PD_4,
-    MOT2A_ENC = PC_6,
-    MOT2A_ENC_ALT0 = PC_6_ALT0,
-    MOT2B_ENC = PC_7,
-    MOT2B_ENC_ALT0 = PC_7_ALT0,
-    MOT34_SLEEP = PC_14,
-    MOT34_FAULT = PE_1,
-    MOT3_PWM = PF_8,
-    MOT3A_IN = PC_15,
-    MOT3B_IN = PF_2,
-    MOT3A_ENC = PB_4,
-    MOT3A_ENC_ALT0 = PB_4_ALT0,
-    MOT3A_ENC_ALT1 = PB_4_ALT1,
-    MOT3B_ENC = PA_7,
-    MOT3B_ENC_ALT0 = PA_7_ALT0,
-    MOT3B_ENC_ALT1 = PA_7_ALT1,
-    MOT3B_ENC_ALT2 = PA_7_ALT2,
-    MOT4_PWM = PF_9,
-    MOT4A_IN = PE_5,
-    MOT4B_IN = PE_6, 
-    MOT4A_ENC = PB_6,
-    MOT4B_ENC = PB_7,   
-    
     // Not connected
     NC = (int)0xFFFFFFFF
 } PinName;
+
+// Standardized LED and button names
+#define LED1        PE_2  // [L1]
+#define LED2        PE_3  // [L2]
+#define LED3        PE_4  // [L3]
+#define BUTTON1     PG_12 // [hBtn1]
+#define BUTTON2     PG_13 // [hBtn2]
+
+// hSensor1 port pins
+#define SENS1_PIN1 PA_2
+#define SENS1_PIN1_ALT0 PA_2_ALT0
+#define SENS1_PIN1_ALT1 PA_2_ALT1
+#define SENS1_PIN2 PG_3
+#define SENS1_PIN3 PB_8
+#define SENS1_PIN3_ALT0 PB_8_ALT0
+#define SENS1_PIN3_ALT1 PB_8_ALT1
+#define SENS1_PIN4 PB_9
+#define SENS1_PIN4_ALT0 PB_9_ALT0
+#define SENS1_PIN4_ALT1 PB_9_ALT1
+
+// hSensor2 port pins
+#define SENS2_PIN1 PA_6
+#define SENS2_PIN1_ALT0 PA_6_ALT0
+#define SENS2_PIN2 PC_8
+#define SENS2_PIN2_ALT0 PC_8_ALT0
+#define SENS2_PIN3 PA_8
+#define SENS2_PIN4 PC_9
+#define SENS2_PIN4_ALT0 PC_9_ALT0
+
+// hSensor3 port pins
+#define SENS3_PIN1 PC_4
+#define SENS3_PIN1_ALT0 PC_4_ALT0
+#define SENS3_PIN2 PG_2
+#define SENS3_PIN3 PC_12         // UART_5_TX
+#define SENS3_PIN3_UART_TX PC_12 // UART_5_TX
+#define SENS3_PIN4 PD_2          // UART_5_RX
+#define SENS3_PIN4_UART_RX PD_2  // UART_5_RX
+
+// hSensor4 port pins
+#define SENS4_PIN1 PC_5
+#define SENS4_PIN1_ALT0 PC_5_ALT0
+#define SENS4_PIN2 PD_15
+#define SENS4_PIN3 PG_14         // USART_6_TX
+#define SENS4_PIN3_UART_TX PG_14 // USART_6_TX
+#define SENS4_PIN4 PG_9          // USART_6_RX
+#define SENS4_PIN4_UART_RX PG_9  // USART_6_RX
+
+// hSensor5 port pins
+#define SENS5_PIN1 PB_0
+#define SENS5_PIN1_ALT0 PB_0_ALT0
+#define SENS5_PIN1_ALT1 PB_0_ALT1
+#define SENS5_PIN2 PD_14
+#define SENS5_PIN3 PD_13
+#define SENS5_PIN4 PD_12
+
+// hSensor6 port pins
+#define SENS6_PIN1 PB_1
+#define SENS6_PIN2 PD_8
+#define SENS6_PIN3 PD_10
+#define SENS6_PIN4 PD_9
+
+#define SENS_POWER_ON PG_4 // SENSOR 5V REGULATOR TOGGLE
+
+// hExt port pins
+#define EXT_PIN1 PF_3
+#define EXT_PIN2 PF_10
+#define EXT_PIN3 PF_4
+#define EXT_PIN4 PF_5
+#define EXT_PIN5 PC_0
+#define EXT_PIN5_ALT0 PC_0_ALT0
+#define EXT_PIN5_ALT1 PC_0_ALT1
+#define EXT_PIN6 PD_6  // USART_2_RX
+#define EXT_PIN7 PD_5  // USART_2_TX
+#define EXT_PIN8 PB_13 // SCK SPI
+#define EXT_PIN9 PC_2  // MISO SPI
+#define EXT_PIN9_ALT0 PC_2_ALT0
+#define EXT_PIN9_ALT1 PC_2_ALT1
+#define EXT_PIN10 PC_3 // MOSI SPI
+#define EXT_PIN10_ALT0 PC_3_ALT0
+#define EXT_PIN10_ATL1 PC_3_ALT1
+#define EXT_PIN11 PF_0 // SDA I2C
+#define EXT_PIN12 PF_1 // SCL I2C
+
+// Legacy SPI aliases
+#define I2C_SCL SENS1_PIN3
+#define I2C_SDA SENS1_PIN4
+#define SPI_MOSI EXT_PIN10
+#define SPI_MISO EXT_PIN9
+#define SPI_SCK  EXT_PIN8
+
+// SBC port pins
+#define SBC_SERIAL_TX PA_9
+#define SBC_SERIAL_RX PA_10
+#define SBC_CONSOLE PG_5
+#define SBC_STATUS PG_6
+#define SBC_BTN PG_7
+
+// CAN pins
+#define CAN_TX PD_1
+#define CAN_RX PD_0
+#define CAN_EN PA_15
+
+// USB-B/USB-micro FTDI pins
+#define FT_SERIAL_TX PB_10
+#define FT_SERIAL_RX PB_11
+#define FT_CBUS3 PD_11
+
+// HOST USB pins
+#define USB_DM PA_11
+#define USB_DP PA_12
+#define USB_CHARGE PE_8
+#define USB_CHARGE_IND PE_7
+
+// SD reader pins
+#define SD_MOSI PB_5_ALT0
+#define SD_MISO PC_11
+#define SD_CLK PC_10
+#define SD_CS PB_3_ALT0
+#define SD_IN PG_15
+#define SD_POWER_ON PD_7
+
+// SERVO pins
+#define SERVO1_PWM PE_9
+#define SERVO2_PWM PE_11
+#define SERVO3_PWM PE_13
+#define SERVO4_PWM PE_14
+#define SERVO5_PWM PB_15
+#define SERVO5_PWM_ALT0 PB_15_ALT0
+#define SERVO5_PWM_ALT1 PB_15_ALT1
+#define SERVO6_PWM PB_14
+#define SERVO6_PWM_ALT0 PB_14_ALT0
+#define SERVO6_PWM_ALT1 PB_14_ALT1
+#define SERVO_ADC PA_3
+#define SERVO_ADC_ALT0 PA_3_ALT0
+#define SERVO_ADC_ALT1 PA_3_ALT1
+#define SERVO_SEL1 PE_10
+#define SERVO_SEL2 PE_12
+#define SERVO_POWER_ON PE_15
+
+/*
+asasdasd
+*/
+
+// Battery and BOOT pins
+#define BAT_MEAS PA_5           //  VIN SUPPLY MEASURMENT
+
+#define BAT_MEAS_ALT0 PA_5_ALT0 // UPPER_RESISTOR: 56kOhm
+                                // LOWER_RESISTOR: 10kOhm
+                                // Volts = ((2 * ADC_READ))/2520 * (UPPER_RESISTOR + LOWER_RESISTOR) / LOWER_RESISTOR; 
+#define BOOT1 PB_2
+
+// hMot1 port pins
+#define MOT1_PWM PF_6
+#define MOT1A_IN PG_10
+#define MOT1B_IN PG_11
+#define MOT1A_ENC PA_0
+#define MOT1A_ENC_ALT0 PA_0_ALT0
+#define MOT1A_ENC_ALT1 PA_0_ALT1
+#define MOT1B_ENC PA_1
+
+// hMot2 port pins
+#define MOT2_PWM PF_7
+#define MOT2A_IN PD_3
+#define MOT2B_IN PD_4
+#define MOT2A_ENC PC_6
+#define MOT2A_ENC_ALT0 PC_6_ALT0
+#define MOT2B_ENC PC_7
+#define MOT2B_ENC_ALT0 PC_7_ALT0
+
+// hMot3 port pins
+#define MOT3_PWM PF_8
+#define MOT3A_IN PC_15
+#define MOT3B_IN PF_2
+#define MOT3A_ENC PB_4
+#define MOT3A_ENC_ALT0 PB_4_ALT0
+#define MOT3A_ENC_ALT1 PB_4_ALT1
+#define MOT3B_ENC PA_7
+#define MOT3B_ENC_ALT0 PA_7_ALT0
+#define MOT3B_ENC_ALT1 PA_7_ALT1
+#define MOT3B_ENC_ALT2 PA_7_ALT2
+
+// hMot4 port pins
+#define MOT4_PWM PF_9
+#define MOT4A_IN PE_5
+#define MOT4B_IN PE_6
+#define MOT4A_ENC PB_6
+#define MOT4B_ENC PB_7
+
+#define MOT12_SLEEP PC_13
+#define MOT12_FAULT PE_0
+#define MOT34_SLEEP PC_14
+#define MOT34_FAULT PE_1
 
 #ifdef __cplusplus
 }
