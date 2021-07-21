@@ -6,7 +6,7 @@ add_library(mbed-rak3172 INTERFACE)
 target_sources(mbed-rak3172
     INTERFACE
         PeripheralPins.c
-        RAK7231_radio_driver.cpp
+        RAK3172_radio_driver.cpp
 )
 
 target_include_directories(mbed-rak3172
