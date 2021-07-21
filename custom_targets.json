@@ -49,7 +49,29 @@
         "macros_add": [
             "LED1=PB_5", 
             "LED2=PB_10",
-            "BUTTON1=PA_0"
+            "BUTTON1=PB_13"
+        ]
+    },
+    "LORA_E5_MINI": {
+        "inherits": [
+            "LORA_E5"
+        ],
+        "macros_add": [
+            "LED1=PB_5", 
+            "BUTTON1=PB_13"
+        ]
+    },
+    "LORA_E5_DEV_BOARD": {
+        "inherits": [
+            "LORA_E5"
+        ],
+        "macros_add": [
+            "LED1=PB_5", 
+            "EN_3V3=PA_9", 
+            "EN_5V=PB_10", 
+            "BUTTON1=PB_13",
+            "BUTTON2=PA_0",
+            "RS485_REDE=PB_4"
         ]
     },
     "RAK3172": {
