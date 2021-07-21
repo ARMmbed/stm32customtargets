@@ -137,6 +137,10 @@ https://www.st.com/en/evaluation-tools/steval-stwinkt1.html
 
 ## Seeed Studio LoRa E5
 
+<img src="https://files.seeedstudio.com/products/317990687/image/lora-e5_Preview-07.png">
+https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/1/1/113990939_preview-07.png
+
+
 MCU: STM32WLE5JC
 
 TARGET: LORA_E5
@@ -162,6 +166,8 @@ https://www.seeedstudio.com/LoRa-E5-mini-STM32WLE5JC-p-4869.html
 
 
 ## Seeed Studio LoRa E5 Dev Board
+
+<img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/202003261_preview-07.png">
 
 TARGET: LORA_E5_DEV_BOARD
 
@@ -209,11 +215,11 @@ for debug LEDs of breakout so you need to add this to your `mbed_app.json` on se
 
 ## RAK Wireless RAK3172
 
+<img src="https://docs.rakwireless.com/assets/images/wisduo/rak3172-module/overview/RAK3172_Module_buy.png">
+
 MCU: STM32WLE5CC
 
 TARGET: RAK3172
-
-https://docs.rakwireless.com/Product-Categories/WisDuo/RAK3172-Module/Datasheet/#description
 
 RAK3172 use only RFO_HP for TX power and no TXCO so for all boards using this module you need to add this to your `mbed_app.json` on section `target_overrides`
 
