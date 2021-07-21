@@ -124,7 +124,7 @@ https://wireless.murata.com/type-abz-078.html
 
 MCU: STM32L4R9ZI
 
-<img src="https://www.st.com/bin/ecommerce/api/image.PF268005.en.feature-description-include-personalized-no-cpn-large.jpg" width="50%" height="50%">
+<img src="https://www.st.com/bin/ecommerce/api/image.PF268005.en.feature-description-include-personalized-no-cpn-large.jpg">
 
 TARGET: STWIN
 
@@ -137,7 +137,7 @@ https://www.st.com/en/evaluation-tools/steval-stwinkt1.html
 
 ## Seeed Studio LoRa E5
 
-<img src="https://files.seeedstudio.com/products/317990687/image/lora-e5_Preview-07.png">
+<img src="https://files.seeedstudio.com/products/317990687/image/lora-e5_Preview-07.png" width="50%" height="50%">
 
 MCU: STM32WLE5JC
 
@@ -213,7 +213,7 @@ for debug LEDs of breakout so you need to add this to your `mbed_app.json` on se
 
 ## RAK Wireless RAK3172
 
-<img src="https://docs.rakwireless.com/assets/images/wisduo/rak3172-module/overview/RAK3172_Module_buy.png"  width="50%" height="50%">
+<img src="https://docs.rakwireless.com/assets/images/wisduo/rak3172-module/overview/RAK3172_Module_buy.png" width="50%" height="50%">
 
 MCU: STM32WLE5CC
 
