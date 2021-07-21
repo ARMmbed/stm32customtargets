@@ -150,12 +150,16 @@ LoRa-E5 use only RFO_HP for TX power, so for all boards using this module you ne
 
 ## Seeed Studio LoRa E5 Mini
 
+TARGET: LORA_E5_MINI
+
 Use LoRa E5 modulen basic board with USB/Serial and headers
 
 https://www.seeedstudio.com/LoRa-E5-mini-STM32WLE5JC-p-4869.html
 
 
 ## Seeed Studio LoRa E5 Dev Board
+
+TARGET: LORA_E5_DEV_BOARD
 
 Use LoRa E5 module 
 
