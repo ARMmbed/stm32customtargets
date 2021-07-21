@@ -138,8 +138,6 @@ https://www.st.com/en/evaluation-tools/steval-stwinkt1.html
 ## Seeed Studio LoRa E5
 
 <img src="https://files.seeedstudio.com/products/317990687/image/lora-e5_Preview-07.png">
-https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/1/1/113990939_preview-07.png
-
 
 MCU: STM32WLE5JC
 
