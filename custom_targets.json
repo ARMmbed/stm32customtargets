@@ -74,6 +74,16 @@
             "RS485_REDE=PB_4"
         ]
     },
+    "LORA_E5_TINY": {
+        "inherits": [
+            "LORA_E5"
+        ],
+        "macros_add": [
+            "LED1=PA_9", 
+            "LED2=PB_13", 
+            "BUTTON1=PB_4"
+        ]
+    },
     "RAK3172": {
         "inherits": [
             "MCU_STM32WLE5xC"

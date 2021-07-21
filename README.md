@@ -20,6 +20,7 @@ Table of Contents
    * [Seeed Studio LoRa E5 Mini](#seeed-studio-lora-e5-mini)
    * [Seeed Studio LoRa E5 Dev Board](#seeed-studio-lora-e5-dev-board)
    * [Charles's LoRa-E5 breakout board](#charless-lora-e5-breakout-board)
+   * [Charles's LoRa-E5 Tiny Cell coin](#charless-lora-e5-tiny)
    * [RAK Wireless RAK3172](#rak-wireless-rak3172)
    * [Charles's RAK3172 breakout board](#charless-rak3172-breakout-board)
 * [License](#license)
@@ -203,7 +204,7 @@ https://github.com/hallard/LoRa-E5-Breakout
 
 Use LoRa E5 module and added
 
-- FTDI 6 pins connector (use 3.3V FTDI One, not 5V)
+- FTDI 6 pins connector (:warning: **use 3.3V FTDI One, not 5V**)
 - Exposed JTAG pins needed to flash module (PA13-SWDIO / PA14-SWCLK / RESET)
 - Green Led on PB10 (LED1) reversed (1=OFF, 0=ON)
 - Red Led on PB5 (LED2) reversed (1=OFF, 0=ON)
@@ -217,6 +218,35 @@ for debug LEDs of breakout so you need to add this to your `mbed_app.json` on se
       "stm32wl-lora-driver.debug_tx": "PB_5",
       "stm32wl-lora-driver.debug_rx": "PB_10",
       "stm32wl-lora-driver.debug_invert": 1
+   }
+```
+
+## Charles's LoRa-E5 Tiny
+
+TARGET: LORA_E5_TINY
+
+<img src="https://github.com/hallard/LoRa-E5-Tiny/blob/main/pictures/LoRa-E5-Tiny-top.png">
+
+https://github.com/hallard/LoRa-E5-Tiny
+
+Use LoRa E5 module with CR2450 cell coin
+
+- FTDI SMD 6 pads edge connector (:warning: **use 3.3V FTDI One, not 5V**)
+- JTAG SMD 6 pads edge connector to flash module (PA13-SWDIO / PA14-SWCLK / PB3-SWO / RESET)
+- Green Led on PB13
+- Red Led on PA9
+- 2 Tactile Switches (user PB4 and reset)
+- Stemma QWIIC I2C connector
+- PTH CR2450 battery holder
+
+for debug LEDs of this board you need to add this to your `mbed_app.json` on section `target_overrides` and don't forget also the `rf_switch_config` seen above
+
+
+```json
+   "LORA_E5_TINY": {
+      "stm32wl-lora-driver.rf_switch_config": 2,
+      "stm32wl-lora-driver.debug_tx": "PB_13",
+      "stm32wl-lora-driver.debug_rx": "PA_9"
    }
 ```
 
@@ -249,7 +279,7 @@ https://github.com/hallard/RAK3172-Breakout
 
 Use RAK3172 and added
 
-- FTDI 6 pins connector (use 3.3V FTDI One, not 5V)
+- FTDI 6 pins connector (:warning: **use 3.3V FTDI One, not 5V**)
 - Exposed JTAG pins needed to flash module (PA13-SWDIO / PA14-SWCLK / RESET)
 - Green Led on PA10 (LED1) reversed (1=OFF, 0=ON)
 - Red Led on PA9 (LED2) reversed (1=OFF, 0=ON)
