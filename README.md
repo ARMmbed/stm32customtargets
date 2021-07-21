@@ -124,7 +124,7 @@ https://wireless.murata.com/type-abz-078.html
 
 MCU: STM32L4R9ZI
 
-<img src="https://www.st.com/bin/ecommerce/api/image.PF268005.en.feature-description-include-personalized-no-cpn-large.jpg">
+<img src="https://www.st.com/bin/ecommerce/api/image.PF268005.en.feature-description-include-personalized-no-cpn-large.jpg" width="50%" height="50%">
 
 TARGET: STWIN
 
@@ -213,7 +213,7 @@ for debug LEDs of breakout so you need to add this to your `mbed_app.json` on se
 
 ## RAK Wireless RAK3172
 
-<img src="https://docs.rakwireless.com/assets/images/wisduo/rak3172-module/overview/RAK3172_Module_buy.png">
+<img src="https://docs.rakwireless.com/assets/images/wisduo/rak3172-module/overview/RAK3172_Module_buy.png"  width="50%" height="50%">
 
 MCU: STM32WLE5CC
 
