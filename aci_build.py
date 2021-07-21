@@ -25,6 +25,7 @@ import json
 import subprocess
 import re
 
+import aci_pinvalidate
 
 custom_targets_file = open("custom_targets.json", "r")
 custom_targets_info = json.load(custom_targets_file)
@@ -33,13 +34,15 @@ custom_targets_file.close()
 print("")
 BuildType = "PATCH"
 Arguments = ArgumentParser(description="Quick script for build check")
-Arguments.add_argument("--toolchain", "-t", help="ARM | GCC_ARM | IAR . Default is GCC_ARM")
-Arguments.add_argument("--target", "-m", help="Specific target. Default is patched targets compared to master branch")
-Arguments.add_argument("--full", "-f", action="store_true", help="Build all targets. Default is patched targets compared to master branch")
+Arguments.add_argument("--toolchain", "-tc", help="ARM | GCC_ARM | IAR . Default is GCC_ARM")
+Arguments.add_argument("--targets", "-t", help="Specific target. Default is patched targets compared to master branch")
+Arguments.add_argument("--all", "-a", action="store_true", help="Build all targets. Default is patched targets compared to master branch")
 Arguments.add_argument("--baremetal", "-b", action="store_true", help="Build with baremetal profile")
 Arguments.add_argument("--cli2", "-c", action="store_true", help="Build with cmake (CLI2). Default is CLI1")
 Arguments.add_argument("--pin", "-p", action="store_true", help="Check pin name standart")
 Arguments.add_argument("--exit", "-e", action="store_true", help="Stop after 1st build failure")
+Arguments.add_argument("--paths", help="don't use it")
+Arguments.add_argument("--verbose", action="count", default=3, help="don't use it")
 args = Arguments.parse_args()
 
 if args.toolchain:
@@ -59,17 +62,17 @@ else:
 
 TargetList = [*custom_targets_info]
 
-if args.target:
+if args.targets:
     BuildType = "TARGET"
-    print ("Explicit target is requested: %s" % args.target)
+    print ("Explicit target is requested: %s" % args.targets)
     for EachTarget in TargetList:
-        if EachTarget == args.target:
+        if EachTarget == args.targets:
             pass
         else:
             print ("\t%s is skipped" % EachTarget)
             del custom_targets_info[EachTarget]
 
-if args.full:
+if args.all:
     BuildType = "FULL"
 
 if BuildType == "PATCH":
@@ -206,50 +209,38 @@ BuildOK = []
 if args.pin:
     ## START PIN NAME VALIDATION
 
-    if "python" in sys.path:
-        python_tool = "python"
-    else:
-        python_tool = "python3"
-
     if BuildType == "PATCH":
         for EachPinName in PinNamesList:
-            cmdline = "%s aci_pinvalidate.py -p %s -vvv" % (python_tool, EachPinName)
-            print("\n***************************************")
-            print("Executing: " + cmdline)
-            sys.stdout.flush()
-
-            if os.system(cmdline) != 0:
+            cmdline = "python aci_pinvalidate.py -p %s -vvv" % EachPinName
+            args.paths = EachPinName
+            try:
+                result = aci_pinvalidate.validate_pin_names(args)
+                BuildOK.append(cmdline)
+            except:
                 BuildFailed.append(cmdline)
                 if args.exit:
                     sys.exit(2)
-            else:
-                BuildOK.append(cmdline)
 
     elif BuildType == "FULL":
-        cmdline = "%s aci_pinvalidate.py -a -vvv" % python_tool
-        print("\n***************************************")
-        print("Executing: " + cmdline)
-        sys.stdout.flush()
-
-        if os.system(cmdline) != 0:
+        cmdline = "python aci_pinvalidate.py -a -vvv"
+        try:
+            result = aci_pinvalidate.validate_pin_names(args)
+            BuildOK.append(cmdline)
+        except:
             BuildFailed.append(cmdline)
             if args.exit:
                 sys.exit(2)
-        else:
-            BuildOK.append(cmdline)
 
     else:
-        cmdline = "%s aci_pinvalidate.py -t %s -vvv" % (python_tool, args.target)
-        print("\n***************************************")
-        print("Executing: " + cmdline)
-        sys.stdout.flush()
-
-        if os.system(cmdline) != 0:
+        cmdline = "python aci_pinvalidate.py -t %s -vvv" % args.targets
+        try:
+            result = aci_pinvalidate.validate_pin_names(args)
+            BuildOK.append(cmdline)
+        except:
             BuildFailed.append(cmdline)
             if args.exit:
                 sys.exit(2)
-        else:
-            BuildOK.append(cmdline)
+
 else:
     ## START BUILD
 

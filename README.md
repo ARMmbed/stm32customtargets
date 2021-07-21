@@ -16,6 +16,8 @@ Table of Contents
    * [Charles's LoRa-E5 breakout board](#charless-lora-e5-breakout-board)
    * [RAK Wrirelesss RAK3172](#rak-wireless-rak3172)
    * [Charles's RAK3172 breakout board](#charless-rak3172-breakout-board)
+* [STM32L0](#stm32l0)
+   * [MURATA LPWAN Wireless Module](#murata-lpwan-wireless-module)
 * [STM32L4](#stm32l4)
    * [STWIN SensorTile Wireless Industrial Node development kit](#stwin-sensortile-wireless-industrial-node-development-kit)
 * [STM32WL](#stm32wl)
@@ -23,8 +25,10 @@ Table of Contents
    * [Charles's LoRa-E5 breakout board](#charless-lora-e5-breakout-board)
    * [RAK Wireless RAK3172](#rak-wireless-rak3172)
    * [Charles's RAK3172 breakout board](#charless-rak3172-breakout-board)
-* [License and contributions](#license-and-contributions)
+* [License](#license)
+* [Contributions](#contributions)
    * [Automatic pull request checks](#automatic-pull-request-checks)
+   * [Manual pull request checks](#manual-pull-request-checks)
    * [Automatic weekly non regression](#automatic-weekly-non-regression)
 
 
@@ -250,9 +254,13 @@ For debug LEDs of breakout so you need to add this to your `mbed_app.json` on se
 ```
 
 
-# License and contributions
+# License
 
 The software is provided under the [Apache-2.0 license](LICENSE-apache-2.0.txt).
+
+
+# Contributions
+
 Contributions to this project are accepted under the same license.
 
 ## Automatic pull request checks
@@ -275,8 +283,35 @@ https://os.mbed.com/docs/mbed-os/latest/apis/standard-pin-names.html
 python aci_build.py --pin
 ```
 
+
+## Manual pull request checks
+
+- Each target in custom_targets.json should be described in the README.md file
+
+```
+## <Full target name>
+
+MCU: <STM32 MCU>
+
+TARGET: <Target name for build>
+
+<Link to a webpage describing this board>
+
+<all other info is optional>
+
+```
+
+- Keep Table of Contents up to date
+
+
 ## Automatic weekly non regression
 
 A full non regression is executed each week-end
+
+```
+python aci_build.py --all
+python aci_build.py --all --cli2
+python aci_build.py --all --pin
+```
 
 See in https://github.com/ARMmbed/stm32customtargets/actions
