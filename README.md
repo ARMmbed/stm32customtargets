@@ -19,7 +19,6 @@ Table of Contents
 * [STM32L4](#stm32l4)
    * [STWIN SensorTile Wireless Industrial Node development kit](#stwin-sensortile-wireless-industrial-node-development-kit)
 * [STM32WL](#stm32wl)
-* [STM32WL](#stm32wl)
    * [Seeed Studio LoRa E5](#seeed-studio-lora-e5)
    * [Charles's LoRa-E5 breakout board](#charless-lora-e5-breakout-board)
    * [RAK Wireless RAK3172](#rak-wireless-rak3172)
