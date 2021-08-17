@@ -163,6 +163,8 @@ set(APP_TARGET ci-application)
 
 include(${MBED_PATH}/tools/cmake/app.cmake)
 
+project(${APP_TARGET})
+
 add_subdirectory(TARGET_STM32F0)
 add_subdirectory(TARGET_STM32F1)
 add_subdirectory(TARGET_STM32F2)
@@ -184,8 +186,6 @@ add_subdirectory(${MBED_PATH})
 add_executable(${APP_TARGET})
 
 mbed_configure_app_target(${APP_TARGET})
-
-project(${APP_TARGET})
 
 target_sources(${APP_TARGET}
     PRIVATE
