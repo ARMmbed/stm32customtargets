@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  ******************************************************************************
  *
- * Copyright (c) 2016-2020 STMicroelectronics.
+ * Copyright (c) 2016-2021 STMicroelectronics.
  * All rights reserved.
  *
  * This software component is licensed by ST under BSD 3-Clause license,
@@ -12,8 +12,10 @@
  *
  ******************************************************************************
  *
- * Automatically generated from STM32CubeMX/db/mcu/STM32WL55JCIx.xml
+ * Automatically generated from STM32CubeMX/db/mcu/STM32WLE5CCUx.xml
  */
+
+/* MBED TARGET LIST: RAK3172, RAK3172_BREAKOUT */
 
 #ifndef MBED_PINNAMES_H
 #define MBED_PINNAMES_H
@@ -27,14 +29,9 @@ extern "C" {
 
 typedef enum {
     ALT0  = 0x100,
-    ALT1  = 0x200,
-    ALT2  = 0x300,
-    ALT3  = 0x400,
-    ALT4  = 0x500
 } ALTx;
 
 typedef enum {
-
     PA_0       = 0x00,
     PA_1       = 0x01,
     PA_1_ALT0  = PA_1  | ALT0, // same pin used for alternate HW
@@ -56,7 +53,6 @@ typedef enum {
     PA_14      = 0x0E,
     PA_15      = 0x0F,
     PB_0       = 0x10,
-    PB_1       = 0x11,
     PB_2       = 0x12,
     PB_3       = 0x13,
     PB_4       = 0x14,
@@ -65,21 +61,7 @@ typedef enum {
     PB_7       = 0x17,
     PB_8       = 0x18,
     PB_8_ALT0  = PB_8  | ALT0, // same pin used for alternate HW
-    PB_9       = 0x19,
-    PB_9_ALT0  = PB_9  | ALT0, // same pin used for alternate HW
-    PB_10      = 0x1A,
-    PB_11      = 0x1B,
     PB_12      = 0x1C,
-    PB_13      = 0x1D,
-    PB_14      = 0x1E,
-    PB_15      = 0x1F,
-    PC_0       = 0x20,
-    PC_1       = 0x21,
-    PC_2       = 0x22,
-    PC_3       = 0x23,
-    PC_4       = 0x24,
-    PC_5       = 0x25,
-    PC_6       = 0x26,
     PC_13      = 0x2D,
     PC_14      = 0x2E,
     PC_15      = 0x2F,
@@ -109,8 +91,27 @@ typedef enum {
 
     /**** DEBUG pins ****/
     DEBUG_JTCK_SWCLK = PA_14,
+    DEBUG_JTDI = PA_15,
     DEBUG_JTDO_SWO = PB_3,
     DEBUG_JTMS_SWDIO = PA_13,
+    DEBUG_JTRST = PB_4,
+    DEBUG_PWR_LDORDY = PA_2,
+    DEBUG_PWR_REGLP1S = PA_0,
+    DEBUG_PWR_REGLP2S = PA_1,
+    DEBUG_RF_BUSY = PA_12,
+    DEBUG_RF_DTB1 = PB_3,
+    DEBUG_RF_HSE32RDY = PA_10,
+    DEBUG_RF_LDORDY = PB_4,
+    DEBUG_RF_NRESET = PA_11,
+    DEBUG_RF_SMPSRDY = PB_2,
+    DEBUG_SUBGHZSPI_MISOOUT = PA_6,
+    DEBUG_SUBGHZSPI_MOSIOUT = PA_7,
+    DEBUG_SUBGHZSPI_NSSOUT = PA_4,
+    DEBUG_SUBGHZSPI_SCKOUT = PA_5,
+    PWR_PVD_IN = PB_7,
+    SYS_PWR_WKUP1 = PA_0,
+    SYS_PWR_WKUP2 = PC_13,
+    SYS_PWR_WKUP3 = PB_3,
 
     // Not connected
     NC = (int)0xFFFFFFFF
