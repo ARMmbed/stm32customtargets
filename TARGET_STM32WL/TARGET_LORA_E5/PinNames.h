@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  ******************************************************************************
  *
- * Copyright (c) 2016-2020 STMicroelectronics.
+ * Copyright (c) 2016-2021 STMicroelectronics.
  * All rights reserved.
  *
  * This software component is licensed by ST under BSD 3-Clause license,
@@ -12,8 +12,10 @@
  *
  ******************************************************************************
  *
- * Automatically generated from STM32CubeMX/db/mcu/STM32WL55JCIx.xml
+ * Automatically generated from STM32CubeMX/db/mcu/STM32WLE5JCIx.xml
  */
+
+/* MBED TARGET LIST: LORA_E5, LORA_E5_BREAKOUT, LORA_E5_MINI, LORA_E5_DEV_BOARD, LORA_E5_TINY */
 
 #ifndef MBED_PINNAMES_H
 #define MBED_PINNAMES_H
@@ -27,14 +29,9 @@ extern "C" {
 
 typedef enum {
     ALT0  = 0x100,
-    ALT1  = 0x200,
-    ALT2  = 0x300,
-    ALT3  = 0x400,
-    ALT4  = 0x500
 } ALTx;
 
 typedef enum {
-
     PA_0       = 0x00,
     PA_1       = 0x01,
     PA_1_ALT0  = PA_1  | ALT0, // same pin used for alternate HW
@@ -109,8 +106,27 @@ typedef enum {
 
     /**** DEBUG pins ****/
     DEBUG_JTCK_SWCLK = PA_14,
+    DEBUG_JTDI = PA_15,
     DEBUG_JTDO_SWO = PB_3,
     DEBUG_JTMS_SWDIO = PA_13,
+    DEBUG_JTRST = PB_4,
+    DEBUG_PWR_LDORDY = PA_2,
+    DEBUG_PWR_REGLP1S = PA_0,
+    DEBUG_PWR_REGLP2S = PA_1,
+    DEBUG_RF_BUSY = PA_12,
+    DEBUG_RF_DTB1 = PB_3,
+    DEBUG_RF_HSE32RDY = PA_10,
+    DEBUG_RF_LDORDY = PB_4,
+    DEBUG_RF_NRESET = PA_11,
+    DEBUG_RF_SMPSRDY = PB_2,
+    DEBUG_SUBGHZSPI_MISOOUT = PA_6,
+    DEBUG_SUBGHZSPI_MOSIOUT = PA_7,
+    DEBUG_SUBGHZSPI_NSSOUT = PA_4,
+    DEBUG_SUBGHZSPI_SCKOUT = PA_5,
+    PWR_PVD_IN = PB_7,
+    SYS_PWR_WKUP1 = PA_0,
+    SYS_PWR_WKUP2 = PC_13,
+    SYS_PWR_WKUP3 = PB_3,
 
     // Not connected
     NC = (int)0xFFFFFFFF
