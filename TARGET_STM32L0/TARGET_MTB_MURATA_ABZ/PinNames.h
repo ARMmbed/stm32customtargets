@@ -130,34 +130,34 @@ typedef enum {
 #define BUTTON1  PA_3
 
 // Aliases
-#define I2C_SCL     = PB_8,
-#define I2C_SDA     = PB_9,
+#define I2C_SCL     PB_8
+#define I2C_SDA     PB_9
 
-#define SPI_MOSI    = PB_15,
-#define SPI_MISO    = PB_14,
-#define SPI_SCK     = PB_13,
+#define SPI_MOSI    PB_15
+#define SPI_MISO    PB_14
+#define SPI_SCK     PB_13
 
-#define SD_CS       = PB_12,
+#define SD_CS       PB_12
 
-#define LCD_A0      = PB_2,
-#define LCD_RESET   = PB_5,
-#define LCD_NCS     = PB_6,
+#define LCD_A0      PB_2
+#define LCD_RESET   PB_5
+#define LCD_NCS     PB_6
 
-#define LORA_SPI_MOSI   = PA_7,
-#define LORA_SPI_MISO   = PA_6,
-#define LORA_SPI_SCLK   = PB_3,
-#define LORA_CS         = PA_15,
-#define LORA_RESET      = PC_0,
-#define LORA_DIO0       = PB_4,
-#define LORA_DIO1       = PB_1,
-#define LORA_DIO2       = PB_0,
-#define LORA_DIO3       = PC_13,
-#define LORA_ANT_RX     = PA_1,
-#define LORA_ANT_TX     = PC_2,
-#define LORA_ANT_BOOST  = PC_1,
+#define LORA_SPI_MOSI   PA_7
+#define LORA_SPI_MISO   PA_6
+#define LORA_SPI_SCLK   PB_3
+#define LORA_CS         PA_15
+#define LORA_RESET      PC_0
+#define LORA_DIO0       PB_4
+#define LORA_DIO1       PB_1
+#define LORA_DIO2       PB_0
+#define LORA_DIO3       PC_13
+#define LORA_ANT_RX     PA_1
+#define LORA_ANT_TX     PC_2
+#define LORA_ANT_BOOST  PC_1
 
-#define FLASH_NCS   = PA_8,
-#define POT         = PA_2, // ADC2 - input !
+#define FLASH_NCS   PA_8
+#define POT         PA_2 // ADC2 - input !
 
 #ifdef __cplusplus
 }
