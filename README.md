@@ -13,6 +13,7 @@ Table of Contents
    * [CORE2](#core2)
 * [STM32L0](#stm32l0)
    * [MURATA LPWAN Wireless Module](#murata-lpwan-wireless-module)
+   * [MURATA Grasshopper](#murata-grasshopper)
 * [STM32L4](#stm32l4)
    * [STWIN SensorTile Wireless Industrial Node development kit](#stwin-sensortile-wireless-industrial-node-development-kit)
 * [STM32WL](#stm32wl)
@@ -105,29 +106,73 @@ https://wireless.murata.com/type-abz-078.html
 
 - LORA is not enabled by default. You need to update your local mbed_app.json file:
 
-```
+```json
 {
     "target_overrides": {
         "MTB_MURATA_ABZ": {
-            "target.components_add":            ["SX1276"],
-            "sx1276-lora-driver.spi-mosi":       "PA_7",
-            "sx1276-lora-driver.spi-miso":       "PA_6",
-            "sx1276-lora-driver.spi-sclk":       "PB_3",
-            "sx1276-lora-driver.spi-cs":         "PA_15",
-            "sx1276-lora-driver.reset":          "PC_0",
-            "sx1276-lora-driver.dio0":           "PB_4",
-            "sx1276-lora-driver.dio1":           "PB_1",
-            "sx1276-lora-driver.dio2":           "PB_0",
-            "sx1276-lora-driver.dio3":           "PC_13",
-            "sx1276-lora-driver.txctl":          "PC_2",
-            "sx1276-lora-driver.rxctl":          "PA_1",
-            "sx1276-lora-driver.pwr-amp-ctl":    "PC_1",
+            "target.components_add":             ["SX1276"],
+            "sx1276-lora-driver.spi-mosi":       "LORA_SPI_MOSI",
+            "sx1276-lora-driver.spi-miso":       "LORA_SPI_MISO",
+            "sx1276-lora-driver.spi-sclk":       "LORA_SPI_SCLK",
+            "sx1276-lora-driver.spi-cs":         "LORA_CS",
+            "sx1276-lora-driver.reset":          "LORA_RESET",
+            "sx1276-lora-driver.dio0":           "LORA_DIO0",
+            "sx1276-lora-driver.dio1":           "LORA_DIO1",
+            "sx1276-lora-driver.dio2":           "LORA_DIO2",
+            "sx1276-lora-driver.dio3":           "LORA_DIO3",
+            "sx1276-lora-driver.txctl":          "LORA_ANT_TX",
+            "sx1276-lora-driver.rxctl":          "LORA_ANT_RX",
+            "sx1276-lora-driver.pwr-amp-ctl":    "LORA_ANT_BOOST"
+        }
+    }
+}
+```
+
+If you need to Low Power with VDD TXCO like [b-l072z-lrwan1](https://www.st.com/en/evaluation-tools/b-l072z-lrwan1.html), then you need JP9 positionned 1-2.
+And reflect the pin used for that because it's defined to `NC` by default.
+
+```json
+{
+    "target_overrides": {
+        "MTB_MURATA_ABZ": {
             "sx1276-lora-driver.tcxo":           "PA_12"
         }
     }
 }
 ```
 
+## MURATA Grasshopper
+
+MCU: STM32L082CZ
+
+<img src="https://cdn.hackaday.io/images/6752761516323719376.jpg" width="500"/>
+
+TARGET: GRASSHOPPER [TleraCorp](https://www.tindie.com/stores/tleracorp/)
+
+- LORA is not enabled by default. You need to update your local mbed_app.json file:
+
+```json
+{
+    "target_overrides": {
+        "GRASSHOPPER": {
+            "target.components_add":             ["SX1276"],
+            "sx1276-lora-driver.spi-mosi":       "LORA_SPI_MOSI",
+            "sx1276-lora-driver.spi-miso":       "LORA_SPI_MISO",
+            "sx1276-lora-driver.spi-sclk":       "LORA_SPI_SCLK",
+            "sx1276-lora-driver.spi-cs":         "LORA_CS",
+            "sx1276-lora-driver.reset":          "LORA_RESET",
+            "sx1276-lora-driver.dio0":           "LORA_DIO0",
+            "sx1276-lora-driver.dio1":           "LORA_DIO1",
+            "sx1276-lora-driver.dio2":           "LORA_DIO2",
+            "sx1276-lora-driver.dio3":           "LORA_DIO3",
+            "sx1276-lora-driver.txctl":          "LORA_ANT_TX",
+            "sx1276-lora-driver.rxctl":          "LORA_ANT_RX",
+            "sx1276-lora-driver.pwr-amp-ctl":    "LORA_ANT_BOOST",
+            "sx1276-lora-driver.tcxo":           "LORA_VDD_TXCO"
+        }
+    }
+}
+```
 
 # STM32L4
 

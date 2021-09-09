@@ -124,10 +124,7 @@ typedef enum {
 
 
 // Standardized LED and button names
-#define LED1     PA_4   // Red
-#define LED2     PA_5   // Blue
-#define LED3     PA_0   // Green
-#define BUTTON1  PA_3
+#define LED1     PB_13   // Red
 
 // Aliases
 #define I2C_SCL     PB_8
@@ -136,12 +133,7 @@ typedef enum {
 #define SPI_MOSI    PB_15
 #define SPI_MISO    PB_14
 #define SPI_SCK     PB_13
-
-#define SD_CS       PB_12
-
-#define LCD_A0      PB_2
-#define LCD_RESET   PB_5
-#define LCD_NCS     PB_6
+#define SPI_CS      PB_12
 
 #define LORA_SPI_MOSI   PA_7
 #define LORA_SPI_MISO   PA_6
@@ -155,10 +147,32 @@ typedef enum {
 #define LORA_ANT_RX     PA_1
 #define LORA_ANT_TX     PC_2
 #define LORA_ANT_BOOST  PC_1
-#define LORA_VDD_TXCO   NC
+#define LORA_VDD_TXCO   PH_1
 
-#define FLASH_NCS   PA_8
-#define POT         PA_2 // ADC2 - input !
+#define D0      PA_10
+#define D1      PA_9
+#define D2      PB_5
+#define D3      PB_6
+#define D4      PB_7
+#define D5      PB_2
+#define D8      PA_13
+#define D9      PA_14
+#define D10     PB_12
+#define D11     PB_15
+#define D12     PB_14
+#define D13     PB_13
+
+#define A0      PA_4
+#define A1      PA_5
+#define A2      PA_2
+#define A3      PA_3
+#define A4      PA_0
+
+#define TX2     PA_2
+#define RX2     PA_3
+
+#define TX3     PA_14
+#define RX3     PA_13
 
 #ifdef __cplusplus
 }

@@ -18,6 +18,11 @@
         "detect_code": ["0456"],
         "device_name": "STM32L082CZYx"
     },
+    "GRASSHOPPER": {
+        "inherits": [
+            "MTB_MURATA_ABZ"
+        ]
+    },
     "STWIN": {
         "inherits": [
             "MCU_STM32L4R9xI"
