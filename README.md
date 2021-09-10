@@ -45,6 +45,10 @@ Copy custom_targets.json
 cp stm32customtargets/custom_targets.json .
 ````
 
+For some targets, you have to customize the configuration in your local mbed_app.json.
+
+Details are explained for each target below, but you can also use the mbed_app_template.json file as example.
+
 Then build your target with
 
 - CLI1:
@@ -364,6 +368,8 @@ python aci_build.py
 python aci_build.py --cli2
 ```
 
+Note that build is using the mbed_app_template.json file as configuration file.
+
 - Standard Pin Names check should be OK
 
 https://os.mbed.com/docs/mbed-os/latest/apis/standard-pin-names.html
@@ -399,7 +405,9 @@ A full non regression is executed each week-end
 
 ```
 python aci_build.py --all
+python aci_build.py --all --baremetal
 python aci_build.py --all --cli2
+python aci_build.py --all --cli2 --baremetal
 python aci_build.py --all --pin
 ```
 
