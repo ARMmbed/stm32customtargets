@@ -60,11 +60,16 @@ if args.baremetal:
 else:
     mbed_lib = "mbed-os"
 
+# TargetList is the copy of custom_targets.json
+#   then skipped targets will be repoved from custom_targets_info
 TargetList = [*custom_targets_info]
 
 if args.targets:
     BuildType = "TARGET"
     print ("Explicit target is requested: %s" % args.targets)
+    if args.targets not in TargetList:
+        print("\tERROR => not part of custom_targets.json")
+        sys.exit(1)
     for EachTarget in TargetList:
         if EachTarget == args.targets:
             pass
@@ -92,8 +97,12 @@ if BuildType == "PATCH":
                 TARGET_match = re.match(r"TARGET_STM32.*/TARGET_(.*)/", EachPatchedFile)
                 if TARGET_match:
                     if TARGET_match.group(1) not in PatchedTargets:
-                        print("  => %s" % TARGET_match.group(1))
-                        PatchedTargets.append(TARGET_match.group(1))
+                        TargetToBuild = TARGET_match.group(1)
+                        PatchedTargets.append(TargetToBuild)
+                        if TargetToBuild not in TargetList:
+                            print("ERROR => %s not part of custom_targets.json" % TargetToBuild)
+                            sys.exit(1)
+                        print("      => %s" % TargetToBuild)
 
     except:
         pass
@@ -124,21 +133,17 @@ int main()
 application_file.write(application_code)
 application_file.close()
 
+
 ## CONFIGURATION
 
-configuration_file = open("mbed_app.json", 'w')
-if args.baremetal:
-    configuration_code =  ("""{
-    "requires": ["bare-metal"]
-}
-""" % ())
-else:
-    configuration_code = ("""{
-}
-""" % ())
-
-configuration_file.write(configuration_code)
-configuration_file.close()
+with open("mbed_app_template.json", "r") as sources:
+    lines = sources.readlines()
+with open("mbed_app.json", "w") as sources:
+    sources.write(lines[0])
+    if args.baremetal:
+        sources.write('    "requires": ["bare-metal", "sx1276-lora-driver", "stm32wl-lora-driver"],\n')
+    for line in lines[1:]:
+        sources.write(line)
 
 
 configuration_file = open(".mbedignore", 'w')
@@ -219,6 +224,7 @@ if args.pin:
             except:
                 BuildFailed.append(cmdline)
                 if args.exit:
+                    print(cmdline)
                     sys.exit(2)
 
     elif BuildType == "FULL":
@@ -229,6 +235,7 @@ if args.pin:
         except:
             BuildFailed.append(cmdline)
             if args.exit:
+                print(cmdline)
                 sys.exit(2)
 
     else:
@@ -239,6 +246,7 @@ if args.pin:
         except:
             BuildFailed.append(cmdline)
             if args.exit:
+                print(cmdline)
                 sys.exit(2)
 
 else:
@@ -253,6 +261,7 @@ else:
         if os.system(cmdline) != 0:
             BuildFailed.append(cmdline)
             if args.exit:
+                print(cmdline)
                 sys.exit(2)
         else:
             BuildOK.append(cmdline)
