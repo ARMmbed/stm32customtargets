@@ -7,6 +7,7 @@ Table of Contents
 =================
 
 * [WOW](#WOW)
+* [STM32G0](#STM32G0)
 * [License](#license)
 * [Contributions](#contributions)
    * [Automatic pull request checks](#automatic-pull-request-checks)
@@ -42,6 +43,41 @@ python aci_build.py -l -b
 python aci_build.py -l -c
 python aci_build.py -l -c -b
 ```
+
+
+# STM32G0
+
+- mbed-os: mbed-os-6.15.0
+- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+
+35 targets available thanks to:
+- MCU_STM32G030x8
+- MCU_STM32G031x8
+- MCU_STM32G041x8
+- MCU_STM32G070xB
+- MCU_STM32G071xB
+- MCU_STM32G081xB
+- MCU_STM32G0B0xE
+- MCU_STM32G0B1xE
+
+16 missing targets due to missing:
+- MCU_STM32G030x6
+- MCU_STM32G031x4
+- MCU_STM32G031x6
+- MCU_STM32G041x6
+- MCU_STM32G050x6
+- MCU_STM32G050x8
+- MCU_STM32G051x6
+- MCU_STM32G051x8
+- MCU_STM32G061x6
+- MCU_STM32G061x8
+- MCU_STM32G071x6
+- MCU_STM32G071x8
+- MCU_STM32G0B1xB
+- MCU_STM32G0B1xC
+- MCU_STM32G0C1xC
+- MCU_STM32G0C1xE
+
 
 
 # License
