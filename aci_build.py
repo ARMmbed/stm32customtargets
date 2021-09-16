@@ -37,6 +37,7 @@ Arguments = ArgumentParser(description="Quick script for build check")
 Arguments.add_argument("--toolchain", "-tc", help="ARM | GCC_ARM | IAR . Default is GCC_ARM")
 Arguments.add_argument("--targets", "-t", help="Specific target. Default is patched targets compared to master branch")
 Arguments.add_argument("--all", "-a", action="store_true", help="Build all targets. Default is patched targets compared to master branch")
+Arguments.add_argument("--list", "-l", action="store_true", help="Build targets from target_list.json")
 Arguments.add_argument("--baremetal", "-b", action="store_true", help="Build with baremetal profile")
 Arguments.add_argument("--cli2", "-c", action="store_true", help="Build with cmake (CLI2). Default is CLI1")
 Arguments.add_argument("--pin", "-p", action="store_true", help="Check pin name standart")
@@ -72,6 +73,23 @@ if args.targets:
         sys.exit(1)
     for EachTarget in TargetList:
         if EachTarget == args.targets:
+            pass
+        else:
+            print ("\t%s is skipped" % EachTarget)
+            del custom_targets_info[EachTarget]
+
+if args.list:
+    BuildType = "FULL"
+    targets_list_file = open("target_list.json", "r")
+    targets_list_arg = json.load(targets_list_file)
+    targets_list_file.close()
+
+    for EachRequestedTarget in targets_list_arg:
+        if EachRequestedTarget not in TargetList:
+            print("\tERROR => %s not part of custom_targets.json"% EachRequestedTarget)
+            sys.exit(1)
+    for EachTarget in TargetList:
+        if EachTarget in targets_list_arg:
             pass
         else:
             print ("\t%s is skipped" % EachTarget)
@@ -141,7 +159,7 @@ with open("mbed_app_template.json", "r") as sources:
 with open("mbed_app.json", "w") as sources:
     sources.write(lines[0])
     if args.baremetal:
-        sources.write('    "requires": ["bare-metal", "sx1276-lora-driver", "stm32wl-lora-driver"],\n')
+        sources.write('    "requires": ["bare-metal"],\n')
     for line in lines[1:]:
         sources.write(line)
 
@@ -254,6 +272,11 @@ else:
     ## START BUILD
 
     for EachTarget in custom_targets_info:
+        if not args.baremetal:
+            if "G03" in EachTarget or "G04" in EachTarget:
+                BuildFailed.append("%s skipped - need baremetal" % EachTarget)
+                continue
+
         cmdline = "%s compile -m %s -t %s" % (mbed_tool, EachTarget, requested_toolchain)
         print ("\n***************************************")
         print ("Executing: " + cmdline)
