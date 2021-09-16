@@ -9,6 +9,7 @@ Table of Contents
 * [WOW](#WOW)
 * [STM32G0](#STM32G0)
 * [STM32G4](#STM32G4)
+* [STM32U5](#STM32U5)
 * [License](#license)
 * [Contributions](#contributions)
    * [Automatic pull request checks](#automatic-pull-request-checks)
@@ -117,6 +118,20 @@ Missing device_name in mbed-os pack manager:
 - GENERIC_STM32G4A1ME
 - GENERIC_STM32G4A1RE
 - GENERIC_STM32G4A1VE
+
+
+# STM32U5
+
+- mbed-os: mbed-os-6.15.0
+- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+
+14 targets available thanks to:
+- MCU_STM32U575xI
+- MCU_STM32U585xI
+
+2 missing targets due to missing:
+- MCU_STM32U575xG
+- MCU_STM32U585xE
 
 
 # License

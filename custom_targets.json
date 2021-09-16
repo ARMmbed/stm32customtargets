@@ -492,5 +492,89 @@
         "inherits": [
             "MCU_STM32G4A1xE"
         ]
+    },
+    "GENERIC_STM32U575AI": {
+        "device_name": "STM32U575ZITx",
+        "inherits": [
+            "MCU_STM32U575xI"
+        ]
+    },
+    "GENERIC_STM32U575CI": {
+        "device_name": "STM32U575ZITx",
+        "inherits": [
+            "MCU_STM32U575xI"
+        ]
+    },
+    "GENERIC_STM32U575OI": {
+        "device_name": "STM32U575ZITx",
+        "inherits": [
+            "MCU_STM32U575xI"
+        ]
+    },
+    "GENERIC_STM32U575QI": {
+        "device_name": "STM32U575ZITx",
+        "inherits": [
+            "MCU_STM32U575xI"
+        ]
+    },
+    "GENERIC_STM32U575RI": {
+        "device_name": "STM32U575ZITx",
+        "inherits": [
+            "MCU_STM32U575xI"
+        ]
+    },
+    "GENERIC_STM32U575VI": {
+        "device_name": "STM32U575ZITx",
+        "inherits": [
+            "MCU_STM32U575xI"
+        ]
+    },
+    "GENERIC_STM32U575ZI": {
+        "device_name": "STM32U575ZITx",
+        "inherits": [
+            "MCU_STM32U575xI"
+        ]
+    },
+    "GENERIC_STM32U585AI": {
+        "device_name": "STM32U585AIIx",
+        "inherits": [
+            "MCU_STM32U585xI"
+        ]
+    },
+    "GENERIC_STM32U585CI": {
+        "device_name": "STM32U585AIIx",
+        "inherits": [
+            "MCU_STM32U585xI"
+        ]
+    },
+    "GENERIC_STM32U585OI": {
+        "device_name": "STM32U585AIIx",
+        "inherits": [
+            "MCU_STM32U585xI"
+        ]
+    },
+    "GENERIC_STM32U585QI": {
+        "device_name": "STM32U585AIIx",
+        "inherits": [
+            "MCU_STM32U585xI"
+        ]
+    },
+    "GENERIC_STM32U585RI": {
+        "device_name": "STM32U585AIIx",
+        "inherits": [
+            "MCU_STM32U585xI"
+        ]
+    },
+    "GENERIC_STM32U585VI": {
+        "device_name": "STM32U585AIIx",
+        "inherits": [
+            "MCU_STM32U585xI"
+        ]
+    },
+    "GENERIC_STM32U585ZI": {
+        "device_name": "STM32U585AIIx",
+        "inherits": [
+            "MCU_STM32U585xI"
+        ]
     }
 }
