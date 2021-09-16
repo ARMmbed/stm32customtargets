@@ -208,5 +208,289 @@
         "inherits": [
             "MCU_STM32G0B1xE"
         ]
+    },
+    "GENERIC_STM32G431CB": {
+        "device_name": "STM32G431CBYx",
+        "inherits": [
+            "MCU_STM32G431xB"
+        ]
+    },
+    "GENERIC_STM32G431KB": {
+        "device_name": "STM32G431KBUx",
+        "inherits": [
+            "MCU_STM32G431xB"
+        ]
+    },
+    "GENERIC_STM32G431MB": {
+        "device_name": "STM32G431VBTx",
+        "inherits": [
+            "MCU_STM32G431xB"
+        ]
+    },
+    "GENERIC_STM32G431RB": {
+        "device_name": "STM32G431RBTx",
+        "inherits": [
+            "MCU_STM32G431xB"
+        ]
+    },
+    "GENERIC_STM32G431VB": {
+        "device_name": "STM32G431VBTx",
+        "inherits": [
+            "MCU_STM32G431xB"
+        ]
+    },
+    "GENERIC_STM32G441CB": {
+        "device_name": "STM32G441CBYx",
+        "inherits": [
+            "MCU_STM32G441xB"
+        ]
+    },
+    "GENERIC_STM32G441KB": {
+        "device_name": "STM32G441KBUx",
+        "inherits": [
+            "MCU_STM32G441xB"
+        ]
+    },
+    "GENERIC_STM32G441MB": {
+        "device_name": "STM32G441VBTx",
+        "inherits": [
+            "MCU_STM32G441xB"
+        ]
+    },
+    "GENERIC_STM32G441RB": {
+        "device_name": "STM32G441RBTx",
+        "inherits": [
+            "MCU_STM32G441xB"
+        ]
+    },
+    "GENERIC_STM32G441VB": {
+        "device_name": "STM32G441VBTx",
+        "inherits": [
+            "MCU_STM32G441xB"
+        ]
+    },
+    "GENERIC_STM32G471CE": {
+        "device_name": "STM32G471CEUx",
+        "inherits": [
+            "MCU_STM32G471xE"
+        ]
+    },
+    "GENERIC_STM32G471ME": {
+        "device_name": "STM32G471MEYx",
+        "inherits": [
+            "MCU_STM32G471xE"
+        ]
+    },
+    "GENERIC_STM32G471QE": {
+        "device_name": "STM32G471QETx",
+        "inherits": [
+            "MCU_STM32G471xE"
+        ]
+    },
+    "GENERIC_STM32G471RE": {
+        "device_name": "STM32G471RE",
+        "inherits": [
+            "MCU_STM32G471xE"
+        ]
+    },
+    "GENERIC_STM32G471VE": {
+        "device_name": "STM32G471VETx",
+        "inherits": [
+            "MCU_STM32G471xE"
+        ]
+    },
+    "GENERIC_STM32G473CE": {
+        "device_name": "STM32G473CEUx",
+        "inherits": [
+            "MCU_STM32G473xE"
+        ]
+    },
+    "GENERIC_STM32G473ME": {
+        "device_name": "STM32G473MEUx",
+        "inherits": [
+            "MCU_STM32G473xE"
+        ]
+    },
+    "GENERIC_STM32G473PE": {
+        "device_name": "STM32G473VETx",
+        "inherits": [
+            "MCU_STM32G473xE"
+        ]
+    },
+    "GENERIC_STM32G473QE": {
+        "device_name": "STM32G473QETx",
+        "inherits": [
+            "MCU_STM32G473xE"
+        ]
+    },
+    "GENERIC_STM32G473RE": {
+        "device_name": "STM32G473RETx",
+        "inherits": [
+            "MCU_STM32G473xE"
+        ]
+    },
+    "GENERIC_STM32G473VE": {
+        "device_name": "STM32G473VETx",
+        "inherits": [
+            "MCU_STM32G473xE"
+        ]
+    },
+    "GENERIC_STM32G474CE": {
+        "device_name": "STM32G474CEUx",
+        "inherits": [
+            "MCU_STM32G474xE"
+        ]
+    },
+    "GENERIC_STM32G474ME": {
+        "device_name": "STM32G474MEYx",
+        "inherits": [
+            "MCU_STM32G474xE"
+        ]
+    },
+    "GENERIC_STM32G474PE": {
+        "device_name": "STM32G474VETx",
+        "inherits": [
+            "MCU_STM32G474xE"
+        ]
+    },
+    "GENERIC_STM32G474QE": {
+        "device_name": "STM32G474QETx",
+        "inherits": [
+            "MCU_STM32G474xE"
+        ]
+    },
+    "GENERIC_STM32G474RE": {
+        "device_name": "STM32G474RETx",
+        "inherits": [
+            "MCU_STM32G474xE"
+        ]
+    },
+    "GENERIC_STM32G474VE": {
+        "device_name": "STM32G474VETx",
+        "inherits": [
+            "MCU_STM32G474xE"
+        ]
+    },
+    "GENERIC_STM32G483CE": {
+        "device_name": "STM32G483CEUx",
+        "inherits": [
+            "MCU_STM32G483xE"
+        ]
+    },
+    "GENERIC_STM32G483ME": {
+        "device_name": "STM32G483MEYx",
+        "inherits": [
+            "MCU_STM32G483xE"
+        ]
+    },
+    "GENERIC_STM32G483PE": {
+        "device_name": "STM32G483VETx",
+        "inherits": [
+            "MCU_STM32G483xE"
+        ]
+    },
+    "GENERIC_STM32G483QE": {
+        "device_name": "STM32G483QETx",
+        "inherits": [
+            "MCU_STM32G483xE"
+        ]
+    },
+    "GENERIC_STM32G483RE": {
+        "device_name": "STM32G483RETx",
+        "inherits": [
+            "MCU_STM32G483xE"
+        ]
+    },
+    "GENERIC_STM32G483VE": {
+        "device_name": "STM32G483VETx",
+        "inherits": [
+            "MCU_STM32G483xE"
+        ]
+    },
+    "GENERIC_STM32G484CE": {
+        "device_name": "STM32G484CEUx",
+        "inherits": [
+            "MCU_STM32G484xE"
+        ]
+    },
+    "GENERIC_STM32G484ME": {
+        "device_name": "STM32G484MEYx",
+        "inherits": [
+            "MCU_STM32G484xE"
+        ]
+    },
+    "GENERIC_STM32G484PE": {
+        "device_name": "STM32G484VETx",
+        "inherits": [
+            "MCU_STM32G484xE"
+        ]
+    },
+    "GENERIC_STM32G484QE": {
+        "device_name": "STM32G484QETx",
+        "inherits": [
+            "MCU_STM32G484xE"
+        ]
+    },
+    "GENERIC_STM32G484RE": {
+        "device_name": "STM32G484RETx",
+        "inherits": [
+            "MCU_STM32G484xE"
+        ]
+    },
+    "GENERIC_STM32G484VE": {
+        "device_name": "STM32G484VETx",
+        "inherits": [
+            "MCU_STM32G484xE"
+        ]
+    },
+    "GENERIC_STM32G491CE": {
+        "inherits": [
+            "MCU_STM32G491xE"
+        ]
+    },
+    "GENERIC_STM32G491KE": {
+        "inherits": [
+            "MCU_STM32G491xE"
+        ]
+    },
+    "GENERIC_STM32G491ME": {
+        "inherits": [
+            "MCU_STM32G491xE"
+        ]
+    },
+    "GENERIC_STM32G491RE": {
+        "inherits": [
+            "MCU_STM32G491xE"
+        ]
+    },
+    "GENERIC_STM32G491VE": {
+        "inherits": [
+            "MCU_STM32G491xE"
+        ]
+    },
+    "GENERIC_STM32G4A1CE": {
+        "inherits": [
+            "MCU_STM32G4A1xE"
+        ]
+    },
+    "GENERIC_STM32G4A1KE": {
+        "inherits": [
+            "MCU_STM32G4A1xE"
+        ]
+    },
+    "GENERIC_STM32G4A1ME": {
+        "inherits": [
+            "MCU_STM32G4A1xE"
+        ]
+    },
+    "GENERIC_STM32G4A1RE": {
+        "inherits": [
+            "MCU_STM32G4A1xE"
+        ]
+    },
+    "GENERIC_STM32G4A1VE": {
+        "inherits": [
+            "MCU_STM32G4A1xE"
+        ]
     }
 }

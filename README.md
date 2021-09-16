@@ -8,6 +8,7 @@ Table of Contents
 
 * [WOW](#WOW)
 * [STM32G0](#STM32G0)
+* [STM32G4](#STM32G4)
 * [License](#license)
 * [Contributions](#contributions)
    * [Automatic pull request checks](#automatic-pull-request-checks)
@@ -78,6 +79,44 @@ python aci_build.py -l -c -b
 - MCU_STM32G0C1xC
 - MCU_STM32G0C1xE
 
+
+# STM32G4
+
+- mbed-os: mbed-os-6.15.0
+- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+
+49 targets available thanks to:
+- MCU_STM32G431xB
+- MCU_STM32G441xB
+- MCU_STM32G471xE
+- MCU_STM32G473xE
+- MCU_STM32G474xE
+- MCU_STM32G483xE
+- MCU_STM32G484xE
+- MCU_STM32G491xE
+- MCU_STM32G4A1xE
+
+8 missing targets due to missing:
+- MCU_STM32G431x6
+- MCU_STM32G431x8
+- MCU_STM32G471xC
+- MCU_STM32G473xB
+- MCU_STM32G473xC
+- MCU_STM32G474xB
+- MCU_STM32G474xC
+- MCU_STM32G491xC
+
+Missing device_name in mbed-os pack manager:
+- GENERIC_STM32G491CE
+- GENERIC_STM32G491KE
+- GENERIC_STM32G491ME
+- GENERIC_STM32G491RE
+- GENERIC_STM32G491VE
+- GENERIC_STM32G4A1CE
+- GENERIC_STM32G4A1KE
+- GENERIC_STM32G4A1ME
+- GENERIC_STM32G4A1RE
+- GENERIC_STM32G4A1VE
 
 
 # License
