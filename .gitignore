@@ -5,3 +5,6 @@ mbed_app.json
 mbed-os.lib
 mbed-os
 .mbed
+STM32_open_pin_data
+TARGET_CUSTOM
+target_list.json

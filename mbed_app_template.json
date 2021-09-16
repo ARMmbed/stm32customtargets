@@ -5,6 +5,8 @@
     ],
     "target_overrides": {
         "*": {
+            "target.stdio_uart_tx" : "0",
+            "target.stdio_uart_rx" : "0"
         }
     }
 }
