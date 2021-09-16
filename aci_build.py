@@ -183,6 +183,7 @@ add_subdirectory(TARGET_STM32L0)
 add_subdirectory(TARGET_STM32L1)
 add_subdirectory(TARGET_STM32L4)
 add_subdirectory(TARGET_STM32L5)
+add_subdirectory(TARGET_STM32U5)
 add_subdirectory(TARGET_STM32WB)
 add_subdirectory(TARGET_STM32WL)
 
