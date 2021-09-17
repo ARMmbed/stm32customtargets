@@ -935,58 +935,166 @@
             "MCU_STM32H743xI"
         ]
     },
-    "GENERIC_STM32H745BI": {
+    "GENERIC_STM32H745BI_CM4": {
         "device_name": "STM32H745BITx",
+        "extra_labels_add": [
+            "GENERIC_STM32H745BI"
+        ],
         "inherits": [
-            "MCU_STM32H745xI"
+            "MCU_STM32H745xI_CM4"
         ]
     },
-    "GENERIC_STM32H745II": {
+    "GENERIC_STM32H745BI_CM7": {
+        "device_name": "STM32H745BITx",
+        "extra_labels_add": [
+            "GENERIC_STM32H745BI"
+        ],
+        "inherits": [
+            "MCU_STM32H745xI_CM7"
+        ]
+    },
+    "GENERIC_STM32H745II_CM4": {
         "device_name": "STM32H745IITx",
+        "extra_labels_add": [
+            "GENERIC_STM32H745II"
+        ],
         "inherits": [
-            "MCU_STM32H745xI"
+            "MCU_STM32H745xI_CM4"
         ]
     },
-    "GENERIC_STM32H745XI": {
+    "GENERIC_STM32H745II_CM7": {
+        "device_name": "STM32H745IITx",
+        "extra_labels_add": [
+            "GENERIC_STM32H745II"
+        ],
+        "inherits": [
+            "MCU_STM32H745xI_CM7"
+        ]
+    },
+    "GENERIC_STM32H745XI_CM4": {
         "device_name": "STM32H745XIHx",
+        "extra_labels_add": [
+            "GENERIC_STM32H745XI"
+        ],
         "inherits": [
-            "MCU_STM32H745xI"
+            "MCU_STM32H745xI_CM4"
         ]
     },
-    "GENERIC_STM32H745ZI": {
+    "GENERIC_STM32H745XI_CM7": {
+        "device_name": "STM32H745XIHx",
+        "extra_labels_add": [
+            "GENERIC_STM32H745XI"
+        ],
+        "inherits": [
+            "MCU_STM32H745xI_CM7"
+        ]
+    },
+    "GENERIC_STM32H745ZI_CM4": {
         "device_name": "STM32H745ZITx",
+        "extra_labels_add": [
+            "GENERIC_STM32H745ZI"
+        ],
         "inherits": [
-            "MCU_STM32H745xI"
+            "MCU_STM32H745xI_CM4"
         ]
     },
-    "GENERIC_STM32H747AI": {
+    "GENERIC_STM32H745ZI_CM7": {
+        "device_name": "STM32H745ZITx",
+        "extra_labels_add": [
+            "GENERIC_STM32H745ZI"
+        ],
+        "inherits": [
+            "MCU_STM32H745xI_CM7"
+        ]
+    },
+    "GENERIC_STM32H747AI_CM4": {
         "device_name": "STM32H747AIIx",
+        "extra_labels_add": [
+            "GENERIC_STM32H747AI"
+        ],
         "inherits": [
-            "MCU_STM32H747xI"
+            "MCU_STM32H747xI_CM4"
         ]
     },
-    "GENERIC_STM32H747BI": {
+    "GENERIC_STM32H747AI_CM7": {
+        "device_name": "STM32H747AIIx",
+        "extra_labels_add": [
+            "GENERIC_STM32H747AI"
+        ],
+        "inherits": [
+            "MCU_STM32H747xI_CM7"
+        ]
+    },
+    "GENERIC_STM32H747BI_CM4": {
         "device_name": "STM32H747BITx",
+        "extra_labels_add": [
+            "GENERIC_STM32H747BI"
+        ],
         "inherits": [
-            "MCU_STM32H747xI"
+            "MCU_STM32H747xI_CM4"
         ]
     },
-    "GENERIC_STM32H747II": {
+    "GENERIC_STM32H747BI_CM7": {
+        "device_name": "STM32H747BITx",
+        "extra_labels_add": [
+            "GENERIC_STM32H747BI"
+        ],
+        "inherits": [
+            "MCU_STM32H747xI_CM7"
+        ]
+    },
+    "GENERIC_STM32H747II_CM4": {
         "device_name": "STM32H747IITx",
+        "extra_labels_add": [
+            "GENERIC_STM32H747II"
+        ],
         "inherits": [
-            "MCU_STM32H747xI"
+            "MCU_STM32H747xI_CM4"
         ]
     },
-    "GENERIC_STM32H747XI": {
+    "GENERIC_STM32H747II_CM7": {
+        "device_name": "STM32H747IITx",
+        "extra_labels_add": [
+            "GENERIC_STM32H747II"
+        ],
+        "inherits": [
+            "MCU_STM32H747xI_CM7"
+        ]
+    },
+    "GENERIC_STM32H747XI_CM4": {
         "device_name": "STM32H747XIHx",
+        "extra_labels_add": [
+            "GENERIC_STM32H747XI"
+        ],
         "inherits": [
-            "MCU_STM32H747xI"
+            "MCU_STM32H747xI_CM4"
         ]
     },
-    "GENERIC_STM32H747ZI": {
-        "device_name": "STM32H747ZIYx",
+    "GENERIC_STM32H747XI_CM7": {
+        "device_name": "STM32H747XIHx",
+        "extra_labels_add": [
+            "GENERIC_STM32H747XI"
+        ],
         "inherits": [
-            "MCU_STM32H747xI"
+            "MCU_STM32H747xI_CM7"
+        ]
+    },
+    "GENERIC_STM32H747ZI_CM4": {
+        "device_name": "STM32H747ZIYx",
+        "extra_labels_add": [
+            "GENERIC_STM32H747ZI"
+        ],
+        "inherits": [
+            "MCU_STM32H747xI_CM4"
+        ]
+    },
+    "GENERIC_STM32H747ZI_CM7": {
+        "device_name": "STM32H747ZIYx",
+        "extra_labels_add": [
+            "GENERIC_STM32H747ZI"
+        ],
+        "inherits": [
+            "MCU_STM32H747xI_CM7"
         ]
     },
     "GENERIC_STM32L053C8": {

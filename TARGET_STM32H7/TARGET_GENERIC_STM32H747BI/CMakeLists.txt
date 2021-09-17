@@ -1,17 +1,32 @@
 # Copyright (c) 2021 ARM Limited. All rights reserved.
 # SPDX-License-Identifier: Apache-2.0
 
-add_library(mbed-generic-stm32h747bi INTERFACE)
+add_library(mbed-generic-stm32h747bi-cm4 INTERFACE)
 
-target_sources(mbed-generic-stm32h747bi
+target_sources(mbed-generic-stm32h747bi-cm4
     INTERFACE
         PeripheralPins.c
         system_clock.c
 )
 
-target_include_directories(mbed-generic-stm32h747bi
+target_include_directories(mbed-generic-stm32h747bi-cm4
     INTERFACE
         .
 )
 
-target_link_libraries(mbed-generic-stm32h747bi INTERFACE mbed-stm32h747xi)
+target_link_libraries(mbed-generic-stm32h747bi-cm4 INTERFACE mbed-stm32h747xi-cm4)
+
+add_library(mbed-generic-stm32h747bi-cm7 INTERFACE)
+
+target_sources(mbed-generic-stm32h747bi-cm7
+    INTERFACE
+        PeripheralPins.c
+        system_clock.c
+)
+
+target_include_directories(mbed-generic-stm32h747bi-cm7
+    INTERFACE
+        .
+)
+
+target_link_libraries(mbed-generic-stm32h747bi-cm7 INTERFACE mbed-stm32h747xi-cm7)
