@@ -949,6 +949,96 @@
             "MCU_STM32G4A1xE"
         ]
     },
+    "GENERIC_STM32L053C8": {
+        "device_name": "STM32L053C8Tx",
+        "inherits": [
+            "MCU_STM32L053x8"
+        ]
+    },
+    "GENERIC_STM32L053R8": {
+        "device_name": "STM32L053R8Tx",
+        "inherits": [
+            "MCU_STM32L053x8"
+        ]
+    },
+    "GENERIC_STM32L071CZ": {
+        "device_name": "STM32L071CZYx",
+        "inherits": [
+            "MCU_STM32L071xZ"
+        ]
+    },
+    "GENERIC_STM32L071KZ": {
+        "device_name": "STM32L071KZUx",
+        "inherits": [
+            "MCU_STM32L071xZ"
+        ]
+    },
+    "GENERIC_STM32L071RZ": {
+        "device_name": "STM32L071RZTx",
+        "inherits": [
+            "MCU_STM32L071xZ"
+        ]
+    },
+    "GENERIC_STM32L071VZ": {
+        "device_name": "STM32L071VZTx",
+        "inherits": [
+            "MCU_STM32L071xZ"
+        ]
+    },
+    "GENERIC_STM32L072CZ": {
+        "device_name": "STM32L072CZYx",
+        "inherits": [
+            "MCU_STM32L072xZ"
+        ]
+    },
+    "GENERIC_STM32L072KZ": {
+        "device_name": "STM32L072KZUx",
+        "inherits": [
+            "MCU_STM32L072xZ"
+        ]
+    },
+    "GENERIC_STM32L072RZ": {
+        "device_name": "STM32L072RZTx",
+        "inherits": [
+            "MCU_STM32L072xZ"
+        ]
+    },
+    "GENERIC_STM32L072VZ": {
+        "device_name": "STM32L072VZTx",
+        "inherits": [
+            "MCU_STM32L072xZ"
+        ]
+    },
+    "GENERIC_STM32L073CZ": {
+        "device_name": "STM32L073CZTx",
+        "inherits": [
+            "MCU_STM32L073xZ"
+        ]
+    },
+    "GENERIC_STM32L073RZ": {
+        "device_name": "STM32L073RZTx",
+        "inherits": [
+            "MCU_STM32L073xZ"
+        ]
+    },
+    "GENERIC_STM32L073VZ": {
+        "device_name": "STM32L073VZTx",
+        "inherits": [
+            "MCU_STM32L073xZ"
+        ]
+    },
+    "GENERIC_STM32L082CZ": {
+        "device_name": "STM32L082CZYx",
+        "inherits": [
+            "MCU_STM32L082xZ"
+        ]
+    },
+    "GENERIC_STM32L082KZ": {
+        "device_name": "STM32L082KZUx",
+        "inherits": [
+            "MCU_STM32L082xZ"
+        ]
+    },
     "GENERIC_STM32U575AI": {
         "device_name": "STM32U575ZITx",
         "inherits": [
