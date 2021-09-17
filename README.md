@@ -16,6 +16,7 @@ Table of Contents
 * [STM32G0](#STM32G0)
 * [STM32G4](#STM32G4)
 * [STM32L0](#STM32L0)
+* [STM32L1](#STM32L1)
 * [STM32U5](#STM32U5)
 * [License](#license)
 * [Contributions](#contributions)
@@ -385,6 +386,35 @@ Missing device_name in mbed-os pack manager:
 - MCU_STM32L083xB
 - MCU_STM32L083xZ
 - MCU_STM32L083x8
+
+
+# STM32L1
+
+- mbed-os: mbed-os-6.15.0
+- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+
+16 targets available thanks to:
+- MCU_STM32L151xC
+- MCU_STM32L152xC
+- MCU_STM32L152xE
+
+16 missing targets due to missing:
+- MCU_STM32L100x6
+- MCU_STM32L100x8
+- MCU_STM32L100xB
+- MCU_STM32L100xC
+- MCU_STM32L151x6
+- MCU_STM32L151x8
+- MCU_STM32L151xB
+- MCU_STM32L151xD
+- MCU_STM32L151xE
+- MCU_STM32L152x6
+- MCU_STM32L152x8
+- MCU_STM32L152xB
+- MCU_STM32L152xD
+- MCU_STM32L162xC
+- MCU_STM32L162xD
+- MCU_STM32L162xE
 
 
 # STM32U5
