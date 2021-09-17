@@ -949,6 +949,96 @@
             "MCU_STM32G4A1xE"
         ]
     },
+    "GENERIC_STM32H743AI": {
+        "device_name": "STM32H743AIIx",
+        "inherits": [
+            "MCU_STM32H743xI"
+        ]
+    },
+    "GENERIC_STM32H743BI": {
+        "device_name": "STM32H743BITx",
+        "inherits": [
+            "MCU_STM32H743xI"
+        ]
+    },
+    "GENERIC_STM32H743II": {
+        "device_name": "STM32H743IITx",
+        "inherits": [
+            "MCU_STM32H743xI"
+        ]
+    },
+    "GENERIC_STM32H743VI": {
+        "device_name": "STM32H743VITx",
+        "inherits": [
+            "MCU_STM32H743xI"
+        ]
+    },
+    "GENERIC_STM32H743XI": {
+        "device_name": "STM32H743XIHx",
+        "inherits": [
+            "MCU_STM32H743xI"
+        ]
+    },
+    "GENERIC_STM32H743ZI": {
+        "device_name": "STM32H743ZITx",
+        "inherits": [
+            "MCU_STM32H743xI"
+        ]
+    },
+    "GENERIC_STM32H745BI": {
+        "device_name": "STM32H745BITx",
+        "inherits": [
+            "MCU_STM32H745xI"
+        ]
+    },
+    "GENERIC_STM32H745II": {
+        "device_name": "STM32H745IITx",
+        "inherits": [
+            "MCU_STM32H745xI"
+        ]
+    },
+    "GENERIC_STM32H745XI": {
+        "device_name": "STM32H745XIHx",
+        "inherits": [
+            "MCU_STM32H745xI"
+        ]
+    },
+    "GENERIC_STM32H745ZI": {
+        "device_name": "STM32H745ZITx",
+        "inherits": [
+            "MCU_STM32H745xI"
+        ]
+    },
+    "GENERIC_STM32H747AI": {
+        "device_name": "STM32H747AIIx",
+        "inherits": [
+            "MCU_STM32H747xI"
+        ]
+    },
+    "GENERIC_STM32H747BI": {
+        "device_name": "STM32H747BITx",
+        "inherits": [
+            "MCU_STM32H747xI"
+        ]
+    },
+    "GENERIC_STM32H747II": {
+        "device_name": "STM32H747IITx",
+        "inherits": [
+            "MCU_STM32H747xI"
+        ]
+    },
+    "GENERIC_STM32H747XI": {
+        "device_name": "STM32H747XIHx",
+        "inherits": [
+            "MCU_STM32H747xI"
+        ]
+    },
+    "GENERIC_STM32H747ZI": {
+        "device_name": "STM32H747ZIYx",
+        "inherits": [
+            "MCU_STM32H747xI"
+        ]
+    },
     "GENERIC_STM32L053C8": {
         "device_name": "STM32L053C8Tx",
         "inherits": [
