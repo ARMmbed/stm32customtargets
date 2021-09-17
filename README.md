@@ -7,6 +7,7 @@ Table of Contents
 =================
 
 * [Usage](#usage)
+* [GENERIC BOARDS](#generic-boards)
 * [STM32F1](#stm32f1)
    * [BLUEPILL](#bluepill)
 * [STM32F4](#stm32f4)
@@ -22,7 +23,7 @@ Table of Contents
    * [Seeed Studio LoRa E5 Mini](#seeed-studio-lora-e5-mini)
    * [Seeed Studio LoRa E5 Dev Board](#seeed-studio-lora-e5-dev-board)
    * [Charles's LoRa-E5 breakout board](#charless-lora-e5-breakout-board)
-   * [Charles's LoRa-E5 Tiny Cell coin](#charless-lora-e5-tiny)
+   * [Charles's LoRa-E5 Tiny](#charless-lora-e5-tiny)
    * [RAK Wireless RAK3172](#rak-wireless-rak3172)
    * [Charles's RAK3172 breakout board](#charless-rak3172-breakout-board)
 * [License](#license)
@@ -69,11 +70,23 @@ mbedtools compile -m XXX -t XXX
 ````
 
 
+# GENERIC BOARDS
+
+A "generic" board is a mbed-os "virtual" target with a pure STM32 MCU.
+
+Goal is to make real custom boards creation very easy
+as we ensure that build has alrady been tested.
+
+Check the GENERIC_TARGET branch in this repo:
+
+https://github.com/ARMmbed/stm32customtargets/tree/GENERIC_TARGET
+
+
 # STM32F1
 
 ## BLUEPILL
 
-<img src="https://stm32-base.org/assets/img/boards/STM32F103C8T6_Blue_Pill-1.jpg">
+<img src="https://stm32-base.org/assets/img/boards/STM32F103C8T6_Blue_Pill-1.jpg" width="200">
 
 MCU: STM32F103C8T6
 
@@ -96,7 +109,7 @@ TARGET: CORE2
 
 https://github.com/byq77/core2-mbed6-template
 
-<img src="https://husarion.com/docs/assets/img/core2-hardware/core2_top_small.jpg" width="500"/>
+<img src="https://husarion.com/docs/assets/img/core2-hardware/core2_top_small.jpg" width="200"/>
 
 
 # STM32L0
@@ -150,7 +163,7 @@ And reflect the pin used for that because it's defined to `NC` by default.
 
 MCU: STM32L082CZ
 
-<img src="https://cdn.hackaday.io/images/6752761516323719376.jpg" width="500"/>
+<img src="https://cdn.hackaday.io/images/6752761516323719376.jpg" width="200"/>
 
 TARGET: GRASSHOPPER [TleraCorp](https://www.tindie.com/stores/tleracorp/)
 
@@ -183,7 +196,9 @@ TARGET: GRASSHOPPER [TleraCorp](https://www.tindie.com/stores/tleracorp/)
 
 MCU: STM32L082CZ
 
-<img src="https://cdn.hackaday.io/images/7985811531762726918.jpg" width="500">https://www.tindie.com/products/tleracorp/gnat-loragnss-asset-tracker/</img>
+<img src="https://cdn.hackaday.io/images/7985811531762726918.jpg" width="200">
+
+https://www.tindie.com/products/tleracorp/gnat-loragnss-asset-tracker/</img>
 
 TARGET: GNAT [TleraCorp](https://www.tindie.com/products/tleracorp/gnat-loragnss-asset-tracker/)
 
@@ -219,7 +234,7 @@ TARGET: GNAT [TleraCorp](https://www.tindie.com/products/tleracorp/gnat-loragnss
 
 MCU: STM32L4R9ZI
 
-<img src="https://www.st.com/bin/ecommerce/api/image.PF268005.en.feature-description-include-personalized-no-cpn-large.jpg">
+<img src="https://www.st.com/bin/ecommerce/api/image.PF268005.en.feature-description-include-personalized-no-cpn-large.jpg"  width="200">
 
 TARGET: STWIN
 
@@ -232,7 +247,7 @@ https://www.st.com/en/evaluation-tools/steval-stwinkt1.html
 
 ## Seeed Studio LoRa E5
 
-<img src="https://files.seeedstudio.com/products/317990687/image/lora-e5_Preview-07.png" width="50%" height="50%">
+<img src="https://files.seeedstudio.com/products/317990687/image/lora-e5_Preview-07.png" width="200">
 
 MCU: STM32WLE5JC
 
@@ -260,7 +275,7 @@ https://www.seeedstudio.com/LoRa-E5-mini-STM32WLE5JC-p-4869.html
 
 ## Seeed Studio LoRa E5 Dev Board
 
-<img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/202003261_preview-07.png">
+<img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/202003261_preview-07.png" width="200">
 
 TARGET: LORA_E5_DEV_BOARD
 
@@ -282,7 +297,7 @@ https://www.seeedstudio.com/LoRa-E5-Dev-Kit-p-4868.html
 
 TARGET: LORA_E5_BREAKOUT
 
-<img src="https://github.com/hallard/LoRa-E5-Breakout/blob/main/pictures/LoRa-E5-Breakout-top.png">
+<img src="https://github.com/hallard/LoRa-E5-Breakout/blob/main/pictures/LoRa-E5-Breakout-top.png" width="200">
 
 https://github.com/hallard/LoRa-E5-Breakout
 
@@ -309,7 +324,7 @@ for debug LEDs of breakout so you need to add this to your `mbed_app.json` on se
 
 TARGET: LORA_E5_TINY
 
-<img src="https://github.com/hallard/LoRa-E5-Tiny/blob/main/pictures/LoRa-E5-Tiny-top.png">
+<img src="https://github.com/hallard/LoRa-E5-Tiny/blob/main/pictures/LoRa-E5-Tiny-top.png" width="200">
 
 https://github.com/hallard/LoRa-E5-Tiny
 
@@ -337,7 +352,7 @@ for debug LEDs of this board you need to add this to your `mbed_app.json` on sec
 
 ## RAK Wireless RAK3172
 
-<img src="https://docs.rakwireless.com/assets/images/wisduo/rak3172-module/overview/RAK3172_Module_buy.png" width="50%" height="50%">
+<img src="https://docs.rakwireless.com/assets/images/wisduo/rak3172-module/overview/RAK3172_Module_buy.png" width="200">
 
 MCU: STM32WLE5CC
 
@@ -357,7 +372,7 @@ RAK3172 use only RFO_HP for TX power and no TXCO so for all boards using this mo
 
 TARGET: RAK3172_BREAKOUT
 
-<img src="https://github.com/hallard/RAK3172-Breakout/blob/main/pictures/RAK3172-Breakout-top.png">
+<img src="https://github.com/hallard/RAK3172-Breakout/blob/main/pictures/RAK3172-Breakout-top.png" width="200">
 
 https://github.com/hallard/RAK3172-Breakout
 
@@ -430,6 +445,8 @@ TARGET: <Target name for build>
 <all other info is optional>
 
 ```
+
+Note we limit image size to 200
 
 - Keep Table of Contents up to date
 
