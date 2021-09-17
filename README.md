@@ -9,6 +9,7 @@ Table of Contents
 * [WOW](#WOW)
 * [STM32F0](#STM32F0)
 * [STM32F1](#STM32F1)
+* [STM32F2](#STM32F2)
 * [STM32G0](#STM32G0)
 * [STM32G4](#STM32G4)
 * [STM32U5](#STM32U5)
@@ -125,6 +126,29 @@ python aci_build.py -l -c -b
 - MCU_STM32F105xC
 - MCU_STM32F107xB
 - MCU_STM32F107xC
+
+
+# STM32F2
+
+- mbed-os: mbed-os-6.15.0
+- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+
+0 targets available thanks to:
+
+13 missing targets due to missing:
+- MCU_STM32F205xB
+- MCU_STM32F205xC
+- MCU_STM32F205xE
+- MCU_STM32F205xF
+- MCU_STM32F205xG
+- MCU_STM32F207xC
+- MCU_STM32F207xE
+- MCU_STM32F207xF
+- MCU_STM32F207xG
+- MCU_STM32F215xE
+- MCU_STM32F215xG
+- MCU_STM32F217xE
+- MCU_STM32F217xG
 
 
 # STM32G0
