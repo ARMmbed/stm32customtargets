@@ -899,56 +899,6 @@
             "MCU_STM32G484xE"
         ]
     },
-    "GENERIC_STM32G491CE": {
-        "inherits": [
-            "MCU_STM32G491xE"
-        ]
-    },
-    "GENERIC_STM32G491KE": {
-        "inherits": [
-            "MCU_STM32G491xE"
-        ]
-    },
-    "GENERIC_STM32G491ME": {
-        "inherits": [
-            "MCU_STM32G491xE"
-        ]
-    },
-    "GENERIC_STM32G491RE": {
-        "inherits": [
-            "MCU_STM32G491xE"
-        ]
-    },
-    "GENERIC_STM32G491VE": {
-        "inherits": [
-            "MCU_STM32G491xE"
-        ]
-    },
-    "GENERIC_STM32G4A1CE": {
-        "inherits": [
-            "MCU_STM32G4A1xE"
-        ]
-    },
-    "GENERIC_STM32G4A1KE": {
-        "inherits": [
-            "MCU_STM32G4A1xE"
-        ]
-    },
-    "GENERIC_STM32G4A1ME": {
-        "inherits": [
-            "MCU_STM32G4A1xE"
-        ]
-    },
-    "GENERIC_STM32G4A1RE": {
-        "inherits": [
-            "MCU_STM32G4A1xE"
-        ]
-    },
-    "GENERIC_STM32G4A1VE": {
-        "inherits": [
-            "MCU_STM32G4A1xE"
-        ]
-    },
     "GENERIC_STM32H743AI": {
         "device_name": "STM32H743AIIx",
         "inherits": [
