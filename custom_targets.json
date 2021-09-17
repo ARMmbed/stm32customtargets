@@ -1554,5 +1554,34 @@
         "inherits": [
             "MCU_STM32U585xI"
         ]
+    },
+    "GENERIC_STM32WB15CC": {
+        "device_name": "STM32WB15CCUx",
+        "inherits": [
+            "MCU_STM32WB15xC"
+        ]
+    },
+    "GENERIC_STM32WB55CG": {
+        "device_name": "STM32WB55CGUx",
+        "inherits": [
+            "MCU_STM32WB55xG"
+        ]
+    },
+    "GENERIC_STM32WB55RG": {
+        "device_name": "STM32WB55RGVx",
+        "inherits": [
+            "MCU_STM32WB55xG"
+        ]
+    },
+    "GENERIC_STM32WB55VG": {
+        "device_name": "STM32WB55VGYx",
+        "inherits": [
+            "MCU_STM32WB55xG"
+        ]
+    },
+    "GENERIC_STM32WB5MMG": {
+        "inherits": [
+            "MCU_STM32WB5MxG"
+        ]
     }
 }
