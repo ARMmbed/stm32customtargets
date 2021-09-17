@@ -7,6 +7,7 @@ Table of Contents
 =================
 
 * [WOW](#WOW)
+* [STM32F0](#STM32F0)
 * [STM32G0](#STM32G0)
 * [STM32G4](#STM32G4)
 * [STM32U5](#STM32U5)
@@ -47,9 +48,43 @@ python aci_build.py -l -c -b
 ```
 
 
+# STM32F0
+
+- mbed-os: mbed-os-6.15.0 + #15075
+- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+
+10 targets available thanks to:
+- MCU_STM32F030x8
+- MCU_STM32F070xB
+- MCU_STM32F072xB
+- MCU_STM32F091xC
+
+20 missing targets due to missing:
+- MCU_STM32F030x6
+- MCU_STM32F030xC
+- MCU_STM32F030x4
+- MCU_STM32F031x4
+- MCU_STM32F031x6
+- MCU_STM32F038x6
+- MCU_STM32F042x4
+- MCU_STM32F042x6
+- MCU_STM32F048x6
+- MCU_STM32F051x4
+- MCU_STM32F051x6
+- MCU_STM32F051x8
+- MCU_STM32F058x8
+- MCU_STM32F070x6
+- MCU_STM32F071x8
+- MCU_STM32F071xB
+- MCU_STM32F072x8
+- MCU_STM32F078xB
+- MCU_STM32F091xB
+- MCU_STM32F098xC
+
+
 # STM32G0
 
-- mbed-os: mbed-os-6.15.0
+- mbed-os: mbed-os-6.15.0 + #15075
 - STM32_open_pin_data: STM32CubeMX-DB.6.0.30
 
 35 targets available thanks to:

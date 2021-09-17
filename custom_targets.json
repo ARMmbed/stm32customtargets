@@ -1,4 +1,64 @@
 {
+    "GENERIC_STM32F030C8": {
+        "device_name": "STM32F030C8Tx",
+        "inherits": [
+            "MCU_STM32F030x8"
+        ]
+    },
+    "GENERIC_STM32F030R8": {
+        "device_name": "STM32F030R8Tx",
+        "inherits": [
+            "MCU_STM32F030x8"
+        ]
+    },
+    "GENERIC_STM32F070CB": {
+        "device_name": "STM32F070CBTx",
+        "inherits": [
+            "MCU_STM32F070xB"
+        ]
+    },
+    "GENERIC_STM32F070RB": {
+        "device_name": "STM32F070RBTx",
+        "inherits": [
+            "MCU_STM32F070xB"
+        ]
+    },
+    "GENERIC_STM32F072CB": {
+        "device_name": "STM32F072CBYx",
+        "inherits": [
+            "MCU_STM32F072xB"
+        ]
+    },
+    "GENERIC_STM32F072RB": {
+        "device_name": "STM32F072RBTx",
+        "inherits": [
+            "MCU_STM32F072xB"
+        ]
+    },
+    "GENERIC_STM32F072VB": {
+        "device_name": "STM32F072VBTx",
+        "inherits": [
+            "MCU_STM32F072xB"
+        ]
+    },
+    "GENERIC_STM32F091CC": {
+        "device_name": "STM32F091CCUx",
+        "inherits": [
+            "MCU_STM32F091xC"
+        ]
+    },
+    "GENERIC_STM32F091RC": {
+        "device_name": "STM32F091RCYx",
+        "inherits": [
+            "MCU_STM32F091xC"
+        ]
+    },
+    "GENERIC_STM32F091VC": {
+        "device_name": "STM32F091VCTx",
+        "inherits": [
+            "MCU_STM32F091xC"
+        ]
+    },
     "GENERIC_STM32G030C8": {
         "device_name": "STM32G030C8Tx",
         "inherits": [
