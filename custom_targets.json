@@ -1583,5 +1583,35 @@
         "inherits": [
             "MCU_STM32WB5MxG"
         ]
+    },
+    "GENERIC_STM32WL55CC": {
+        "device_name": "STM32WL55JCIx",
+        "inherits": [
+            "MCU_STM32WL55xC"
+        ]
+    },
+    "GENERIC_STM32WL55JC": {
+        "device_name": "STM32WL55JCIx",
+        "inherits": [
+            "MCU_STM32WL55xC"
+        ]
+    },
+    "GENERIC_STM32WL55UC": {
+        "device_name": "STM32WL55JCIx",
+        "inherits": [
+            "MCU_STM32WL55xC"
+        ]
+    },
+    "GENERIC_STM32WLE5CC": {
+        "device_name": "STM32WLE5CCUx",
+        "inherits": [
+            "MCU_STM32WLE5xC"
+        ]
+    },
+    "GENERIC_STM32WLE5JC": {
+        "device_name": "STM32WLE5JCIx",
+        "inherits": [
+            "MCU_STM32WLE5xC"
+        ]
     }
 }
