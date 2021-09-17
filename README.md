@@ -6,7 +6,7 @@ Feel free to propose your custom boards support in mbed-os!
 Table of Contents
 =================
 
-* [STM32XX](#STM32XX)
+* [WOW](#WOW)
 * [License](#license)
 * [Contributions](#contributions)
    * [Automatic pull request checks](#automatic-pull-request-checks)
@@ -14,7 +14,34 @@ Table of Contents
    * [Automatic weekly non regression](#automatic-weekly-non-regression)
 
 
-# STM32XX
+# WOW
+
+Clone mbed-os:
+```
+git clone https://github.com/ARMmbed/mbed-os.git
+```
+
+A "generic" target is a mbed-os target with a pure STM32 MCU.
+
+Goal is to make real custom boards creation very easy
+as we ensure that build has alrady been tested.
+
+```
+python -u make_generic_boards.py -f STM32G0
+```
+
+make_generic_boards.py is:
+- using mbed-os/targets/TARGET_STM/tools/STM32_gen_PeripheralPins.py to create all needed files for all supported MCU
+- copying files into this stm32customtargets repo
+- updating few files to make build environment OK with CLI1 and CLI2
+
+Start build tests:
+```
+python aci_build.py -l
+python aci_build.py -l -b
+python aci_build.py -l -c
+python aci_build.py -l -c -b
+```
 
 
 # License
