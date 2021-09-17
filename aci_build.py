@@ -64,6 +64,7 @@ else:
 # TargetList is the copy of custom_targets.json
 #   then skipped targets will be repoved from custom_targets_info
 TargetList = [*custom_targets_info]
+number_of_builds = 0
 
 if args.targets:
     BuildType = "TARGET"
@@ -73,7 +74,7 @@ if args.targets:
         sys.exit(1)
     for EachTarget in TargetList:
         if EachTarget == args.targets:
-            pass
+            number_of_builds += 1
         else:
             print ("\t%s is skipped" % EachTarget)
             del custom_targets_info[EachTarget]
@@ -90,13 +91,15 @@ if args.list:
             sys.exit(1)
     for EachTarget in TargetList:
         if EachTarget in targets_list_arg:
-            pass
+            number_of_builds += 1
         else:
             print ("\t%s is skipped" % EachTarget)
             del custom_targets_info[EachTarget]
 
 if args.all:
     BuildType = "FULL"
+    for EachTarget in TargetList:
+        number_of_builds += 1
 
 if BuildType == "PATCH":
     PatchedTargets = []
@@ -127,7 +130,7 @@ if BuildType == "PATCH":
 
     for EachTarget in TargetList:
         if EachTarget in PatchedTargets:
-            pass
+            number_of_builds += 1
         else:
             print ("\t%s is skipped" % EachTarget)
             del custom_targets_info[EachTarget]
@@ -271,15 +274,27 @@ if args.pin:
 else:
     ## START BUILD
 
+    def CheckBaremetalSupport(target_name):
+        baremetal_target_list = ["G03", "G04", "F030"]
+        for InList in baremetal_target_list:
+            if InList in target_name:
+                return True
+        return False
+
+    build_position = 0
     for EachTarget in custom_targets_info:
+        build_position += 1
+
         if not args.baremetal:
-            if "G03" in EachTarget or "G04" in EachTarget:
+            if CheckBaremetalSupport(EachTarget):
+                print("\n***************************************")
+                print("Skipping (baremetal only): " + EachTarget)
                 BuildFailed.append("%s skipped - need baremetal" % EachTarget)
                 continue
 
         cmdline = "%s compile -m %s -t %s" % (mbed_tool, EachTarget, requested_toolchain)
         print ("\n***************************************")
-        print ("Executing: " + cmdline)
+        print ("Executing %d/%d: %s" %(build_position, number_of_builds, cmdline))
         sys.stdout.flush()
 
         if os.system(cmdline) != 0:
