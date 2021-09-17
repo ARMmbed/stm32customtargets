@@ -1399,6 +1399,78 @@
             "MCU_STM32L4S5xI"
         ]
     },
+    "GENERIC_STM32L552CE": {
+        "device_name": "STM32L552ZETxQ",
+        "inherits": [
+            "MCU_STM32L552xE"
+        ]
+    },
+    "GENERIC_STM32L552ME": {
+        "device_name": "STM32L552ZETxQ",
+        "inherits": [
+            "MCU_STM32L552xE"
+        ]
+    },
+    "GENERIC_STM32L552QE": {
+        "device_name": "STM32L552ZETxQ",
+        "inherits": [
+            "MCU_STM32L552xE"
+        ]
+    },
+    "GENERIC_STM32L552RE": {
+        "device_name": "STM32L552ZETxQ",
+        "inherits": [
+            "MCU_STM32L552xE"
+        ]
+    },
+    "GENERIC_STM32L552VE": {
+        "device_name": "STM32L552ZETxQ",
+        "inherits": [
+            "MCU_STM32L552xE"
+        ]
+    },
+    "GENERIC_STM32L552ZE": {
+        "device_name": "STM32L552ZETxQ",
+        "inherits": [
+            "MCU_STM32L552xE"
+        ]
+    },
+    "GENERIC_STM32L562CE": {
+        "device_name": "STM32L562QEIxQ",
+        "inherits": [
+            "MCU_STM32L562xE"
+        ]
+    },
+    "GENERIC_STM32L562ME": {
+        "device_name": "STM32L562QEIxQ",
+        "inherits": [
+            "MCU_STM32L562xE"
+        ]
+    },
+    "GENERIC_STM32L562QE": {
+        "device_name": "STM32L562QEIxQ",
+        "inherits": [
+            "MCU_STM32L562xE"
+        ]
+    },
+    "GENERIC_STM32L562RE": {
+        "device_name": "STM32L562QEIxQ",
+        "inherits": [
+            "MCU_STM32L562xE"
+        ]
+    },
+    "GENERIC_STM32L562VE": {
+        "device_name": "STM32L562QEIxQ",
+        "inherits": [
+            "MCU_STM32L562xE"
+        ]
+    },
+    "GENERIC_STM32L562ZE": {
+        "device_name": "STM32L562QEIxQ",
+        "inherits": [
+            "MCU_STM32L562xE"
+        ]
+    },
     "GENERIC_STM32U575AI": {
         "device_name": "STM32U575ZITx",
         "inherits": [
