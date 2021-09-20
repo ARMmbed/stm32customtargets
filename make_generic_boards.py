@@ -39,7 +39,7 @@ Arguments.add_argument("--filter", "-f", help="")
 args = Arguments.parse_args()
 
 if args.filter:
-    requested_device = args.filter
+    requested_device = args.filter.upper()
 else:
     print("please use -f option")
     exit(3)
@@ -53,6 +53,9 @@ missing_target = []
 subfamily_list_ok = []
 missing_subfamily_list = []
 missing_device_list = []
+
+dual_core_list = ["H745", "H755", "H747", "H757"]
+is_dual_core = False
 
 custom_targets_file = open("custom_targets.json", "r")
 custom_targets_info = json.load(custom_targets_file)
@@ -78,8 +81,12 @@ for root, dirs, files in os.walk("TARGET_CUSTOM", topdown=False):
                     print("%s => skipped" % name)
                     continue
 
+                if "%s%s" %(STM32_FAMILY.upper(), STM32_SUBFAMILY) in dual_core_list:
+                    is_dual_core = True
+
                 TARGET_NAME =  "GENERIC_STM32%s%s%s%s" %(STM32_FAMILY, STM32_SUBFAMILY, STM32_PACKAGE, STM32_FLASH)
-                if TARGET_NAME not in target_list:
+                if (is_dual_core == False and TARGET_NAME not in target_list) or\
+                        (is_dual_core and "%s_CM4" % TARGET_NAME not in target_list):
                     INHERIT_NAME = "MCU_STM32%s%sx%s" % (STM32_FAMILY, STM32_SUBFAMILY, STM32_FLASH)
                     if INHERIT_NAME not in targets_json_info:
                         if INHERIT_NAME not in missing_subfamily_list:
@@ -96,7 +103,11 @@ for root, dirs, files in os.walk("TARGET_CUSTOM", topdown=False):
 
 # STEP2: copy to stm32customtargets STM32 family
                     copy_tree(os.path.join(root, name), os.path.join("TARGET_STM32%s" % STM32_FAMILY, "TARGET_%s" % TARGET_NAME))
-                    target_list.append(TARGET_NAME)
+                    if is_dual_core:
+                        target_list.append("%s_CM4" % TARGET_NAME)
+                        target_list.append("%s_CM7" % TARGET_NAME)
+                    else:
+                        target_list.append(TARGET_NAME)
 
 # STEP4: create system_clock.c
                     clock_file = open(os.path.join("TARGET_STM32%s" % STM32_FAMILY, "TARGET_%s" % TARGET_NAME, "system_clock.c"), 'w')
@@ -113,11 +124,27 @@ MBED_WEAK void SetSysClock(void)
                     cmake_list_file = os.path.join("TARGET_STM32%s" % STM32_FAMILY, "TARGET_%s" % TARGET_NAME, "CMakeLists.txt")
                     with open(cmake_list_file, "r") as sources:
                         lines = sources.readlines()
-                    with open(cmake_list_file, "w") as sources:
-                        for line in lines:
-                            sources.write(line.replace("xxx", TARGET_NAME.replace("_", "-").lower()))
-                            if "PeripheralPins" in line:
-                                sources.write("        system_clock.c\n")
+                    if is_dual_core:
+                        with open(cmake_list_file, "w") as sources:
+                            for line in lines:
+                                if "target_link_libraries" in line:
+                                    line = line.replace(")", "-cm4)")
+                                sources.write(line.replace("xxx", "%s-cm4" % TARGET_NAME.replace("_", "-").lower()))
+                                if "PeripheralPins" in line:
+                                    sources.write("        system_clock.c\n")
+                            for line in lines[2:]:
+                                if "target_link_libraries" in line:
+                                    line = line.replace(")", "-cm7)")
+                                sources.write(line.replace("xxx", "%s-cm7" % TARGET_NAME.replace("_", "-").lower()))
+                                if "PeripheralPins" in line:
+                                    sources.write("        system_clock.c\n")
+                    else:
+                        with open(cmake_list_file, "w") as sources:
+                            for line in lines:
+                                sources.write(line.replace("xxx", TARGET_NAME.replace("_", "-").lower()))
+                                if "PeripheralPins" in line:
+                                    sources.write("        system_clock.c\n")
+
 
 # STEP6: update TARGET_STM32xx/CMakeLists.txt
                     cmake_list_file = os.path.join("TARGET_STM32%s" % STM32_FAMILY, "CMakeLists.txt")
@@ -162,13 +189,37 @@ MBED_WEAK void SetSysClock(void)
 # STEP3B: update custom_targets.json
                     json_info = {}
                     inherit_list = []
-                    inherit_list.append(INHERIT_NAME)
-                    json_info['inherits'] = inherit_list
-                    if device_name != "":
-                        json_info['device_name'] = device_name
+                    if is_dual_core:
+                        label_list = []
+                        label_list.append(TARGET_NAME)
+
+                        inherit_list.append("%s_CM4" % INHERIT_NAME)
+                        json_info['inherits'] = inherit_list
+                        json_info['extra_labels_add'] = label_list
+                        if device_name != "":
+                            json_info['device_name'] = device_name
+                        else:
+                            missing_device_list.append(TARGET_NAME)
+                        custom_targets_info["%s_CM4" % TARGET_NAME] = json_info
+
+                        json_info = {}
+                        inherit_list = []
+                        inherit_list.append("%s_CM7" % INHERIT_NAME)
+                        json_info['inherits'] = inherit_list
+                        json_info['extra_labels_add'] = label_list
+                        if device_name != "":
+                            json_info['device_name'] = device_name
+                        else:
+                            missing_device_list.append(TARGET_NAME)
+                        custom_targets_info["%s_CM7" % TARGET_NAME] = json_info
                     else:
-                        missing_device_list.append(TARGET_NAME)
-                    custom_targets_info[TARGET_NAME] = json_info
+                        inherit_list.append(INHERIT_NAME)
+                        json_info['inherits'] = inherit_list
+                        if device_name != "":
+                            json_info['device_name'] = device_name
+                        else:
+                            missing_device_list.append(TARGET_NAME)
+                        custom_targets_info[TARGET_NAME] = json_info
 
                     print ("%s => %s inherits from %s with device_name %s" % (name, TARGET_NAME, INHERIT_NAME, device_name))
 
@@ -183,7 +234,9 @@ with open('custom_targets.json', 'w') as f:
 
 # create local file to call with aci_build.py after
 with open('target_list.json', 'w') as f:
-    json.dump(target_list, f)
+    json.dump(target_list, f, sort_keys = True, indent = 4)
+with open('target_list_%s.json' % STM32_FAMILY.lower(), 'w') as f:
+    json.dump(target_list, f, sort_keys = True, indent = 4)
 
 
 print ("")
