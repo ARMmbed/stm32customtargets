@@ -275,7 +275,7 @@ else:
     ## START BUILD
 
     def CheckBaremetalSupport(target_name):
-        baremetal_target_list = ["G03", "G04", "F030"]
+        baremetal_target_list = ["G030", "G030", "G041", "G050", "G051", "G061", "F030"]
         for InList in baremetal_target_list:
             if InList in target_name:
                 return True

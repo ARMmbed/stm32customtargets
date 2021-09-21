@@ -527,6 +527,66 @@
             "MCU_STM32G041x8"
         ]
     },
+    "GENERIC_STM32G050C8": {
+        "device_name": "STM32G050K8Tx",
+        "inherits": [
+            "MCU_STM32G050x8"
+        ]
+    },
+    "GENERIC_STM32G050K8": {
+        "device_name": "STM32G050K8Tx",
+        "inherits": [
+            "MCU_STM32G050x8"
+        ]
+    },
+    "GENERIC_STM32G051C8": {
+        "device_name": "STM32G051K8Tx",
+        "inherits": [
+            "MCU_STM32G051x8"
+        ]
+    },
+    "GENERIC_STM32G051F8": {
+        "device_name": "STM32G051K8Tx",
+        "inherits": [
+            "MCU_STM32G051x8"
+        ]
+    },
+    "GENERIC_STM32G051G8": {
+        "device_name": "STM32G051K8Tx",
+        "inherits": [
+            "MCU_STM32G051x8"
+        ]
+    },
+    "GENERIC_STM32G051K8": {
+        "device_name": "STM32G051K8Tx",
+        "inherits": [
+            "MCU_STM32G051x8"
+        ]
+    },
+    "GENERIC_STM32G061C8": {
+        "device_name": "STM32G061K8Tx",
+        "inherits": [
+            "MCU_STM32G061x8"
+        ]
+    },
+    "GENERIC_STM32G061F8": {
+        "device_name": "STM32G061K8Tx",
+        "inherits": [
+            "MCU_STM32G061x8"
+        ]
+    },
+    "GENERIC_STM32G061G8": {
+        "device_name": "STM32G061K8Tx",
+        "inherits": [
+            "MCU_STM32G061x8"
+        ]
+    },
+    "GENERIC_STM32G061K8": {
+        "device_name": "STM32G061K8Tx",
+        "inherits": [
+            "MCU_STM32G061x8"
+        ]
+    },
     "GENERIC_STM32G070CB": {
         "device_name": "STM32G070CBTx",
         "inherits": [
@@ -663,6 +723,42 @@
         "device_name": "STM32G0B1RETx",
         "inherits": [
             "MCU_STM32G0B1xE"
+        ]
+    },
+    "GENERIC_STM32G0C1CE": {
+        "device_name": "STM32G0C1RETx",
+        "inherits": [
+            "MCU_STM32G0C1xE"
+        ]
+    },
+    "GENERIC_STM32G0C1KE": {
+        "device_name": "STM32G0C1RETx",
+        "inherits": [
+            "MCU_STM32G0C1xE"
+        ]
+    },
+    "GENERIC_STM32G0C1ME": {
+        "device_name": "STM32G0C1RETx",
+        "inherits": [
+            "MCU_STM32G0C1xE"
+        ]
+    },
+    "GENERIC_STM32G0C1NE": {
+        "device_name": "STM32G0C1RETx",
+        "inherits": [
+            "MCU_STM32G0C1xE"
+        ]
+    },
+    "GENERIC_STM32G0C1RE": {
+        "device_name": "STM32G0C1RETx",
+        "inherits": [
+            "MCU_STM32G0C1xE"
+        ]
+    },
+    "GENERIC_STM32G0C1VE": {
+        "device_name": "STM32G0C1RETx",
+        "inherits": [
+            "MCU_STM32G0C1xE"
         ]
     },
     "GENERIC_STM32G431CB": {
