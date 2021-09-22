@@ -55,7 +55,6 @@ missing_subfamily_list = []
 missing_device_list = []
 
 dual_core_list = ["H745", "H755", "H747", "H757"]
-is_dual_core = False
 
 custom_targets_file = open("custom_targets.json", "r")
 custom_targets_info = json.load(custom_targets_file)
@@ -68,6 +67,7 @@ targets_json_file.close()
 for root, dirs, files in os.walk("TARGET_CUSTOM", topdown=False):
     for name in dirs:
         # print("%s" %name)
+        is_dual_core = False
         if requested_device in name:
             MCU_pattern = re.compile("TARGET_STM32([\w]{2})([\w]{2})([\w])([\w])")
             for match in re.finditer(MCU_pattern, name):
@@ -76,6 +76,9 @@ for root, dirs, files in os.walk("TARGET_CUSTOM", topdown=False):
                 STM32_PACKAGE = match.group(3)
                 STM32_FLASH = match.group(4)
                 # print("match family %s sub %s" %(STM32_FAMILY, STM32_SUBFAMILY))
+
+                if name.endswith("_Q"):
+                    STM32_FLASH += "Q"
 
                 if name.endswith("_N"):
                     print("%s => skipped" % name)
@@ -141,6 +144,9 @@ MBED_WEAK void SetSysClock(void)
                     else:
                         with open(cmake_list_file, "w") as sources:
                             for line in lines:
+                                if "target_link_libraries" in line:
+                                    if name.endswith("_Q"):
+                                        line = line.replace(")", "q)")
                                 sources.write(line.replace("xxx", TARGET_NAME.replace("_", "-").lower()))
                                 if "PeripheralPins" in line:
                                     sources.write("        system_clock.c\n")
@@ -170,14 +176,14 @@ MBED_WEAK void SetSysClock(void)
                     pack_manager_file.close()
 
                     device_name = ""
-                    device_to_find = "STM32%s%s%s%s" % (STM32_FAMILY, STM32_SUBFAMILY, STM32_PACKAGE, STM32_FLASH)
+                    device_to_find = "STM32%s%s%s%s" % (STM32_FAMILY, STM32_SUBFAMILY, STM32_PACKAGE, STM32_FLASH[0])
                     for EachDevice in pack_manager_info:
                         if device_to_find in EachDevice:
                             device_name = EachDevice
 
                     # 2nd chance without package information
                     if device_name == "":
-                        device_to_find = "STM32%s%sx%s" % (STM32_FAMILY, STM32_SUBFAMILY, STM32_FLASH)
+                        device_to_find = "STM32%s%sx%s" % (STM32_FAMILY, STM32_SUBFAMILY, STM32_FLASH[0])
                         CMSIS_pattern = re.compile("STM32([\w]{4})[\w]([\w])")
                         # print("device_to_find %s" % device_to_find)
                         for EachDevice in pack_manager_info:

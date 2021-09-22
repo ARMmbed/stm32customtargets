@@ -350,19 +350,22 @@ Missing device_name in mbed-os pack manager:
 
 # STM32H7
 
-- mbed-os: mbed-os-6.15.0
+- mbed-os: mbed-os-6.15.0 ++
 - STM32_open_pin_data: STM32CubeMX-DB.6.0.30
 
-15 targets available thanks to:
+41 targets available thanks to:
+- MCU_STM32H723xG
+- MCU_STM32H725xE
 - MCU_STM32H743xI
 - MCU_STM32H745xI
 - MCU_STM32H747xI
+- MCU_STM32H750xB
+- MCU_STM32H7A3xIQ
 
-20 missing targets due to missing:
+21 missing targets due to missing:
 - MCU_STM32H723xE
-- MCU_STM32H723xG
-- MCU_STM32H725xE
 - MCU_STM32H725xG
+- MCU_STM32H730xBQ
 - MCU_STM32H730xB
 - MCU_STM32H733xG
 - MCU_STM32H735xG
@@ -371,13 +374,15 @@ Missing device_name in mbed-os pack manager:
 - MCU_STM32H743xG
 - MCU_STM32H745xG
 - MCU_STM32H747xG
-- MCU_STM32H750xB
 - MCU_STM32H753xI
 - MCU_STM32H755xI
 - MCU_STM32H757xI
+- MCU_STM32H7A3xGQ
 - MCU_STM32H7A3xG
 - MCU_STM32H7A3xI
+- MCU_STM32H7B0xBQ
 - MCU_STM32H7B0xB
+- MCU_STM32H7B3xIQ
 - MCU_STM32H7B3xI
 
 
