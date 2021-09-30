@@ -2,7 +2,7 @@
 
 This branch is creating "generic" targets which are virtual boards with an STM32.
 
-Current status: 331 generic boards have created and tested with CLI1 and CLI2.
+Current status: 337 generic boards have created and tested with CLI1 and CLI2.
 
 Real custom boards are in the main branch : https://github.com/ARMmbed/stm32customtargets
 
@@ -353,7 +353,7 @@ Missing device_name in mbed-os pack manager:
 - mbed-os: mbed-os-6.15.0 ++
 - STM32_open_pin_data: STM32CubeMX-DB.6.0.30
 
-46 targets available thanks to:
+52 targets available thanks to:
 - MCU_STM32H723xG
 - MCU_STM32H725xE
 - MCU_STM32H735xG
@@ -362,8 +362,9 @@ Missing device_name in mbed-os pack manager:
 - MCU_STM32H747xI
 - MCU_STM32H750xB
 - MCU_STM32H7A3xIQ
+- MCU_STM32H7B3xIQ
 
-20 missing targets due to missing:
+19 missing targets due to missing:
 - MCU_STM32H723xE
 - MCU_STM32H725xG
 - MCU_STM32H730xBQ
@@ -382,7 +383,6 @@ Missing device_name in mbed-os pack manager:
 - MCU_STM32H7A3xI
 - MCU_STM32H7B0xBQ
 - MCU_STM32H7B0xB
-- MCU_STM32H7B3xIQ
 - MCU_STM32H7B3xI
 
 

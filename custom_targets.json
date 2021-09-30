@@ -1397,6 +1397,42 @@
             "MCU_STM32H7A3xIQ"
         ]
     },
+    "GENERIC_STM32H7B3AIQ": {
+        "device_name": "STM32H7B3ZITxQ",
+        "inherits": [
+            "MCU_STM32H7B3xIQ"
+        ]
+    },
+    "GENERIC_STM32H7B3IIQ": {
+        "device_name": "STM32H7B3ZITxQ",
+        "inherits": [
+            "MCU_STM32H7B3xIQ"
+        ]
+    },
+    "GENERIC_STM32H7B3LIQ": {
+        "device_name": "STM32H7B3ZITxQ",
+        "inherits": [
+            "MCU_STM32H7B3xIQ"
+        ]
+    },
+    "GENERIC_STM32H7B3QIQ": {
+        "device_name": "STM32H7B3ZITxQ",
+        "inherits": [
+            "MCU_STM32H7B3xIQ"
+        ]
+    },
+    "GENERIC_STM32H7B3VIQ": {
+        "device_name": "STM32H7B3ZITxQ",
+        "inherits": [
+            "MCU_STM32H7B3xIQ"
+        ]
+    },
+    "GENERIC_STM32H7B3ZIQ": {
+        "device_name": "STM32H7B3ZITxQ",
+        "inherits": [
+            "MCU_STM32H7B3xIQ"
+        ]
+    },
     "GENERIC_STM32L053C8": {
         "device_name": "STM32L053C8Tx",
         "inherits": [
