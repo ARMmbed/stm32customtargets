@@ -1037,6 +1037,36 @@
             "MCU_STM32H725xE"
         ]
     },
+    "GENERIC_STM32H735AG": {
+        "device_name": "STM32H735IGTx",
+        "inherits": [
+            "MCU_STM32H735xG"
+        ]
+    },
+    "GENERIC_STM32H735IG": {
+        "device_name": "STM32H735IGTx",
+        "inherits": [
+            "MCU_STM32H735xG"
+        ]
+    },
+    "GENERIC_STM32H735RG": {
+        "device_name": "STM32H735IGTx",
+        "inherits": [
+            "MCU_STM32H735xG"
+        ]
+    },
+    "GENERIC_STM32H735VG": {
+        "device_name": "STM32H735IGTx",
+        "inherits": [
+            "MCU_STM32H735xG"
+        ]
+    },
+    "GENERIC_STM32H735ZG": {
+        "device_name": "STM32H735IGTx",
+        "inherits": [
+            "MCU_STM32H735xG"
+        ]
+    },
     "GENERIC_STM32H743AI": {
         "device_name": "STM32H743AIIx",
         "inherits": [
