@@ -20,6 +20,7 @@ jobs:
           shell: bash
           run: |
             pip3 list
+            pip3 install mbed-tools -U
             git clone https://github.com/ARMmbed/mbed-os.git
             python3 aci_build.py --all
 
@@ -37,6 +38,7 @@ jobs:
           shell: bash
           run: |
             pip3 list
+            pip3 install mbed-tools -U
             git clone https://github.com/ARMmbed/mbed-os.git
             python3 aci_build.py --all --baremetal
 
@@ -54,6 +56,7 @@ jobs:
           shell: bash
           run: |
             pip3 list
+            pip3 install mbed-tools -U
             git clone https://github.com/ARMmbed/mbed-os.git
             python3 aci_build.py --cli2 --all
 
@@ -71,6 +74,7 @@ jobs:
           shell: bash
           run: |
             pip3 list
+            pip3 install mbed-tools -U
             git clone https://github.com/ARMmbed/mbed-os.git
             python3 aci_build.py --cli2 --all --baremetal
 
