@@ -17,7 +17,7 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           options: -v ${{ github.workspace }}:/stm32customtargets -w=/stm32customtargets
-          image: mbedos/mbed-os-env:latest
+          image: ghcr.io/armmbed/mbed-os-env:latest
           shell: bash
           run: |
             pip3 list
@@ -36,7 +36,7 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           options: -v ${{ github.workspace }}:/stm32customtargets -w=/stm32customtargets
-          image: mbedos/mbed-os-env:latest
+          image: ghcr.io/armmbed/mbed-os-env:latest
           shell: bash
           run: |
             pip3 list
@@ -55,7 +55,7 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           options: -v ${{ github.workspace }}:/stm32customtargets -w=/stm32customtargets
-          image: mbedos/mbed-os-env:latest
+          image: ghcr.io/armmbed/mbed-os-env:latest
           shell: bash
           run: |
             pip3 list
