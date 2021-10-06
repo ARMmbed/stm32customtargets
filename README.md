@@ -2,7 +2,7 @@
 
 This branch is creating "generic" targets which are virtual boards with an STM32.
 
-Current status: 337 generic boards have created and tested with CLI1 and CLI2.
+Current status: 329 generic boards have created and tested with CLI1 and CLI2.
 
 Real custom boards are in the main branch : https://github.com/ARMmbed/stm32customtargets
 
