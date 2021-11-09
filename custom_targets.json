@@ -1451,6 +1451,18 @@
             "MCU_STM32L082xZ"
         ]
     },
+    "GENERIC_STM32L151CB": {
+        "device_name": "STM32L151CB",
+        "inherits": [
+            "MCU_STM32L151xB"
+        ]
+    },
+    "GENERIC_STM32L151CBA": {
+        "device_name": "STM32L151CBxxA",
+        "inherits": [
+            "MCU_STM32L151xBA"
+        ]
+    },
     "GENERIC_STM32L151CC": {
         "device_name": "STM32L151CCTx",
         "inherits": [
@@ -1463,8 +1475,20 @@
             "MCU_STM32L151xC"
         ]
     },
+    "GENERIC_STM32L151RB": {
+        "device_name": "STM32L151RB",
+        "inherits": [
+            "MCU_STM32L151xB"
+        ]
+    },
+    "GENERIC_STM32L151RBA": {
+        "device_name": "STM32L151RBxxA",
+        "inherits": [
+            "MCU_STM32L151xBA"
+        ]
+    },
     "GENERIC_STM32L151RC": {
-        "device_name": "STM32L151RCxxA",
+        "device_name": "STM32L151RC",
         "inherits": [
             "MCU_STM32L151xC"
         ]
@@ -1475,8 +1499,20 @@
             "MCU_STM32L151xC"
         ]
     },
+    "GENERIC_STM32L151VB": {
+        "device_name": "STM32L151VB",
+        "inherits": [
+            "MCU_STM32L151xB"
+        ]
+    },
+    "GENERIC_STM32L151VBA": {
+        "device_name": "STM32L151VBxxA",
+        "inherits": [
+            "MCU_STM32L151xBA"
+        ]
+    },
     "GENERIC_STM32L151VC": {
-        "device_name": "STM32L151VCxxA",
+        "device_name": "STM32L151VC",
         "inherits": [
             "MCU_STM32L151xC"
         ]
@@ -1506,7 +1542,7 @@
         ]
     },
     "GENERIC_STM32L152RC": {
-        "device_name": "STM32L152RCxxA",
+        "device_name": "STM32L152RCTx",
         "inherits": [
             "MCU_STM32L152xC"
         ]
@@ -1524,7 +1560,7 @@
         ]
     },
     "GENERIC_STM32L152VC": {
-        "device_name": "STM32L152VCxxA",
+        "device_name": "STM32L152VC",
         "inherits": [
             "MCU_STM32L152xC"
         ]

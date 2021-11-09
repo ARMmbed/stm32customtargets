@@ -66,7 +66,7 @@ targets_json_file.close()
 
 for root, dirs, files in os.walk("TARGET_CUSTOM", topdown=False):
     for name in dirs:
-        # print("%s" %name)
+        # print("\n%s" %name)
         is_dual_core = False
         if requested_device in name:
             MCU_pattern = re.compile("TARGET_STM32([\w]{2})([\w]{2})([\w])([\w])")
@@ -79,6 +79,9 @@ for root, dirs, files in os.walk("TARGET_CUSTOM", topdown=False):
 
                 if name.endswith("_Q"):
                     STM32_FLASH += "Q"
+
+                if name.endswith("_A"):
+                    STM32_FLASH += "A"
 
                 if name.endswith("_N"):
                     print("%s => skipped" % name)
@@ -177,15 +180,20 @@ MBED_WEAK void SetSysClock(void)
 
                     device_name = ""
                     device_to_find = "STM32%s%s%s%s" % (STM32_FAMILY, STM32_SUBFAMILY, STM32_PACKAGE, STM32_FLASH[0])
+                    if STM32_FAMILY == "L1" and STM32_FLASH.endswith("A"):
+                        device_to_find += "xxA"
+                    # print("1- device_to_find %s" % device_to_find)
                     for EachDevice in pack_manager_info:
                         if device_to_find in EachDevice:
+                            print("    found %s" % EachDevice)
                             device_name = EachDevice
+                            break
 
                     # 2nd chance without package information
                     if device_name == "":
                         device_to_find = "STM32%s%sx%s" % (STM32_FAMILY, STM32_SUBFAMILY, STM32_FLASH[0])
                         CMSIS_pattern = re.compile("STM32([\w]{4})[\w]([\w])")
-                        # print("device_to_find %s" % device_to_find)
+                        # print("2- device_to_find %s" % device_to_find)
                         for EachDevice in pack_manager_info:
                             for match in re.finditer(CMSIS_pattern, EachDevice):
                                 device_to_compare = "STM32%sx%s" % (match.group(1), match.group(2))

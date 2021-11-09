@@ -2,7 +2,7 @@
 
 This branch is creating "generic" targets which are virtual boards with an STM32.
 
-Current status: 329 generic boards have created and tested with CLI1 and CLI2.
+Current status: 335 generic boards have created and tested with CLI1 and CLI2.
 
 Real custom boards are in the main branch : https://github.com/ARMmbed/stm32customtargets
 
@@ -433,30 +433,42 @@ Missing device_name in mbed-os pack manager:
 
 # STM32L1
 
-- mbed-os: mbed-os-6.15.0
+- mbed-os: mbed-os-6.15.0 + https://github.com/ARMmbed/mbed-os/pull/15164
 - STM32_open_pin_data: STM32CubeMX-DB.6.0.30
 
-16 targets available thanks to:
+22 targets available thanks to:
+- MCU_STM32L151xB
+- MCU_STM32L151xBA
 - MCU_STM32L151xC
 - MCU_STM32L152xC
 - MCU_STM32L152xE
 
-16 missing targets due to missing:
+26 missing targets due to missing:
 - MCU_STM32L100x6
+- MCU_STM32L100x6A
 - MCU_STM32L100x8
+- MCU_STM32L100x8A
 - MCU_STM32L100xB
+- MCU_STM32L100xBA
 - MCU_STM32L100xC
 - MCU_STM32L151x6
+- MCU_STM32L151x6A
 - MCU_STM32L151x8
-- MCU_STM32L151xB
+- MCU_STM32L151x8A
 - MCU_STM32L151xD
 - MCU_STM32L151xE
+- MCU_STM32L151xCA
 - MCU_STM32L152x6
+- MCU_STM32L152x6A
 - MCU_STM32L152x8
+- MCU_STM32L152x8A
 - MCU_STM32L152xB
+- MCU_STM32L152xBA
 - MCU_STM32L152xD
+- MCU_STM32L152xCA
 - MCU_STM32L162xC
 - MCU_STM32L162xD
+- MCU_STM32L162xCA
 - MCU_STM32L162xE
 
 
