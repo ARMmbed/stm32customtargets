@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  ******************************************************************************
  *
- * Copyright (c) 2016-2021 STMicroelectronics.
+ * Copyright (c) 2016-2022 STMicroelectronics.
  * All rights reserved.
  *
  * This software component is licensed by ST under BSD 3-Clause license,
@@ -12,7 +12,7 @@
  *
  ******************************************************************************
  *
- * Automatically generated from STM32CubeMX/db/mcu/STM32L443CCTx.xml
+ * Automatically generated from STM32CubeMX/db/mcu/STM32L443CCFx.xml
  */
 
 /* MBED TARGET LIST: xxx */
@@ -76,6 +76,7 @@ typedef enum {
     PB_14_ALT0 = PB_14 | ALT0, // same pin used for alternate HW
     PB_15      = 0x1F,
     PB_15_ALT0 = PB_15 | ALT0, // same pin used for alternate HW
+    PC_3       = 0x23,
     PC_13      = 0x2D,
     PC_14      = 0x2E,
     PC_15      = 0x2F,

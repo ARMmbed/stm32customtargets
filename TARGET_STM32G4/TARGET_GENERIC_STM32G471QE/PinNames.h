@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  ******************************************************************************
  *
- * Copyright (c) 2016-2021 STMicroelectronics.
+ * Copyright (c) 2016-2022 STMicroelectronics.
  * All rights reserved.
  *
  * This software component is licensed by ST under BSD 3-Clause license,
@@ -53,9 +53,7 @@ typedef enum {
     PA_7_ALT2  = PA_7  | ALT2, // same pin used for alternate HW
     PA_8       = 0x08,
     PA_9       = 0x09,
-    PA_9_ALT0  = PA_9  | ALT0, // same pin used for alternate HW
     PA_10      = 0x0A,
-    PA_10_ALT0 = PA_10 | ALT0, // same pin used for alternate HW
     PA_11      = 0x0B,
     PA_11_ALT0 = PA_11 | ALT0, // same pin used for alternate HW
     PA_11_ALT1 = PA_11 | ALT1, // same pin used for alternate HW
@@ -122,6 +120,7 @@ typedef enum {
     PC_7_ALT0  = PC_7  | ALT0, // same pin used for alternate HW
     PC_8       = 0x28,
     PC_8_ALT0  = PC_8  | ALT0, // same pin used for alternate HW
+    PC_8_ALT1  = PC_8  | ALT1, // same pin used for alternate HW
     PC_9       = 0x29,
     PC_9_ALT0  = PC_9  | ALT0, // same pin used for alternate HW
     PC_10      = 0x2A,
@@ -150,11 +149,17 @@ typedef enum {
     PD_14      = 0x3E,
     PD_15      = 0x3F,
     PE_0       = 0x40,
+    PE_0_ALT0  = PE_0  | ALT0, // same pin used for alternate HW
     PE_1       = 0x41,
+    PE_1_ALT0  = PE_1  | ALT0, // same pin used for alternate HW
     PE_2       = 0x42,
+    PE_2_ALT0  = PE_2  | ALT0, // same pin used for alternate HW
     PE_3       = 0x43,
+    PE_3_ALT0  = PE_3  | ALT0, // same pin used for alternate HW
     PE_4       = 0x44,
+    PE_4_ALT0  = PE_4  | ALT0, // same pin used for alternate HW
     PE_5       = 0x45,
+    PE_5_ALT0  = PE_5  | ALT0, // same pin used for alternate HW
     PE_6       = 0x46,
     PE_7       = 0x47,
     PE_8       = 0x48,

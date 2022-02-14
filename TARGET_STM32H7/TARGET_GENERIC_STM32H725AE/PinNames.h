@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  ******************************************************************************
  *
- * Copyright (c) 2016-2021 STMicroelectronics.
+ * Copyright (c) 2016-2022 STMicroelectronics.
  * All rights reserved.
  *
  * This software component is licensed by ST under BSD 3-Clause license,
@@ -211,6 +211,7 @@ typedef enum {
     PG_11      = 0x6B,
     PG_12      = 0x6C,
     PG_13      = 0x6D,
+    PG_13_ALT0 = PG_13 | ALT0, // same pin used for alternate HW
     PG_14      = 0x6E,
     PG_15      = 0x6F,
     PH_0       = 0x70,

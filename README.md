@@ -2,7 +2,7 @@
 
 This branch is creating "generic" targets which are virtual boards with an STM32.
 
-Current status: 335 generic boards have created and tested with CLI1 and CLI2.
+Current status: 345 generic boards have created and tested with CLI1 and CLI2.
 
 Real custom boards are in the main branch : https://github.com/ARMmbed/stm32customtargets
 
@@ -62,8 +62,8 @@ python aci_build.py -l -c -b
 
 # STM32F0
 
-- mbed-os: mbed-os-6.15.0
-- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+- mbed-os: master
+- STM32_open_pin_data: master
 
 10 targets available thanks to:
 - MCU_STM32F030x8
@@ -96,8 +96,8 @@ python aci_build.py -l -c -b
 
 # STM32F1
 
-- mbed-os: mbed-os-6.15.0
-- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+- mbed-os: master
+- STM32_open_pin_data: master
 
 11 targets available thanks to:
 - MCU_STM32F103x8
@@ -140,8 +140,8 @@ python aci_build.py -l -c -b
 
 # STM32F2
 
-- mbed-os: mbed-os-6.15.0
-- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+- mbed-os: master
+- STM32_open_pin_data: master
 
 0 targets available thanks to:
 
@@ -163,8 +163,8 @@ python aci_build.py -l -c -b
 
 # STM32F3
 
-- mbed-os: mbed-os-6.15.0
-- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+- mbed-os: master
+- STM32_open_pin_data: master
 
 15 targets available thanks to:
 - MCU_STM32F302x8
@@ -198,8 +198,8 @@ python aci_build.py -l -c -b
 
 # STM32F4
 
-- mbed-os: mbed-os-6.15.0
-- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+- mbed-os: master
+- STM32_open_pin_data: master
 
 40 targets available thanks to:
 - MCU_STM32F401xE
@@ -244,8 +244,8 @@ python aci_build.py -l -c -b
 
 # STM32F7
 
-- mbed-os: mbed-os-6.15.0
-- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+- mbed-os: master
+- STM32_open_pin_data: master
 
 0 targets available thanks to:
 
@@ -277,8 +277,8 @@ python aci_build.py -l -c -b
 
 # STM32G0
 
-- mbed-os: mbed-os-6.15.0 + #15075
-- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+- mbed-os: master
+- STM32_open_pin_data: master
 
 51 targets available thanks to:
 - MCU_STM32G030x8
@@ -311,10 +311,10 @@ python aci_build.py -l -c -b
 
 # STM32G4
 
-- mbed-os: mbed-os-6.15.0
-- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+- mbed-os: master
+- STM32_open_pin_data: master
 
-49 targets available thanks to:
+39 targets available thanks to:
 - MCU_STM32G431xB
 - MCU_STM32G441xB
 - MCU_STM32G471xE
@@ -322,10 +322,8 @@ python aci_build.py -l -c -b
 - MCU_STM32G474xE
 - MCU_STM32G483xE
 - MCU_STM32G484xE
-- MCU_STM32G491xE
-- MCU_STM32G4A1xE
 
-8 missing targets due to missing:
+10 missing targets due to missing:
 - MCU_STM32G431x6
 - MCU_STM32G431x8
 - MCU_STM32G471xC
@@ -334,24 +332,14 @@ python aci_build.py -l -c -b
 - MCU_STM32G474xB
 - MCU_STM32G474xC
 - MCU_STM32G491xC
-
-Missing device_name in mbed-os pack manager:
-- GENERIC_STM32G491CE
-- GENERIC_STM32G491KE
-- GENERIC_STM32G491ME
-- GENERIC_STM32G491RE
-- GENERIC_STM32G491VE
-- GENERIC_STM32G4A1CE
-- GENERIC_STM32G4A1KE
-- GENERIC_STM32G4A1ME
-- GENERIC_STM32G4A1RE
-- GENERIC_STM32G4A1VE
+- MCU_STM32G491xE
+- MCU_STM32G4A1xE
 
 
 # STM32H7
 
-- mbed-os: mbed-os-6.15.0 ++
-- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+- mbed-os: master
+- STM32_open_pin_data: master
 
 52 targets available thanks to:
 - MCU_STM32H723xG
@@ -388,8 +376,8 @@ Missing device_name in mbed-os pack manager:
 
 # STM32L0
 
-- mbed-os: mbed-os-6.15.0
-- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+- mbed-os: master
+- STM32_open_pin_data: master
 
 15 targets available thanks to:
 - MCU_STM32L053x8
@@ -433,8 +421,8 @@ Missing device_name in mbed-os pack manager:
 
 # STM32L1
 
-- mbed-os: mbed-os-6.15.0 + https://github.com/ARMmbed/mbed-os/pull/15164
-- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+- mbed-os: master
+- STM32_open_pin_data: master
 
 22 targets available thanks to:
 - MCU_STM32L151xB
@@ -474,10 +462,11 @@ Missing device_name in mbed-os pack manager:
 
 # STM32L4
 
-- mbed-os: mbed-os-6.15.0
-- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+- mbed-os: master
+- STM32_open_pin_data: master
 
-44 targets available thanks to:
+54 targets available thanks to:
+- MCU_STM32L412xB
 - MCU_STM32L432xC
 - MCU_STM32L433xC
 - MCU_STM32L443xC
@@ -487,13 +476,13 @@ Missing device_name in mbed-os pack manager:
 - MCU_STM32L476xG
 - MCU_STM32L486xG
 - MCU_STM32L496xG
+- MCU_STM32L4P5xG
 - MCU_STM32L4R5xI
 - MCU_STM32L4R9xI
 - MCU_STM32L4S5xI
 
-29 missing targets due to missing:
+27 missing targets due to missing:
 - MCU_STM32L412x8
-- MCU_STM32L412xB
 - MCU_STM32L422xB
 - MCU_STM32L431xB
 - MCU_STM32L431xC
@@ -514,7 +503,6 @@ Missing device_name in mbed-os pack manager:
 - MCU_STM32L496xE
 - MCU_STM32L4A6xG
 - MCU_STM32L4P5xE
-- MCU_STM32L4P5xG
 - MCU_STM32L4Q5xG
 - MCU_STM32L4R5xG
 - MCU_STM32L4R7xI
@@ -525,35 +513,41 @@ Missing device_name in mbed-os pack manager:
 
 # STM32L5
 
-- mbed-os: mbed-os-6.15.0
-- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+- mbed-os: master
+- STM32_open_pin_data: master
 
 12 targets available thanks to:
 - MCU_STM32L552xE
 - MCU_STM32L562xE
 
-1 missing targets due to missing:
+4 missing targets due to missing:
 - MCU_STM32L552xC
+- MCU_STM32L552xEQ
+- MCU_STM32L552xCQ
+- MCU_STM32L562xEQ
 
 
 # STM32U5
 
-- mbed-os: mbed-os-6.15.0
-- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+- mbed-os: master
+- STM32_open_pin_data: master
 
-14 targets available thanks to:
+12 targets available thanks to:
 - MCU_STM32U575xI
 - MCU_STM32U585xI
 
-2 missing targets due to missing:
+5 missing targets due to missing:
 - MCU_STM32U575xG
-- MCU_STM32U585xE
+- MCU_STM32U575xGQ
+- MCU_STM32U575xIQ
+- MCU_STM32U585xIQ
+- MCU_STM32U585xEQ
 
 
 # STM32WB
 
-- mbed-os: mbed-os-6.15.0
-- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+- mbed-os: master
+- STM32_open_pin_data: master
 
 5 targets available thanks to:
 - MCU_STM32WB15xC
@@ -576,8 +570,8 @@ Missing device_name in mbed-os pack manager:
 
 # STM32WL
 
-- mbed-os: mbed-os-6.15.0
-- STM32_open_pin_data: STM32CubeMX-DB.6.0.30
+- mbed-os: master
+- STM32_open_pin_data: master
 
 5 targets available thanks to:
 - MCU_STM32WL55xC

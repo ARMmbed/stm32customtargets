@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  ******************************************************************************
  *
- * Copyright (c) 2016-2021 STMicroelectronics.
+ * Copyright (c) 2016-2022 STMicroelectronics.
  * All rights reserved.
  *
  * This software component is licensed by ST under BSD 3-Clause license,
@@ -53,9 +53,7 @@ typedef enum {
     PA_7_ALT2  = PA_7  | ALT2, // same pin used for alternate HW
     PA_8       = 0x08,
     PA_9       = 0x09,
-    PA_9_ALT0  = PA_9  | ALT0, // same pin used for alternate HW
     PA_10      = 0x0A,
-    PA_10_ALT0 = PA_10 | ALT0, // same pin used for alternate HW
     PA_11      = 0x0B,
     PA_11_ALT0 = PA_11 | ALT0, // same pin used for alternate HW
     PA_11_ALT1 = PA_11 | ALT1, // same pin used for alternate HW
@@ -122,6 +120,7 @@ typedef enum {
     PC_7_ALT0  = PC_7  | ALT0, // same pin used for alternate HW
     PC_8       = 0x28,
     PC_8_ALT0  = PC_8  | ALT0, // same pin used for alternate HW
+    PC_8_ALT1  = PC_8  | ALT1, // same pin used for alternate HW
     PC_9       = 0x29,
     PC_9_ALT0  = PC_9  | ALT0, // same pin used for alternate HW
     PC_10      = 0x2A,

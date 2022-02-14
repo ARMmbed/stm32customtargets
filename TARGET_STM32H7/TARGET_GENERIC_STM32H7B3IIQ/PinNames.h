@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  ******************************************************************************
  *
- * Copyright (c) 2016-2021 STMicroelectronics.
+ * Copyright (c) 2016-2022 STMicroelectronics.
  * All rights reserved.
  *
  * This software component is licensed by ST under BSD 3-Clause license,
@@ -318,7 +318,6 @@ typedef enum {
     PWR_NDSTOP2 = PA_5,
     PWR_PVD_IN = PB_7,
     SYS_PWR_WKUP1 = PA_0,
-    SYS_PWR_WKUP1_ALT0 = PA_0C,
     SYS_PWR_WKUP2 = PA_2,
     SYS_PWR_WKUP4 = PC_13,
     SYS_PWR_WKUP6 = PC_1,
