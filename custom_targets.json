@@ -1349,6 +1349,42 @@
             "MCU_STM32H750xB"
         ]
     },
+    "GENERIC_STM32H753AI": {
+        "device_name": "STM32H753AIIx",
+        "inherits": [
+            "MCU_STM32H753xI"
+        ]
+    },
+    "GENERIC_STM32H753BI": {
+        "device_name": "STM32H753BITx",
+        "inherits": [
+            "MCU_STM32H753xI"
+        ]
+    },
+    "GENERIC_STM32H753II": {
+        "device_name": "STM32H753IIKx",
+        "inherits": [
+            "MCU_STM32H753xI"
+        ]
+    },
+    "GENERIC_STM32H753VI": {
+        "device_name": "STM32H753VIHx",
+        "inherits": [
+            "MCU_STM32H753xI"
+        ]
+    },
+    "GENERIC_STM32H753XI": {
+        "device_name": "STM32H753XIHx",
+        "inherits": [
+            "MCU_STM32H753xI"
+        ]
+    },
+    "GENERIC_STM32H753ZI": {
+        "device_name": "STM32H753ZITx",
+        "inherits": [
+            "MCU_STM32H753xI"
+        ]
+    },
     "GENERIC_STM32H7A3AIQ": {
         "device_name": "STM32H7A3ZITxQ",
         "inherits": [
