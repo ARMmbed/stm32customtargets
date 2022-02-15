@@ -2,7 +2,7 @@
 
 This branch is creating "generic" targets which are virtual boards with an STM32.
 
-Current status: 345 generic boards have created and tested with CLI1 and CLI2.
+Current status: 355 generic boards have created and tested with CLI1 and CLI2.
 
 Real custom boards are in the main branch : https://github.com/ARMmbed/stm32customtargets
 
@@ -314,7 +314,7 @@ python aci_build.py -l -c -b
 - mbed-os: master
 - STM32_open_pin_data: master
 
-39 targets available thanks to:
+49 targets available thanks to:
 - MCU_STM32G431xB
 - MCU_STM32G441xB
 - MCU_STM32G471xE
@@ -322,8 +322,10 @@ python aci_build.py -l -c -b
 - MCU_STM32G474xE
 - MCU_STM32G483xE
 - MCU_STM32G484xE
+- MCU_STM32G491xE
+- MCU_STM32G4A1xE
 
-10 missing targets due to missing:
+8 missing targets due to missing:
 - MCU_STM32G431x6
 - MCU_STM32G431x8
 - MCU_STM32G471xC
@@ -332,8 +334,6 @@ python aci_build.py -l -c -b
 - MCU_STM32G474xB
 - MCU_STM32G474xC
 - MCU_STM32G491xC
-- MCU_STM32G491xE
-- MCU_STM32G4A1xE
 
 
 # STM32H7

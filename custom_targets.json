@@ -995,6 +995,66 @@
             "MCU_STM32G484xE"
         ]
     },
+    "GENERIC_STM32G491CE": {
+        "device_name": "STM32G491RETx",
+        "inherits": [
+            "MCU_STM32G491xE"
+        ]
+    },
+    "GENERIC_STM32G491KE": {
+        "device_name": "STM32G491RETx",
+        "inherits": [
+            "MCU_STM32G491xE"
+        ]
+    },
+    "GENERIC_STM32G491ME": {
+        "device_name": "STM32G491RETx",
+        "inherits": [
+            "MCU_STM32G491xE"
+        ]
+    },
+    "GENERIC_STM32G491RE": {
+        "device_name": "STM32G491RETx",
+        "inherits": [
+            "MCU_STM32G491xE"
+        ]
+    },
+    "GENERIC_STM32G491VE": {
+        "device_name": "STM32G491RETx",
+        "inherits": [
+            "MCU_STM32G491xE"
+        ]
+    },
+    "GENERIC_STM32G4A1CE": {
+        "device_name": "STM32G4A1RETx",
+        "inherits": [
+            "MCU_STM32G4A1xE"
+        ]
+    },
+    "GENERIC_STM32G4A1KE": {
+        "device_name": "STM32G4A1RETx",
+        "inherits": [
+            "MCU_STM32G4A1xE"
+        ]
+    },
+    "GENERIC_STM32G4A1ME": {
+        "device_name": "STM32G4A1RETx",
+        "inherits": [
+            "MCU_STM32G4A1xE"
+        ]
+    },
+    "GENERIC_STM32G4A1RE": {
+        "device_name": "STM32G4A1RETx",
+        "inherits": [
+            "MCU_STM32G4A1xE"
+        ]
+    },
+    "GENERIC_STM32G4A1VE": {
+        "device_name": "STM32G4A1RETx",
+        "inherits": [
+            "MCU_STM32G4A1xE"
+        ]
+    },
     "GENERIC_STM32H723VG": {
         "device_name": "STM32H723ZGTx",
         "inherits": [
