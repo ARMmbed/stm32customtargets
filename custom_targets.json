@@ -1487,10 +1487,22 @@
             "MCU_STM32L053x8"
         ]
     },
+    "GENERIC_STM32L071CB": {
+        "device_name": "STM32L071CBTx",
+        "inherits": [
+            "MCU_STM32L071xB"
+        ]
+    },
     "GENERIC_STM32L071CZ": {
         "device_name": "STM32L071CZTx",
         "inherits": [
             "MCU_STM32L071xZ"
+        ]
+    },
+    "GENERIC_STM32L071KB": {
+        "device_name": "STM32L071KBTx",
+        "inherits": [
+            "MCU_STM32L071xB"
         ]
     },
     "GENERIC_STM32L071KZ": {
@@ -1499,10 +1511,22 @@
             "MCU_STM32L071xZ"
         ]
     },
+    "GENERIC_STM32L071RB": {
+        "device_name": "STM32L071RBHx",
+        "inherits": [
+            "MCU_STM32L071xB"
+        ]
+    },
     "GENERIC_STM32L071RZ": {
         "device_name": "STM32L071RZHx",
         "inherits": [
             "MCU_STM32L071xZ"
+        ]
+    },
+    "GENERIC_STM32L071VB": {
+        "device_name": "STM32L071VBIx",
+        "inherits": [
+            "MCU_STM32L071xB"
         ]
     },
     "GENERIC_STM32L071VZ": {

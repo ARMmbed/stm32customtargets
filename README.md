@@ -2,7 +2,7 @@
 
 This branch is creating "generic" targets which are virtual boards with an STM32.
 
-Current status: 364 generic boards have created and tested with CLI1 and CLI2.
+Current status: 368 generic boards have created and tested with CLI1 and CLI2.
 
 Real custom boards are in the main branch : https://github.com/ARMmbed/stm32customtargets
 
@@ -10,24 +10,26 @@ Real custom boards are in the main branch : https://github.com/ARMmbed/stm32cust
 Table of Contents
 =================
 
-* [WOW](#WOW)
-* [STM32F0](#STM32F0)
-* [STM32F1](#STM32F1)
-* [STM32F2](#STM32F2)
-* [STM32F3](#STM32F3)
-* [STM32F4](#STM32F4)
-* [STM32F7](#STM32F7)
-* [STM32G0](#STM32G0)
-* [STM32G4](#STM32G4)
-* [STM32H7](#STM32H7)
-* [STM32L0](#STM32L0)
-* [STM32L1](#STM32L1)
-* [STM32L4](#STM32L4)
-* [STM32L5](#STM32L5)
-* [STM32U5](#STM32U5)
-* [STM32WB](#STM32WB)
-* [STM32WL](#STM32WL)
-* [License](#license)
+- [CUSTOM boards with STM32](#custom-boards-with-stm32)
+- [Table of Contents](#table-of-contents)
+- [WOW](#wow)
+- [STM32F0](#stm32f0)
+- [STM32F1](#stm32f1)
+- [STM32F2](#stm32f2)
+- [STM32F3](#stm32f3)
+- [STM32F4](#stm32f4)
+- [STM32F7](#stm32f7)
+- [STM32G0](#stm32g0)
+- [STM32G4](#stm32g4)
+- [STM32H7](#stm32h7)
+- [STM32L0](#stm32l0)
+- [STM32L1](#stm32l1)
+- [STM32L4](#stm32l4)
+- [STM32L5](#stm32l5)
+- [STM32U5](#stm32u5)
+- [STM32WB](#stm32wb)
+- [STM32WL](#stm32wl)
+- [License](#license)
 
 
 # WOW
@@ -379,14 +381,15 @@ python aci_build.py -l -c -b
 - mbed-os: master
 - STM32_open_pin_data: master
 
-15 targets available thanks to:
+19 targets available thanks to:
 - MCU_STM32L053x8
+- MCU_STM32L071xB
 - MCU_STM32L071xZ
 - MCU_STM32L072xZ
 - MCU_STM32L073xZ
 - MCU_STM32L082xZ
 
-30 missing targets due to missing:
+29 missing targets due to missing:
 - MCU_STM32L010x6
 - MCU_STM32L010x4
 - MCU_STM32L010x8
@@ -406,7 +409,6 @@ python aci_build.py -l -c -b
 - MCU_STM32L062x8
 - MCU_STM32L063x8
 - MCU_STM32L071x8
-- MCU_STM32L071xB
 - MCU_STM32L072xB
 - MCU_STM32L072x8
 - MCU_STM32L073xB
