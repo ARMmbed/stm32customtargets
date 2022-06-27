@@ -287,10 +287,22 @@
             "MCU_STM32F411xE"
         ]
     },
+    "GENERIC_STM32F412CE": {
+        "device_name": "STM32F412CEUx",
+        "inherits": [
+            "MCU_STM32F412xE"
+        ]
+    },
     "GENERIC_STM32F412CG": {
         "device_name": "STM32F412CGUx",
         "inherits": [
             "MCU_STM32F412xG"
+        ]
+    },
+    "GENERIC_STM32F412RE": {
+        "device_name": "STM32F412RETx",
+        "inherits": [
+            "MCU_STM32F412xE"
         ]
     },
     "GENERIC_STM32F412RG": {
@@ -299,10 +311,22 @@
             "MCU_STM32F412xG"
         ]
     },
+    "GENERIC_STM32F412VE": {
+        "device_name": "STM32F412VEHx",
+        "inherits": [
+            "MCU_STM32F412xE"
+        ]
+    },
     "GENERIC_STM32F412VG": {
         "device_name": "STM32F412VGHx",
         "inherits": [
             "MCU_STM32F412xG"
+        ]
+    },
+    "GENERIC_STM32F412ZE": {
+        "device_name": "STM32F412ZEJx",
+        "inherits": [
+            "MCU_STM32F412xE"
         ]
     },
     "GENERIC_STM32F412ZG": {
