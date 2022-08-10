@@ -109,6 +109,17 @@
             "LED2=PA_10"
         ]
     },
+    "RAK3172SIP": {
+        "inherits": [
+            "MCU_STM32WLE5xC"
+        ],
+        "device_name": "STM32WLE5CCUx"
+    },
+    "RAK3272_BREAKOUT": {
+        "inherits": [
+            "RAK3172SIP"
+        ]
+    },
     "CORE2":
     {
         "inherits": ["MCU_STM32F4"],

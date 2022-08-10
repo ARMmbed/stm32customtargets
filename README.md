@@ -427,7 +427,7 @@ RAK3172-SIP SOC exists in two versions, both with TCXO connected to PB0 (so you 
 
 ```json
 
-   "RAK3272_SIP_BREAKOUT": {
+   "RAK3272_BREAKOUT": {
       "stm32wl-lora-driver.rf_switch_config": "RBI_CONF_RFO_HP",
       "stm32wl-lora-driver.crystal_select" : 1
    }
@@ -437,7 +437,7 @@ RAK3172-SIP SOC exists in two versions, both with TCXO connected to PB0 (so you 
 
 ```json
 
-   "RAK3272_SIP_BREAKOUT": {
+   "RAK3272_BREAKOUT": {
       "stm32wl-lora-driver.rf_switch_config": "RBI_CONF_RFO_LP",
       "stm32wl-lora-driver.crystal_select" : 1
    }
