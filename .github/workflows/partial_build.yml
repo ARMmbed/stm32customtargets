@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -20,15 +20,17 @@ jobs:
           image: ghcr.io/armmbed/mbed-os-env:latest
           shell: bash
           run: |
+            set -x
             pip3 list
             git clone https://github.com/ARMmbed/mbed-os.git
+            git config --global --add safe.directory /stm32customtargets
             python3 aci_build.py
 
   CLI2:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -39,15 +41,17 @@ jobs:
           image: ghcr.io/armmbed/mbed-os-env:latest
           shell: bash
           run: |
+            set -x
             pip3 list
             git clone https://github.com/ARMmbed/mbed-os.git
+            git config --global --add safe.directory /stm32customtargets
             python3 aci_build.py --cli2
 
   PIN_STANDARD:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -58,5 +62,7 @@ jobs:
           image: ghcr.io/armmbed/mbed-os-env:latest
           shell: bash
           run: |
+            set -x
             pip3 list
+            git config --global --add safe.directory /stm32customtargets
             python3 aci_build.py --pin
