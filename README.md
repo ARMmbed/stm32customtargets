@@ -26,6 +26,9 @@ Table of Contents
    * [Charles's LoRa-E5 Tiny](#charless-lora-e5-tiny)
    * [RAK Wireless RAK3172](#rak-wireless-rak3172)
    * [Charles's RAK3172 breakout board](#charless-rak3172-breakout-board)
+   * [RAK Wirekess RAK3172-SiP SOC](#rak-wirekess-rak3172-sip-soc)
+   * [RAK Wirekess RAK3272-SiP Breakout Board](#rak-wirekess-rak3272-sip-breakout-board)
+
 * [License](#license)
 * [Contributions](#contributions)
    * [Automatic pull request checks](#automatic-pull-request-checks)
@@ -393,6 +396,50 @@ For debug LEDs of breakout so you need to add this to your `mbed_app.json` on se
       "stm32wl-lora-driver.debug_tx": "PA_10",
       "stm32wl-lora-driver.debug_rx": "PA_9",
       "stm32wl-lora-driver.debug_invert": 1
+   }
+```
+
+
+
+
+## RAK Wirekess RAK3172-SiP SOC
+
+<img src="https://docs.rakwireless.com/assets/images/wisduo/rak3172-sip/overview/RAK3172_SiP_home.png" width="200">
+
+MCU: STM32WLE5CC
+
+TARGET: RAK3172SIP
+
+RAK3172-SIP SOC is just a SOC, you can build your own boards with this module, check below the usage for the RAK3272-SiP Breakout Board reference board and an example of board definition and usage.
+
+
+## RAK Wirekess RAK3272-SiP Breakout Board
+
+<img src="https://docs.rakwireless.com/assets/images/wisduo/rak3272-sip-breakout-board/overview/RAK3272-SiP-Breakout_home.png" width="200">
+
+MCU: STM32WLE5CC
+
+TARGET: RAK3272_SIP_BREAKOUT
+
+RAK3172-SIP SOC exists in two versions, both with TCXO connected to PB0 (so you can disable it for low power):
+
+- RAK3172-SIP using high power path (>14db) that use only RFO_HP for TX power, you need to add this to your `mbed_app.json` on section `target_overrides`
+
+```json
+
+   "RAK3272_BREAKOUT": {
+      "stm32wl-lora-driver.rf_switch_config": "RBI_CONF_RFO_HP",
+      "stm32wl-lora-driver.crystal_select" : 1
+   }
+```
+
+- RAK3172LP-SIP using low power path only (<=14db) that use only RFO_LP for TX power, you need to add this to your `mbed_app.json` on section `target_overrides`
+
+```json
+
+   "RAK3272_BREAKOUT": {
+      "stm32wl-lora-driver.rf_switch_config": "RBI_CONF_RFO_LP",
+      "stm32wl-lora-driver.crystal_select" : 1
    }
 ```
 
