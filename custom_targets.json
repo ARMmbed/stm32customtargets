@@ -101,6 +101,12 @@
             "MCU_STM32F103xE"
         ]
     },
+    "GENERIC_STM32F103RG": {
+        "device_name": "STM32F103RG",
+        "inherits": [
+            "MCU_STM32F103xG"
+        ]
+    },
     "GENERIC_STM32F103T8": {
         "device_name": "STM32F103T8",
         "inherits": [
@@ -143,6 +149,12 @@
             "MCU_STM32F103xE"
         ]
     },
+    "GENERIC_STM32F103VG": {
+        "device_name": "STM32F103VG",
+        "inherits": [
+            "MCU_STM32F103xG"
+        ]
+    },
     "GENERIC_STM32F103ZC": {
         "device_name": "STM32F103ZC",
         "inherits": [
@@ -159,6 +171,12 @@
         "device_name": "STM32F103ZE",
         "inherits": [
             "MCU_STM32F103xE"
+        ]
+    },
+    "GENERIC_STM32F103ZG": {
+        "device_name": "STM32F103ZG",
+        "inherits": [
+            "MCU_STM32F103xG"
         ]
     },
     "GENERIC_STM32F302C8": {
