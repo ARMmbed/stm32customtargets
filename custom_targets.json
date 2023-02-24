@@ -126,10 +126,6 @@
         "extra_labels_add": ["STM32F407xG"],
         "macros_add": [
             "STM32F407xx",
-            "ENCODER_1=TIM2",
-            "ENCODER_2=TIM8",
-            "ENCODER_3=TIM3",
-            "ENCODER_4=TIM4",
             "UPPER_RESISTOR=5.6e4",
             "LOWER_RESISTOR=1.0e4",
             "VIN_MEAS_CORRECTION=0.986"

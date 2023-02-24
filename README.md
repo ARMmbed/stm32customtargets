@@ -112,9 +112,6 @@ TARGET: CORE2
 
 https://github.com/byq77/core2-mbed6-template
 
-<img src="https://husarion.com/docs/assets/img/core2-hardware/core2_top_small.jpg" width="200"/>
-
-
 # STM32L0
 
 ## MURATA LPWAN Wireless Module
