@@ -158,20 +158,6 @@ typedef enum {
     NC = (int)0xFFFFFFFF
 } PinName;
 
-// Legacy I2C aliases
-#define I2C_SDA  PA_11
-#define I2C_SCL  PA_12
-// Legacy SPI aliases
-#define SPI_CS   PA_4
-#define SPI_SCK  PA_5
-#define SPI_MISO PA_6
-#define SPI_MOSI PA_7
-
-// TTN Generic Node Standardized LED and button names
-#define LED1    PB_5
-#define LED2    PB_6
-#define LED3    PB_7
-#define BUTTON1 PB_3
 
 #ifdef __cplusplus
 }
