@@ -137,5 +137,11 @@
         "device_has_add": ["TRNG", "CAN"],
         "device_has_remove": ["LPTICKER"],
         "device_name": "STM32F407ZG"
+    },
+    "TTN_GNSE": {
+        "inherits": [
+            "MCU_STM32WL55xC"
+        ],
+        "device_name": "STM32WL55JCIx"
     }
 }
