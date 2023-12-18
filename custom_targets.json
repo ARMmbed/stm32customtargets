@@ -137,5 +137,32 @@
         "device_has_add": ["TRNG", "CAN"],
         "device_has_remove": ["LPTICKER"],
         "device_name": "STM32F407ZG"
+    },
+    "TTN_GNSE": {
+        "inherits": [
+            "MCU_STM32WL55xC"
+        ],
+        "macros_add": [
+            "LED_ACTIVE_LOW=1",
+            "LED1=PB_5", 
+            "LED2=PB_6",
+            "LED3=PB_7",
+            "BUTTON1=PB_3",
+            "BAT_EN=PB_4",
+            "BAT_MON=PB_2",
+            "POWER_SENSOR=PB_12",
+            "POWER_FLASH=PC_13",
+            "INT_ACC=PA_8",
+            "BUZZER=PA_15",
+            "I2C_SDA=PA_10",
+            "I2C_SCL=PA_9",
+            "I2C2_SDA=PA_11",
+            "I2C2_SCL=PA_12",
+            "SPI_CS=PA_4",
+            "SPI_SCK=PA_5",
+            "SPI_MISO=PA_6",
+            "SPI_MOSI=PA_7"
+        ],
+        "device_name": "STM32WL55JCIx"
     }
 }

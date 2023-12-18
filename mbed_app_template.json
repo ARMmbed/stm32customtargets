@@ -77,6 +77,17 @@
             "stm32wl-lora-driver.debug_tx": "PA_10",
             "stm32wl-lora-driver.debug_rx": "PA_9",
             "stm32wl-lora-driver.debug_invert": 1
+        },
+        "RAK3172SIP": {
+            "stm32wl-lora-driver.rf_switch_config": 2,
+            "stm32wl-lora-driver.crystal_select" : 0
+        },
+        "TTN_GNSE": {
+            "stm32wl-lora-driver.rf_switch_config": 0,
+            "stm32wl-lora-driver.crystal_select" : 1,
+            "stm32wl-lora-driver.debug_tx": "PB_5",
+            "stm32wl-lora-driver.debug_rx": "PB_6",
+            "stm32wl-lora-driver.debug_invert": 1
         }
     }
 }
